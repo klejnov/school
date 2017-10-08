@@ -1,43 +1,51 @@
 /*Задание 1*/
-#text1 {
-    color: #00BFFF;
-    font-size: 20px;
-    font-family: Arial;
-    text-align: justify;
+
+p:nth-child(1) {
+    color: red;
 }
 
-/*Задание 2*/
-.text_center {
-    font-size: 20px;
-    font-family: Arial;
-    text-align: center;
+p:nth-child(2) {
+    color: blue;
 }
+
+p:nth-child(3) {
+    color: green;
+}
+
+/*
+Второй вариант. Будет полезно если количество абзацев более трех и применить стиль нужно ко всем внутренним.
+
+p:first-child {
+    color: red;
+}
+
+p:not(only-child) {
+    color: blue;
+}
+
+p:last-child {
+    color: green;
+}
+*/
 
 /*Задание 3*/
-.img-center {
-    text-align: center;
+
+.ul1 {
+    list-style: square;
 }
 
-.text_s {
-    font-family: sans-serif;
+.ul2>li:first-child {
+    list-style-type: lower-latin;
+    list-style-position: outside;
+    color: red;
 }
 
-h1, h2 {
-    text-align: center;
-    color: hotpink;
-    text-decoration: underline;
+.ul2>li:last-child::after {
+    color: blue;
+    content:  " (Описание)";
 }
 
-p {
-    text-indent: 2.1em;
-    text-align: justify;
-    line-height: 2;
-}
-
-.dialog {
-    border-bottom-style: dashed;
-    border-bottom-color: #00BFFF;
-    border-bottom-width: 2px;
-    font-style: italic;
-    cursor: help;
+.ul2>li:last-child {
+    list-style-type: disc;
+    list-style-position: outside;
 }

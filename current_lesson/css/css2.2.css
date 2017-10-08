@@ -1,0 +1,51 @@
+
+/*Задание 2*/
+
+div > p:nth-child(1) {
+    width: 260px;
+    color: red;
+    text-align: justify;
+    margin-left: 410px;
+    padding-top: 53px;
+}
+
+div > p:nth-child(2) {
+    width: 390px;
+    color: red;
+    text-align: justify;
+    margin-left: 345px;
+    margin-top: -16px;
+}
+
+div > p:nth-child(3) {
+    width: 523px;
+    color: red;
+    text-align: justify;
+    margin-left: 280px;
+    margin-right: 300px;
+    margin-top: -16px;
+}
+
+div > p:nth-child(4) {
+    width: 651px;
+    color: red;
+    text-align: justify;
+    margin-left: 215px;
+    margin-right: 300px;
+    margin-top: -16px;
+}
+div > p:nth-child(5) {
+    width: 131px;
+    color: red;
+    text-align: justify;
+    margin-left: 475px;
+    margin-right: 300px;
+    margin-top: -16px;
+}
+
+.text_center {
+    background-image: url(../img/image.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
