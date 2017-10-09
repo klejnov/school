@@ -1,0 +1,101 @@
+/*Задание 1*/
+body {
+    background: white;
+    margin: 0;
+}
+
+.div1 {
+    width: 100%;
+    height: 630px;
+    display: inline-block;
+    background-color: #187A03;
+    background-size: 30px;
+    background-image: url(../img/pic1.png), url(../img/pic1.png);
+    background-repeat: repeat-x, repeat-x;
+    background-position: left 20px, left 140px;
+}
+
+.div2 {
+    height: 460px;
+    margin: 120px 50px;
+    background-color: #773E09;
+    opacity: 0.8;
+    /*Задать цвет и прозрачность можно и так:*/
+    /*background: rgba(119, 62, 9, 0.8);*/
+}
+
+/*Задание 2*/
+
+.clip {
+    background: url(../img/html.jpg) no-repeat;
+    background-color: lightgray;
+    border: 10px dotted #900;
+    padding: 40px;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    color: #fff;
+    float: left;
+}
+.bc {
+    background-clip: border-box;
+}
+.cc {
+    background-clip: content-box;
+}
+.pc {
+    background-clip: padding-box;
+}
+
+.origin {
+    background: url(../img/html.jpg) no-repeat;
+    background-color: lightgray;
+    border: 10px dotted #900;
+    padding: 40px;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    color: #fff;
+    float: left;
+}
+.bo {
+    background-origin: border-box;
+}
+.co {
+    background-origin: content-box;
+}
+.po {
+    background-origin: padding-box;
+}
+
+.space {
+    height: 200px;
+}
+
+/*Задание 3*/
+.img-center {
+    text-align: center;
+}
+
+.text_s {
+    font-family: sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    text-indent: 2.1em;
+    text-align: justify;
+    line-height: 2;
+}
+
+.dialog {
+    border-bottom-style: dashed;
+    border-bottom-color: #00BFFF;
+    border-bottom-width: 2px;
+    font-style: italic;
+    cursor: help;
+}
