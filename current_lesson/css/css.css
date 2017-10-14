@@ -1,51 +1,125 @@
+body {
+    background: white;
+    margin: 0;
+}
+
 /*Задание 1*/
 
-p:nth-child(1) {
-    color: red;
+.button {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial;
 }
 
-p:nth-child(2) {
-    color: blue;
+#sprite {
+    display: inline-block;
+    background-image: url('../img/sprite.png');
+    background-position: -40px -10px;
+    background-repeat: no-repeat;
+    height: 110px;
+    width: 272px
 }
 
-p:nth-child(3) {
-    color: green;
+#sprite:hover {
+    background-position: -40px -119px;
 }
 
-/*
-Второй вариант. Будет полезно если количество абзацев более трех и применить стиль нужно ко всем внутренним.
-
-p:first-child {
-    color: red;
+#sprite:active {
+    background-position: -40px -228px;
 }
 
-p:not(only-child) {
-    color: blue;
+.div1 {
+    text-align: center;
+    margin-top: 20%;
 }
 
-p:last-child {
-    color: green;
+.div1 a {
+    display: block;
+    height: 100%;
 }
-*/
 
 /*Задание 3*/
+
+.menu {
+    font-family: Arial;
+    text-align: center;
+    line-height: 35px;
+}
+
+.menu a {
+    display: block;
+    width: 100px;
+}
+
+.next {
+    font-family: Arial;
+    text-align: center;
+    margin-right: 30px;
+    line-height: 35px;
+}
+
+.next a {
+    display: block;
+    width: 100px;
+}
+
+.back {
+    font-family: Arial;
+    text-align: center;
+    margin-left: 30px;
+    line-height: 35px;
+}
+
+.back a {
+    display: block;
+    width: 100px;
+}
 
 .ul1 {
     list-style: square;
 }
 
-.ul2>li:first-child {
-    list-style-type: lower-latin;
-    list-style-position: outside;
-    color: red;
+.ul1 > li {
+    display: inline-block;
+    background-color: #1E90FF;
+    border-radius: 10px;
 }
 
-.ul2>li:last-child::after {
-    color: blue;
-    content:  " (Описание)";
+.ul1 > li:hover {
+    box-shadow: 3px 3px grey;
+    background: linear-gradient(to top, #6b18ff, #0c9bf1);
 }
 
-.ul2>li:last-child {
-    list-style-type: disc;
-    list-style-position: outside;
+.ul1 > li > a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.img-center {
+    text-align: center;
+}
+
+.text_s {
+    font-family: sans-serif;
+    padding: 0px 15px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    text-indent: 2.1em;
+    text-align: justify;
+    line-height: 2;
+}
+
+.dialog {
+    border-bottom-style: dashed;
+    border-bottom-color: #00BFFF;
+    border-bottom-width: 2px;
+    font-style: italic;
+    cursor: help;
 }

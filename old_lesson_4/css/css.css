@@ -1,0 +1,51 @@
+/*Задание 1*/
+
+p:nth-child(1) {
+    color: red;
+}
+
+p:nth-child(2) {
+    color: blue;
+}
+
+p:nth-child(3) {
+    color: green;
+}
+
+/*
+Второй вариант. Будет полезно если количество абзацев более трех и применить стиль нужно ко всем внутренним.
+
+p:first-child {
+    color: red;
+}
+
+p:not(only-child) {
+    color: blue;
+}
+
+p:last-child {
+    color: green;
+}
+*/
+
+/*Задание 3*/
+
+.ul1 {
+    list-style: square;
+}
+
+.ul2>li:first-child {
+    list-style-type: lower-latin;
+    list-style-position: outside;
+    color: red;
+}
+
+.ul2>li:last-child::after {
+    color: blue;
+    content:  " (Описание)";
+}
+
+.ul2>li:last-child {
+    list-style-type: disc;
+    list-style-position: outside;
+}
