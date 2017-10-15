@@ -1,0 +1,76 @@
+body {
+    background: white;
+    margin: 0;
+}
+
+/*Задание 1*/
+
+.div1 {
+    margin: 30px;
+}
+
+/*Таблица с зеброй*/
+.lux {
+    width: 300px;
+    border: 1px solid #a52a2a;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.lux th {
+    background: #a52a2a;
+    color: white;
+}
+.lux td {
+    border-bottom: 1px solid #a52a2a;
+}
+.lux td, .lux th {
+    padding: 4px;
+}
+.lux>tbody>tr>td:not(:first-child) {
+    text-align: center;
+}
+.lux>tbody>tr:nth-child(2n) {
+    background: #ffffeb;
+}
+.lux>tbody>tr:not(:nth-child(2n)):not(:first-child) {
+    background: #fff8d3;
+}
+
+
+/*Таблица на div с зеброй*/
+
+.divTable{
+    display: table;
+    width: 300px;
+    border: 1px solid #a52a2a;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.divTableRow {
+    display: table-row;
+}
+.divTableRow1 {
+    display: table-row;
+    background: #a52a2a;
+    color: white;
+    padding: 4px;
+}
+
+.divTableCell {
+    display: table-cell;
+    border-bottom: 1px solid #a52a2a;
+    padding: 4px;
+}
+.divTableBody {
+    display: table-row-group;
+}
+
+.divTableCell:not(:first-child) {
+    text-align: center;
+}
+.divTableRow:nth-child(2n) {
+    background: #ffffeb;
+}
+.divTableRow:not(:nth-child(2n)) {
+    background: #fff8d3;
+}
