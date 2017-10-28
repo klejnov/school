@@ -1,0 +1,19 @@
+
+.top-menu .col-lg-1, .row .col-lg-7 {
+  height: 42px;
+  border-right: solid 1px;
+}
+
+.top-menu {
+  background-color: #F5F5F5;
+}
+
+.top-menu span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: rgba(119, 119, 119, 255);
+  text-align: left;
+  padding-top: 10px;
+  display: block;
+}
+
