@@ -1,88 +1,88 @@
 body {
-	background-color: #039BE6;
-	margin: 0;
+    background-color: #039BE6;
+    margin: 0;
 }
 
 .wrapper {
-	text-align: center;
+    text-align: center;
 
 }
 
 .not-found {
-	display: inline-block;
-	text-align: center;
+    display: inline-block;
+    text-align: center;
 }
 
 .title, .sub-title, .sub-text, .button, .button-link {
-	display: block;
-	font-family: Arial;
-	color: white;
+    display: block;
+    font-family: Arial;
+    color: white;
 }
 
-.title{
-	margin-top: 75px;
-	font-size: 240px;
-	font-weight: bolder;
+.title {
+    margin-top: 75px;
+    font-size: 240px;
+    font-weight: bolder;
 }
 
-.sub-title{
-	margin-top: 12px;
-	font-size: 45px;
-	font-weight: bolder;
+.sub-title {
+    margin-top: 12px;
+    font-size: 45px;
+    font-weight: bolder;
 }
 
-.sub-text{
-	margin-top: 15px;
-	font-size: 20px;
-	opacity: .5;
+.sub-text {
+    margin-top: 15px;
+    font-size: 20px;
+    opacity: .5;
 }
 
 .button {
-	display: inline-block;
-	text-align: center;
-	margin-top: 47px;
-	background-color: #039BE6;
-	border: solid 2px;
-	border-color: white;
-	height: 56px;
-	width: 210px;
-	border-radius: 28px;
-	opacity: .8;
+    display: inline-block;
+    text-align: center;
+    margin-top: 47px;
+    background-color: #039BE6;
+    border: solid 2px;
+    border-color: white;
+    height: 56px;
+    width: 210px;
+    border-radius: 28px;
+    opacity: .8;
 
 }
 
 .button-link {
-	text-decoration: none;
-	line-height: 56px;
-	display: block;
-	font-size: 18px;
+    text-decoration: none;
+    line-height: 56px;
+    display: block;
+    font-size: 18px;
 }
 
 .button:hover {
-	opacity: .9;
-	box-shadow: 0 0 10px white;
+    opacity: .9;
+    box-shadow: 0 0 10px white;
 }
 
 .button:active {
-	opacity: 1;
-	height: 55px;
-	width: 208px;
-	border-radius: 27px;
-	margin-top: 48px;
+    opacity: 1;
+    height: 55px;
+    width: 208px;
+    border-radius: 27px;
+    margin-top: 48px;
 }
 
 @media screen and (max-width: 600px) {
 
-	.title{
-		font-size: 120px;
-	}
+    .title {
+        font-size: 120px;
+    }
 
-	.sub-title{
-		font-size: 22px;
-	}
+    .sub-title {
+        font-size: 22px;
+    }
 
-	.sub-text{
-		font-size: 12px;
-	}
+    .sub-text {
+        font-size: 12px;
+    }
 }
 
