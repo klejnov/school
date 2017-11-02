@@ -27,7 +27,7 @@
     background-color: #F5F5F5;
 }
 
-.top-menu span {
+.top-menu span, .top-menu-block {
     font-size: 14px;
     color: rgba(119, 119, 119, 255);
     text-align: left;
@@ -35,14 +35,20 @@
     display: block;
 }
 
-.top-menu span a {
+.top-menu-block {
+    width: 60px;
+}
+
+.top-menu span a, .top-menu-block a {
     color: rgba(119, 119, 119, 255);
     outline: none;
 }
 
-.top-menu span a:hover, .top-menu a span:hover {
+.top-menu span a:hover, .top-menu a span:hover, .top-menu-block a:hover {
     color: rgb(61, 61, 61);
 }
+
+
 
 .social, .currency-menu {
     list-style-type: none;
