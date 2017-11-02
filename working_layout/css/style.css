@@ -48,8 +48,6 @@
     color: rgb(61, 61, 61);
 }
 
-
-
 .social, .currency-menu {
     list-style-type: none;
     padding-left: 0px;
@@ -251,7 +249,7 @@ li:hover .currency-dropdown {
 .background-logo-menu {
     background-color: white;
     color: rgb(135, 135, 135);
-    height: 87px;
+    min-height: 87px;
 }
 
 .logo-menu span {
@@ -263,7 +261,6 @@ li:hover .currency-dropdown {
     font-weight: 600;
     text-transform: uppercase;
 }
-
 
 .label {
     position: relative;
@@ -320,13 +317,16 @@ li:hover .currency-dropdown {
     text-align: center;
     font-size: 13px;
 }
+
 .circle-block {
     margin-top: -5px;
 
 }
+
 .circle-block-nowrap {
     white-space: nowrap;
 }
+
 .price-circle-block {
     display: inline;
 }
