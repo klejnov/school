@@ -1,19 +1,326 @@
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Верхнее меню соц. сети*/
+
+.background-top-menu {
+    background-color: #F5F5F5;
+}
 
 .top-menu .col-lg-1, .row .col-lg-7 {
-  height: 42px;
-  border-right: solid 1px;
+    height: 42px;
+    position: relative;
+
+}
+
+.top-menu .col-lg-1:before, .row .col-lg-7:before {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 50%;
+    border-right: 1px solid rgb(215, 215, 215);
+    content: "";
 }
 
 .top-menu {
-  background-color: #F5F5F5;
+    background-color: #F5F5F5;
 }
 
 .top-menu span {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  color: rgba(119, 119, 119, 255);
-  text-align: left;
-  padding-top: 10px;
-  display: block;
+    font-size: 14px;
+    color: rgba(119, 119, 119, 255);
+    text-align: left;
+    padding-top: 10px;
+    display: block;
 }
 
+.top-menu span a {
+    color: rgba(119, 119, 119, 255);
+    outline: none;
+}
+
+.top-menu span a:hover, .top-menu a span:hover {
+    color: rgb(61, 61, 61);
+}
+
+.social, .currency-menu {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.currency-menu li {
+    position: relative;
+}
+
+.currency-menu li ul {
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+li:hover .currency-dropdown {
+    display: block;
+    -webkit-padding-start: 0px;
+    background-color: #F5F5F5;
+    width: 100%;
+
+}
+
+.social > li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.social > ul {
+    padding-left: 0px;
+}
+
+.fa {
+    opacity: .5;
+    color: black;
+}
+
+.fa:hover {
+    opacity: .8;
+}
+
+.fa-twitter-square:before {
+    content: "\f081";
+}
+
+.fa-facebook-square:before {
+    content: "\f082";
+}
+
+.fa-linkedin-square:before {
+    content: "\f08c";
+}
+
+.fa-pinterest-p:before {
+    content: "\f231";
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+
+.fa-angle-down {
+    margin-left: 5px;
+}
+
+/*Нижний футер с оплатой */
+
+.background-footer-copyright-box {
+    background-color: rgb(25, 27, 31);
+    color: rgb(135, 135, 135);
+}
+
+.footer-copyright-box .col-lg-3, .footer-copyright-box .col-lg-7 {
+    border: solid 1px rgb(25, 27, 31);
+    height: 70px;
+}
+
+.footer-copyright-box span {
+    line-height: 70px;
+}
+
+.payment-icons {
+    line-height: 70px;
+}
+
+.payment-icons-img {
+    display: inline-block;
+    background: url("../img/ico/payment_icons.png") top left no-repeat;
+    width: 300px;
+    height: 17px;
+    margin-left: 15px;
+    margin-bottom: -4px;
+}
+
+.payment-s {
+    text-align: right;
+}
+
+.footer-copyright-box span > span {
+    color: white;
+}
+
+/*Футер с виджетами*/
+
+.background-footer-widgets-box {
+    background-color: rgb(31, 33, 38);
+    color: rgb(135, 135, 135);
+    height: 354px;
+}
+
+.background-footer-widgets-box .social > li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.background-footer-widgets-box .fa {
+    opacity: .8;
+    color: white;
+}
+
+.background-footer-widgets-box .fa:hover {
+    opacity: 1;
+}
+
+.footer-logo {
+    margin-top: 50px;
+}
+
+.footer-logo-text {
+    margin: 25px 0;
+}
+
+.footer-title {
+    font-size: larger;
+    color: white;
+    margin: 60px 0 10px;
+}
+
+.footer-links, .footer-address {
+    list-style-type: none;
+    padding-left: 0px;
+    font-size: medium;
+}
+
+.footer-links a, .footer-text-1 a {
+    color: rgba(119, 119, 119, 255);
+}
+
+.footer-links a:hover, .footer-text-1 a:hover {
+    color: rgb(156, 156, 156);
+}
+
+.footer-text-block {
+    margin-left: 10px;
+}
+
+.date-box {
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px 20px;
+    margin-right: 5px;
+    border-color: rgb(0, 99, 209);
+    background-color: rgb(31, 33, 38);
+    float: left;
+}
+
+.footer-text-block .wrapper {
+    height: 100px;
+}
+
+.date-box-1 {
+    font-size: 22px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.date-box-2 {
+    font-size: 16px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.footer-text-1 {
+    font-size: medium;
+}
+
+.footer-text {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    padding-top: 2px;
+    padding-bottom: 10px;
+    padding-left: 73px;
+}
+
+/*Меню с логотипом*/
+
+.background-logo-menu {
+    background-color: white;
+    color: rgb(135, 135, 135);
+    height: 87px;
+}
+
+.logo-menu span {
+    font-size: 16px;
+    color: rgba(119, 119, 119, 255);
+    text-align: left;
+    padding-top: 10px;
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.label {
+    position: relative;
+    top: -48px;
+    left: 26px;
+    width: 40px;
+    height: 21px;
+    padding-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0;
+}
+
+.label:after {
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+    left: 0px;
+    top: 20px;
+}
+
+.label-green {
+    background-color: rgb(60, 184, 120);
+
+}
+
+.label-green:after {
+    border-left: 5px solid rgb(60, 184, 120);
+    border-top: 5px solid rgb(60, 184, 120);
+}
+
+.label-red {
+    background-color: rgb(242, 109, 125);
+
+}
+
+.label-red:after {
+    border-left: 5px solid rgb(242, 109, 125);
+    border-top: 5px solid rgb(242, 109, 125);
+}
+
+.circle {
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgb(0, 99, 209);
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 23px;
+    height: 23px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+.circle-block {
+    margin-top: -5px;
+
+}
+.circle-block-nowrap {
+    white-space: nowrap;
+}
+.price-circle-block {
+    display: inline;
+}

@@ -8,9 +8,12 @@
     <meta name="author" content="Клейнов Олег">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400i,500i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic-ext"
+          rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,22 +21,286 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
 
-<div class="container">
-    <div class="row top-menu">
-        <div class="col-lg-1 col-md-1 col-sm-1"><span>Доставка</span></div>
-        <div class="col-lg-1 col-md-1 col-sm-1"><span>Правила</span></div>
-        <div class="col-lg-6 col-md-6 col-sm-6"><span>Подписаться на нас</span></div>
-        <div class="col-lg-1 col-md-1 col-sm-1"><span>USD</span></div>
-        <div class="col-lg-1 col-md-1 col-sm-1"><span>English</span></div>
-        <div class="col-lg-2 col-md-2 col-sm-2"><span>Вход/Регистрация</span></div>
+<!-- Модальное окно Регистрации -->
+<div id="registration" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Регистрация</h4>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+                <form name="registration" action="#">
+                    <div><input required type="text" id="first_name" name="first_name" placeholder=" "
+                                pattern="^[А-ЯЁ]{1}[а-яё]{1,}">
+                        <label
+                                for="first_name">Имя</label>
+                        <div class="requirmetns">Введите имя на русском языке и с заглавной буквы</div>
+                    </div>
+                    <div><input required type="text" id="last_name" name="last_name" placeholder=" "
+                                pattern="^[А-ЯЁ][а-яё]{1,}"> <label
+                            for="last_name">Фамилия</label>
+                        <div class="requirmetns">Введите фамилию на русском языке и с заглавной буквы</div>
+                    </div>
+                    <div><input required type="tel" id="tel" name="tel" placeholder=" "
+                                pattern="[+]375 [0-9]{2} [0-9]{7}"> <label
+                            for="tel">Телефон</label>
+                        <div class="requirmetns">Введите телефон в формате: +375 29 1234567</div>
+                    </div>
+                    <div><input required type="email" id="email" name="email" placeholder=" "> <label
+                            for="email">Email</label>
+                        <div class="requirmetns">Неправильный адрес электронной почты, повторите попытку.</div>
+                    </div>
+                    <div><input required type="password" id="password" name="password" placeholder=" "
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"> <label for="password">Пароль</label>
+                        <div class="requirmetns">Пароль должен иметь длину не менее 6 символов, число, прописные и
+                            строчные буквы
+                        </div>
+                    </div>
+                    <input type="radio" class="radio" name="radio" id="male" required/>
+                    <label for="male">Мужчина</label>
+                    <input type="radio" class="radio" name="radio" id="female" required/>
+                    <label for="female">Женщина</label>
+                    <input type="checkbox" class="checkbox" id="rules" required/>
+                    <label for="rules">Согласен с правилами магазина</label>
+                    <input type="submit" value="Зарегистрироваться"/></form>
+            </div>
+        </div>
     </div>
 </div>
 
+<!-- Модальное окно Авторизации -->
+<div id="authorization" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Вход в магазин</h4>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+                <form name="authorization" action="#">
+                    <div><input required type="email" id="email-auth" name="email" placeholder=" "> <label
+                            for="email-auth">Email</label>
+                        <div class="requirmetns">Неправильный адрес электронной почты, повторите попытку.</div>
+                    </div>
+                    <div><input required type="password" id="password-auth" name="password" placeholder=" "
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"> <label for="password-auth">Пароль</label>
+                        <div class="requirmetns">Пароль должен иметь длину не менее 6 символов, число, прописные и
+                            строчные буквы
+                        </div>
+                    </div>
+                    <input type="submit" value="Войти"/></form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="background-top-menu" class="container-fluid">
+        <div class="container">
+            <div class="row top-menu">
+                <div class="col-lg-1 col-md-1 col-sm-2"><a href="#"><span>Доставка</span></a></div>
+                <div class="col-lg-1 col-md-1 col-sm-2"><a href="#"><span>Правила</span></a></div>
+                <div class="col-lg-6 col-md-6 col-sm-4">
+                    <ul class="social">
+                        <li><span>Подписаться на нас</span></li>
+                        <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-1 hidden-sm"><span>
+                    <div>
+                        <ul class="currency-menu">
+                            <li><a href="#">USD</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <ul class="currency-dropdown">
+                            <li><a href="#">EUR</a></li>
+                            <li><a href="#">RUR</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+            </span></div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                <span>
+                    <div>
+                        <ul class="currency-menu">
+                            <li><a href="#">English</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <ul class="currency-dropdown">
+                            <li><a href="#">Русский</a></li>
+                            <li><a href="#">Deutsch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+            </span></div>
+                <div class="col-lg-2 col-md-2 col-sm-3"><span><a href="#authorization" data-toggle="modal">Вход</a>/<a
+                        href="#registration" data-toggle="modal">Регистрация</a></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 50px;"></div>
+
+    <div class="background-logo-menu" class="container-fluid">
+        <div class="container">
+            <div class="row logo-menu">
+                <div class="col-lg-3 col-md-3 col-sm-1"><a href="#"><img src="img/logo-header.png" alt="MEGANO Магазин"></a>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><a href="#"><span>1</span></a></div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="label-content"><a href="#"><span>Магазин</span></a></div>
+                    <div class="label label-red">скидки</div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><a href="#"><span>Блог</span></a></div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="label-content"><a href="#"><span>Галерея</span></a></div>
+                    <div class="label label-green">new</div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><a href="#"><span>Контакты</span></a></div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><a href="#"><span>Покупки</span></a></div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="circle-block"><a href="#"><span><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                    <div class="circle">0</div>
+</span></a></div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="circle-block"><a href="#"><span><i class="fa fa-exchange fa-2x" aria-hidden="true"></i>
+                    <div class="circle">0</div>
+</span></a></div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="circle-block"><a href="#"><span class="circle-block-nowrap"><i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i> 0.00$</span><div class="circle">3</div></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<div style="height: 50px;"></div>
+
+<footer>
+    <div class="background-footer-widgets-box" class="container-fluid">
+        <div class="container">
+            <div class="row footer-widgets-box">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="footer-logo"><img src="img/logo-footer.png" alt="MEGANO Магазин"></div>
+                    <div class="footer-logo-text">Магазин «MEGANO» основан в 2017 году и является одним из лидирующих и
+                        наиболее динамично развивающихся брендов в сегменте торговли бытовой техникой, электроникой и
+                        аксессуарами к ним.
+                    </div>
+                    <div>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 hidden-md hidden-sm hidden-xs">
+                    <div class="footer-text-block">
+                        <div class="footer-title">Полезные ссылки</div>
+                        <div>
+                            <ul class="footer-links">
+                                <li><a href="#">Аксессуары</a></li>
+                                <li><a href="#">Электроника</a></li>
+                                <li><a href="#">Сумки</a></li>
+                                <li><a href="#">Камеры</a></li>
+                                <li><a href="#">Одежда</a></li>
+                                <li><a href="#">Мода</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 hidden-md hidden-sm hidden-xs">
+                    <div class="footer-text-block">
+                        <div class="footer-title">Ваш профиль</div>
+                        <div>
+                            <ul class="footer-links">
+                                <li><a href="#">Проверка заказа</a></li>
+                                <li><a href="#">Ваша корзина</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Информация о заказе</a></li>
+                                <li><a href="#">Сроки</a></li>
+                                <li><a href="#">Условия</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 hidden-sm hidden-xs">
+                    <div class="footer-text-block">
+                        <div class="footer-title">Контакты</div>
+                        <div>
+                            <ul class="footer-address">
+                                <li>Телефон: +375 29 1111111</li>
+                                <li>Email: pochta@mail.ru</li>
+                                <li>Skype: klejnov</li>
+                                <li>Адрес: Беларусь, г. Бобруйск ул. Волочкова, 54</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 hidden-xs">
+                    <div class="footer-text-block">
+                        <div class="footer-title">Свежие новости</div>
+                        <div class="wrapper">
+                            <div class="date-box">
+                                <div class="date-box-1">30</div>
+                                <div class="date-box-2">янв</div>
+                            </div>
+                            <div>
+                                <div class="footer-text-1"><a href="#">Предложение от которого вы не сможете отказаться.
+                                    Скидки!</a></div>
+                                <div class="footer-text">Электроника</div>
+                            </div>
+                        </div>
+                        <div class="date-box">
+                            <div class="date-box-1">1</div>
+                            <div class="date-box-2">янв</div>
+                        </div>
+                        <div>
+                            <div class="footer-text-1"><a href="#">Новогодняя распродажа. Минералка за полцены.</a>
+                            </div>
+                            <div class="footer-text">Еда и напитки</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 50px;"></div>
+
+    <div class="background-footer-copyright-box" class="container-fluid">
+        <div class="container">
+            <div class="row footer-copyright-box">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <span>&copy; <span>MEGANO Магазин.</span> Все права защищены</span>
+                </div>
+                <div class="col-lg-3 hidden-md hidden-sm hidden-xs"></div>
+                <div class="col-lg-2 col-md-4 hidden-sm hidden-xs">
+                    <div class="payment-s"><span>Способы оплаты</span></div>
+                </div>
+                <div class="payment-icons" class="col-lg-4 col-md-8 col-sm-6"><span class="payment-icons-img"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

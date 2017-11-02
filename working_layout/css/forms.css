@@ -1,0 +1,214 @@
+form {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+form > div {
+    position: relative;
+    background: white;
+    border-bottom: 1px solid #ccc;
+}
+
+form > div > label {
+    opacity: 0.3;
+    font-weight: bold;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+}
+
+form > div > input[type="text"], form > div > input[type="email"], form > div > input[type="password"], form > div > input[type="tel"] {
+    width: 100%;
+    border: 0;
+    padding: 20px 20px 20px 50px;
+    background: #eee;
+}
+
+form > div > input[type="text"]:focus, form > div > input[type="email"]:focus, form > div > input[type="password"]:focus, form > div > input[type="tel"]:focus {
+    outline: 0;
+    background: white;
+}
+
+form > div > input[type="text"]:focus + label, form > div > input[type="email"]:focus + label, form > div > input[type="password"]:focus + label, form > div > input[type="tel"]:focus + label {
+    opacity: 0;
+}
+
+form > div > input[type="text"]:valid, form > div > input[type="email"]:valid, form > div > input[type="password"]:valid, form > div > input[type="tel"]:valid {
+    background: url(../img/ico/blue-flat-check-mark-by-Vexels.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+}
+
+form > div > input[type="text"]:valid + label, form > div > input[type="email"]:valid + label, form > div > input[type="password"]:valid + label, form > div > input[type="tel"]:valid + label {
+    opacity: 0;
+}
+
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown), form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown), form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown), form > div > input[type="tel"]:invalid:not(:focus):not(:placeholder-shown) {
+    background: pink;
+}
+
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label, form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label, form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) + label, form > div > input[type="tel"]:invalid:not(:focus):not(:placeholder-shown) + label {
+    opacity: 0;
+}
+
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirmetns, form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirmetns, form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirmetns, form > div > input[type="tel"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirmetns {
+    max-height: 200px;
+    padding: 0 30px 20px 50px;
+}
+
+form > div .requirmetns {
+    padding: 0 30px 0 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+}
+
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    background: #04d6ac;
+    color: white;
+    border: 0;
+    padding: 15px;
+    font-size: 1.6em;
+}
+
+
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox + label {
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox:not(checked) + label {
+    position: relative; /* будем позиционировать псевдочекбокс относительно label */
+    padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+}
+
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox:checked + label:before {
+    background: #04d6ac;
+}
+
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+    left: 26px;
+}
+
+/* Показываем получение фокуса. */
+.checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(255, 255, 0, .5);
+}
+
+.radio {
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin: 0 3px 0 0;
+}
+
+.radio + label {
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.radio:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 35px;
+}
+
+.radio:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #CDD1DA;
+    border-radius: 50%;
+    background: #FFF;
+}
+
+.radio:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #04d6ac;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: all .2s;
+}
+
+.radio:checked + label:after {
+    opacity: 1;
+}
+
+.radio:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(255, 255, 0, .5);
+}
+
+[for="female"] {
+    margin-left: 20px;
+}
