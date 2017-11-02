@@ -262,6 +262,10 @@ li:hover .currency-dropdown {
     text-transform: uppercase;
 }
 
+.logo-menu>div>a>span {
+    text-align: center;
+}
+
 .label {
     position: relative;
     top: -48px;
