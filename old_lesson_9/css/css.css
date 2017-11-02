@@ -16,7 +16,7 @@ body {
 .title, .sub-title, .sub-text, .button, .button-link {
     display: block;
     font-family: Arial;
-    color: white;
+    color: #fff;
 }
 
 .title {
