@@ -8,13 +8,13 @@
     background-color: #F5F5F5;
 }
 
-.top-menu .col-lg-1, .row .col-lg-7 {
+.top-menu .col-lg-1, .top-menu .row .col-lg-7 {
     height: 42px;
     position: relative;
 
 }
 
-.top-menu .col-lg-1:before, .row .col-lg-7:before {
+.top-menu .col-lg-1:before, .top-menu .row .col-lg-7:before {
     position: absolute;
     top: 10px;
     right: 0;
@@ -262,7 +262,7 @@ li:hover .currency-dropdown {
     text-transform: uppercase;
 }
 
-.logo-menu>div>a>span {
+.logo-menu > div > a > span {
     text-align: center;
 }
 
@@ -334,4 +334,74 @@ li:hover .currency-dropdown {
 
 .price-circle-block {
     display: inline;
+}
+
+/*Блок подписки*/
+
+.background-subscribe-box {
+    background-color: rgb(0, 99, 209);
+    min-height: 117px;
+}
+
+.subscribe-box span {
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    vertical-align: middle;
+    display: block;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 45px 0 0 60px;
+}
+
+.fa-at {
+    margin-top: 25px;
+    color: white;
+    opacity: 1;
+    float: left;
+}
+
+.subscribe {
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.subscribe form {
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.subscribe input {
+    width: 70%;
+    min-width: 60px;
+    height: 42px;
+    padding-left: 30px;
+    border-radius: 21px 0 0 21px;
+    border: none;
+    outline: none;
+    background: white;
+    float: left;
+}
+
+.subscribe button {
+    width: 30%;
+    min-width: 75px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: white;
+    background: rgb(31, 33, 38);
+    border-radius: 0 21px 21px 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.subscribe button:hover {
+    opacity: .9;
+    box-shadow: 0 0 10px white;
+}
+
+.subscribe button:active {
+    border-radius: 0 20px 20px 0;
+    opacity: 1;
 }

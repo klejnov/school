@@ -36,7 +36,7 @@
             </div>
             <!-- Основное содержимое модального окна -->
             <div class="modal-body">
-                <form name="registration" action="#">
+                <form name="registration" action="#" method="post">
                     <div><input required type="text" id="first_name" name="first_name" placeholder=" "
                                 pattern="^[А-ЯЁ]{1}[а-яё]{1,}">
                         <label
@@ -86,7 +86,7 @@
             </div>
             <!-- Основное содержимое модального окна -->
             <div class="modal-body">
-                <form name="authorization" action="#">
+                <form name="authorization" action="#" method="post">
                     <div><input required type="email" id="email-auth" name="email" placeholder=" "> <label
                             for="email-auth">Email</label>
                         <div class="requirmetns">Неправильный адрес электронной почты, повторите попытку.</div>
@@ -104,7 +104,7 @@
 </div>
 
 <header>
-    <div class="background-top-menu" class="container-fluid">
+    <div class="background-top-menu container-fluid">
         <div class="container">
             <div class="row top-menu">
                 <div class="col-lg-1 col-md-1 col-sm-2"><a href="#"><span>Доставка</span></a></div>
@@ -151,7 +151,7 @@
 
     <div style="height: 50px;"></div>
 
-    <div class="background-logo-menu" class="container-fluid">
+    <div class="background-logo-menu container-fluid">
         <div class="container">
             <div class="row logo-menu">
                 <div class="col-lg-3 col-md-3 col-sm-3"><a href="#"><img src="img/logo-header.png" alt="MEGANO Магазин"></a>
@@ -192,8 +192,28 @@
 
 <div style="height: 50px;"></div>
 
+<div class="background-subscribe-box" class="container-fluid">
+    <div class="container">
+        <div class="row subscribe-box">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="position: relative">
+                <i class="fa fa-at fa-4x" aria-hidden="true"></i><span>Подпишитесь на рассылку и будьте с нами.</span>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <div class="subscribe">
+                    <form action="#" method="post" name="subscribe">
+                        <input name="subscribe" placeholder="Введите ваш email адрес" type="email" required>
+                        <button type="submit">Подписка</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height: 50px;"></div>
+
 <footer>
-    <div class="background-footer-widgets-box" class="container-fluid">
+    <div class="background-footer-widgets-box container-fluid">
         <div class="container">
             <div class="row footer-widgets-box">
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -287,7 +307,7 @@
 
     <div style="height: 50px;"></div>
 
-    <div class="background-footer-copyright-box" class="container-fluid">
+    <div class="background-footer-copyright-box container-fluid">
         <div class="container">
             <div class="row footer-copyright-box">
                 <div class="col-lg-3 col-md-4 col-sm-6">
