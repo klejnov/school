@@ -8,7 +8,7 @@
     <meta name="author" content="Клейнов Олег">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic-ext"
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:100,100i,300,300i,400,400i,700,700i&amp;subset=cyrillic-ext"
           rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -188,7 +188,65 @@
         </div>
     </div>
 
+    <div style="height: 50px;"></div>
 
+    <div class="background-search-box container-fluid">
+        <div class="container">
+            <div class="row search-box">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <nav>
+                        <div class="dropdown">
+                            <input type="checkbox" id="checkbox-menu">
+                            <label for="checkbox-menu"><i class="fa fa-list" aria-hidden="true"></i> Все разделы <i
+                                    class="fa fa-angle-down" aria-hidden="true"></i></label>
+                            <ul class="main-menu">
+                                <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>Мониторы</a></li>
+                                <li><a href="#"><i class="fa fa-camera" aria-hidden="true"></i>Камеры</a></li>
+                                <li><a href="#"><i class="fa fa-plug" aria-hidden="true"></i>Электроника</a></li>
+                                <li><a href="#"><i class="fa fa-television" aria-hidden="true"></i>Телевизоры</a></li>
+                                <li><a href="#"><i class="fa fa-bus" aria-hidden="true"></i>Для авто</a></li>
+                                <li><a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Телефоны</a></li>
+                                <li><a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Наушники</a></li>
+                                <li><a href="#"><i class="fa fa-laptop" aria-hidden="true"></i>Ноутбуки</a></li>
+                                <li><a href="#"><i class="fa fa-server" aria-hidden="true"></i>Разное <i
+                                        class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Навигаторы</a></li>
+                                        <li><a href="#"><i class="fa fa-map-o" aria-hidden="true"></i>Трекеры</a></li>
+                                        <li><a href="#" class="no-border"><i class="fa fa-microphone" aria-hidden="true"></i>Микрофоны</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="no-border"><i class="fa fa-print" aria-hidden="true"></i>Принтеры</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-8 hidden-xs">
+                    <div class="search">
+                        <form action="#" method="post" id="search" name="search">
+                            <input name="search" placeholder="Что вы ищете..." type="search" required>
+                            <div class="select-search">
+                                <select name="select-list" form="search">
+                                    <option value="all">Все категории</option>
+                                    <option value="1">Аксессуары</option>
+                                    <option value="2">Электроника</option>
+                                    <option value="3">Сумки</option>
+                                    <option value="4">Камеры</option>
+                                    <option value="5">Одежда</option>
+                                    <option value="6">Мода</option>
+                                </select>
+                            </div>
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i> Поиск</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div style="height: 450px; background-color: rgb(243, 244, 249);"></div>
 
 <div class="background-subscribe-box container-fluid">
     <div class="container">
