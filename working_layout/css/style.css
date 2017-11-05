@@ -626,3 +626,6 @@ li:hover .currency-dropdown {
     border: none;
 }
 
+.block-nowrap {
+    white-space: nowrap;
+}
