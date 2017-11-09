@@ -1,0 +1,130 @@
+body {
+    background: white;
+    margin: 0;
+}
+
+/*Задание 1*/
+
+.wrapper {
+    background-color: #f1f1f1;
+    width: 420px;
+    height: 540px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.product {
+    position: relative;
+    text-align: center;
+    margin: 15px 15px 0 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.name {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+
+.price {
+    margin-top: 5px;
+    padding: 0 0 64px 10px;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.buy {
+    background-color: red;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    display: block;
+    opacity: .3;
+    position: absolute;
+    width: 390px;
+    transition: all 3s;
+    bottom: 0px;
+    transform: translateY(54px);
+    transition-duration: 1s;
+}
+
+.buy a {
+    display: block;
+    padding: 15px;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+}
+
+.block:hover .product {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.block:hover .buy {
+    background-color: #006401;
+    display: block;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.sale {
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    width: 90px;
+    color: white;
+    border-radius: 0 0 20px 0;
+    top: -40px;
+    display: block;
+    opacity: .1;
+    background-color: #d70009;
+    transition: all 2s;
+    transition-delay: .5s;
+}
+
+.block:hover .sale {
+    top: 0px;
+    opacity: 1;
+    display: block;
+}
+
+.block:hover .product {
+    border-radius: 0 0 10px 10px;
+}
+
+.pic {
+    transform: scale(0.75);
+    transition: all 1s;
+}
+
+.block:hover .pic {
+    transform: scale(1);
+}
+
+.price span:last-child {
+    visibility: hidden;
+    opacity: .5;
+    transition: all .5s;
+}
+
+.block:hover span:first-child {
+    text-decoration: line-through;
+}
+
+.block:hover span:last-child {
+    font-weight: 600;
+    font-size: 1.4em;
+    visibility: visible;
+    color: red;
+    opacity: 1;
+}
+
