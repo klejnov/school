@@ -793,13 +793,16 @@ li:hover .currency-dropdown {
     font-size: 20px;
 }
 
-.product-box-head .fa-square {
+.product-box-head .fa-square,
+.text-big-slider-box .fa-square {
     font-size: 6px;
     padding: 3px;
 }
 
 .product-box-head .fa-angle-left,
-.product-box-head .fa-angle-right {
+.product-box-head .fa-angle-right,
+.text-big-slider-box .fa-angle-left,
+.text-big-slider-box .fa-angle-right {
     font-size: 22px;
     margin: 0 7px;
 }
@@ -822,7 +825,8 @@ li:hover .currency-dropdown {
     border: none;
 }
 
-.product-box-head .navigation {
+.product-box-head .navigation,
+.text-big-slider-box .navigation {
     vertical-align: super
 }
 
@@ -899,7 +903,7 @@ li:hover .currency-dropdown {
     padding: 0 3px;
 }
 
-.banner-box .button, .right-banner-box .button {
+.banner-box .button, .right-banner-box .button, .text-big-slider-box .button {
     width: 117px;
     height: 30px;
     border: none;
@@ -911,17 +915,17 @@ li:hover .currency-dropdown {
     margin-top: 30px;
 }
 
-.banner-box .button:hover, .right-banner-box .button:hover {
+.banner-box .button:hover, .right-banner-box .button:hover, .text-big-slider-box .button:hover {
     opacity: .9;
     box-shadow: 0 0 10px white;
 }
 
-.banner-box .button:active, .right-banner-box .button:active {
+.banner-box .button:active, .right-banner-box .button:active, .text-big-slider-box .button:active {
     border-radius: 15px 15px;
     opacity: 1;
 }
 
-.banner-box .button a, .right-banner-box .button a {
+.banner-box .button a, .right-banner-box .button a, .text-big-slider-box .button a {
     line-height: 30px;
     text-decoration: none;
     display: block;
@@ -991,12 +995,13 @@ li:hover .currency-dropdown {
     text-align: center;
 }
 
-.right-banner-box .button {
+.right-banner-box .button, .text-big-slider-box .button {
     background-color: rgb(0, 102, 190);
     margin-top: 5px;
+    text-align: center;
 }
 
-.right-banner-box .button a {
+.right-banner-box .button a, .text-big-slider-box .button a {
     color: rgb(255, 255, 255);
 }
 
@@ -1197,12 +1202,134 @@ li:hover .currency-dropdown {
 
 .background-big-slider-box {
     background-color: rgb(241, 242, 242);
-    height: 677px;
+    min-height: 445px;
 }
 
-.img-big-slider-box .pic {
+.big-slider-box {
     background: url("../img/iphone.png") no-repeat;
     height: 677px;
-    background-size: 600px;
-    background-position: left 40px;
+    background-size: 790px;
+    background-position: 205px -67px;
+    position: absolute;
+    width: 100%;
+    transition: all 1.5s;
 }
+
+.text-big-slider-box {
+    margin-top: 100px;
+}
+
+.text-big-slider-box .name {
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 435px;
+    text-shadow: 4px -2px 4px #ffffff;
+    transition: all 1.5s;
+}
+
+.background-big-slider-box:hover .text-big-slider-box .name {
+    transform: scale(1.1);
+}
+
+.background-big-slider-box:hover .big-slider-box {
+    background-size: 800px;
+}
+.text-big-slider-box .name span {
+    color: #0066be;
+}
+
+.text-big-slider-box .sub-name {
+    max-width: 390px;
+}
+
+.text-big-slider-box .video-circle {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(73, 77, 88);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: .7;
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 30px;
+    padding-left: 3px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.text-big-slider-box .button {
+    margin-top: 20px;
+    float: left;
+    text-transform: uppercase;
+}
+
+.text-big-slider-box .video a {
+    color: rgb(73, 77, 88);
+    padding-left: 10px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.text-big-slider-box .sub-name {
+    color: rgba(73, 77, 88, 0.8);
+}
+
+.text-big-slider-box .navigaton-top {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .big-slider-box {
+        background-size: 715px;
+    }
+    .background-big-slider-box:hover .big-slider-box {
+        background-size: 725px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+
+    .big-slider-box {
+        background-size: 645px;
+    }
+    .background-big-slider-box:hover .big-slider-box {
+        background-size: 655px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    .big-slider-box {
+        background: none;
+    }
+    .text-big-slider-box .name {
+        font-size: 35px;
+    }
+}
+
+
+
+
