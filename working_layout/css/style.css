@@ -344,6 +344,18 @@ li:hover .currency-dropdown {
     left: 35px;
 }
 
+.circle-block:hover .fa-heart-o {
+    color: rgb(242, 109, 125);
+}
+
+.circle-block:hover .fa-exchange {
+    color: rgb(0, 99, 209);
+}
+
+.circle-block:hover .fa-shopping-basket {
+    color: gold;
+}
+
 /*Блок подписки*/
 
 .background-subscribe-box {
