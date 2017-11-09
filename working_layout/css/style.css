@@ -306,15 +306,19 @@ li:hover .currency-dropdown {
     border-top: 5px solid rgb(242, 109, 125);
 }
 
+.label-blue {
+    background-color: rgb(0, 99, 209);
+
+}
+
 .circle {
     border-style: solid;
     border-width: 3px;
     border-color: rgb(255, 255, 255);
     border-radius: 50%;
-    background-color: rgb(0, 99, 209);
     position: absolute;
     top: 3px;
-    left: 37px;
+    left: 15px;
     width: 23px;
     height: 23px;
     color: white;
@@ -334,6 +338,10 @@ li:hover .currency-dropdown {
 
 .price-circle-block {
     display: inline;
+}
+
+.logo-menu .circle {
+    left: 35px;
 }
 
 /*Блок подписки*/
@@ -489,6 +497,16 @@ li:hover .currency-dropdown {
 
 }
 
+.select-search:before {
+    position: absolute;
+    top: -3px;
+    left: -15px;
+    height: 115%;
+    border-right: 1px solid rgb(215, 215, 215);
+    content: "";
+
+}
+
 .search-box select {
     padding-right: 25px;
     padding-left: 10px;
@@ -628,4 +646,563 @@ li:hover .currency-dropdown {
 
 .block-nowrap {
     white-space: nowrap;
+}
+
+/*Секция со слайдерами нижними*/
+
+.background-section-box-slider {
+    background-color: rgb(243, 244, 249);
+    min-height: 299px;
+    color: rgb(135, 135, 135);
+}
+
+.section-box {
+    background-color: white;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+    margin-top: 75px;
+    line-height: 155px;
+    display: block;
+    text-align: center;
+}
+
+.section-box a {
+    display: block;
+    font-size: 22px;
+}
+
+.section-box div:last-child a {
+    text-align: right;
+}
+
+.section-box div:first-child a {
+    text-align: left;
+}
+
+/*Секция со слайдерами нижними*/
+
+.background-product-box {
+    background-color: white;
+    color: rgb(135, 135, 135);
+}
+
+.product-box, .banner-box {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(224, 224, 224);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+    height: 300px;
+    min-width: 185px;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+.product-box:hover, .banner-box:hover, .banner-box-content:hover, .vertical-block .feature-box:hover {
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-box .pic {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.product-box .pic, .banner-box-content .pic {
+    transform: scale(0.9);
+    transition: all 1s;
+}
+
+.product-box:hover .pic, .banner-box-content:hover .pic {
+    transform: scale(1);
+}
+
+.product-box .pic img {
+    width: 150px;
+    height: 140px;
+}
+
+.product-box .name {
+    margin-top: 10px;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+.product-box .name a {
+    color: rgba(119, 119, 119, 255)
+}
+
+.product-box .name a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.product-box .price {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-box .price span:first-child {
+    color: rgb(153, 153, 153);
+    text-decoration: line-through;
+}
+
+.product-box .price span:last-child {
+    color: rgb(0, 102, 190);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.product-box .category {
+    font-size: small;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.product-box .circle {
+    top: -25px;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.product-box .circle span {
+    line-height: 51px;
+}
+
+/*Секция со слайдерами нижними. Шапка*/
+
+.product-box-head {
+    line-height: 60px;
+    margin-top: 40px;
+}
+
+.product-box-head a {
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+}
+
+.product-box-head a:hover {
+    text-decoration: none;
+    color: rgb(0, 102, 190);
+}
+
+.product-box-head div:first-child {
+    font-size: 20px;
+}
+
+.product-box-head .fa-square {
+    font-size: 6px;
+    padding: 3px;
+}
+
+.product-box-head .fa-angle-left,
+.product-box-head .fa-angle-right {
+    font-size: 22px;
+    margin: 0 7px;
+}
+
+.product-box-head div:last-child {
+    padding: 0;
+}
+
+.product-box-head .col-lg-1:before {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    height: 30%;
+    border-right: 1px solid rgb(215, 215, 215);
+    content: "";
+}
+
+.product-box-head .col-lg-1:nth-child(5):before,
+.product-box-head .col-lg-1:nth-child(6):before {
+    border: none;
+}
+
+.product-box-head .navigation {
+    vertical-align: super
+}
+
+.product-box-head .navigaton-top {
+    position: absolute;
+    top: -8px;
+    text-align: right;
+}
+
+.line-grad {
+    height: 8px;
+    margin-top: 25px;
+
+    background: url(../img/line-grad.png) repeat-x;
+}
+
+.product-box-head div:nth-child(2) {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*Секция с синим слайдером*/
+
+.background-section-box {
+    background-color: rgb(243, 244, 249);
+    min-height: 580px;
+}
+
+.section-box-row > div:nth-child(1) {
+    padding: 0px;
+}
+
+.section-box-row > div:nth-child(1) > div:nth-child(1) {
+    padding: 0px;
+}
+
+.section-box-row > div:nth-child(2) {
+    padding-right: 0px;
+}
+
+.section-box-row > div:nth-child(3) {
+    padding: 0px;
+}
+
+.banner-box {
+
+    background: url("../img/bgr-block.png") repeat-x;
+    background-color: rgb(0, 99, 209);
+}
+
+.banner-box, .section-box-row .product-box {
+    height: 355px;
+}
+
+.banner-box .name {
+    margin-top: 60px;
+}
+
+.banner-box .name a {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.banner-box .sub-name a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+
+}
+
+.banner-box .sub-name {
+    margin-top: 20px;
+    padding: 0 3px;
+}
+
+.banner-box .button, .right-banner-box .button {
+    width: 117px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.banner-box .button:hover, .right-banner-box .button:hover {
+    opacity: .9;
+    box-shadow: 0 0 10px white;
+}
+
+.banner-box .button:active, .right-banner-box .button:active {
+    border-radius: 15px 15px;
+    opacity: 1;
+}
+
+.banner-box .button a, .right-banner-box .button a {
+    line-height: 30px;
+    text-decoration: none;
+    display: block;
+    color: rgb(119, 119, 119);
+}
+
+.product-box .fa-star {
+    color: rgb(255, 192, 0);
+    opacity: .7;
+}
+
+.product-box .fa-star:hover {
+    opacity: 1;
+}
+
+.section-box-row .product-box .name {
+    margin-top: -30px;
+}
+
+.section-box-head {
+    margin-top: 30px;
+}
+
+.section-box-head .navigation {
+    vertical-align: super
+}
+
+.section-box-head .navigaton-top {
+    text-align: right;
+}
+
+.section-box-head .fa-square {
+    font-size: 6px;
+    padding: 3px;
+}
+
+.section-box-head .fa-angle-left, .section-box-head .fa-angle-right {
+    font-size: 22px;
+    margin: 0 7px;
+}
+
+/*Секция с двумя длинными баннерами*/
+
+.background-content-row {
+    min-height: 900px;
+}
+
+.banner-box-content {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(243, 244, 249);
+    margin-top: 15px;
+}
+
+.left-banner-box {
+    display: inline-block;
+    width: 30%;
+    height: 150px;
+    float: left;
+}
+
+.right-banner-box {
+
+    display: inline-block;
+    width: 70%;
+    height: 150px;
+    text-align: center;
+}
+
+.right-banner-box .button {
+    background-color: rgb(0, 102, 190);
+    margin-top: 5px;
+}
+
+.right-banner-box .button a {
+    color: rgb(255, 255, 255);
+}
+
+.right-banner-box .name {
+    font-size: 20px;
+    color: rgb(66, 70, 80);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.right-banner-box .sub-name, .right-feature-box .sub-name {
+    font-size: 14px;
+    color: gray;
+    margin: 5px auto;
+}
+
+.left-banner-box img {
+    width: 135px;
+    margin-top: 25px;
+}
+
+.left-banner-box .pic {
+    text-align: center;
+}
+
+/*Секция с лимитируемым вертикальным баннером*/
+
+.vertical-block {
+    margin-top: 20px;
+}
+
+.vertical-block .product-box {
+    min-height: 600px;
+    /*min-width: 260px;*/
+}
+
+.vertical-block .number-box {
+    background-color: rgb(235, 235, 235);
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 0 2px;
+    font-size: 22px;
+    color: rgb(66, 70, 80);
+}
+
+.vertical-block .number-box-sign {
+    font-weight: bold;
+    color: rgb(116, 120, 128);
+    font-size: 12px;
+}
+
+.vertical-block .timer {
+    display: inline-block;
+}
+
+.vertical-block .product-box .pic img {
+    width: 129px;
+    height: 285px;
+}
+
+.vertical-block .line {
+    display: inline-block;
+    border-bottom: solid 1px lightgray;
+    width: 80%;
+    text-align: center;
+}
+
+.vertical-block .navigaton-title {
+    display: inline-block;
+    height: 15px;
+    float: left;
+    font-size: 20px;
+    color: rgb(116, 120, 128);
+    padding-left: 25px;
+    text-align: left;
+    width: 70%;
+    margin-top: 5px;
+}
+
+.vertical-block .navigaton-top {
+    display: inline-block;
+    height: 15px;
+    font-size: 20px;
+    width: 30%;
+    padding-right: 20px;
+    margin-top: 5px;
+    letter-spacing: 5px;
+}
+
+.vertical-block .product-box .circle {
+    top: 60px;
+    left: 10px;
+}
+
+.vertical-block .feature-box {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(224, 224, 224);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
+
+.feature-box .left-feature-box {
+    display: inline-block;
+    width: 25%;
+    height: 95px;
+    float: left;
+}
+
+.feature-box .right-feature-box {
+
+    display: inline-block;
+    width: 75%;
+    height: 95px;
+    text-align: center;
+}
+
+.feature-box .right-feature-box .name {
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    color: rgb(0, 99, 209);
+    padding-top: 20px;
+}
+
+.feature-box .left-feature-box .pic {
+    margin-top: 22px;
+    margin-left: 10px;
+    text-align: center;
+
+}
+
+/*Основные товары вверху страницы*/
+
+.background-content-row .product-box-head {
+    margin-top: 0px;
+}
+
+.product-box-row .product-box .name {
+    font-size: 16px;
+}
+
+.product-box-row .product-box .pic {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.product-box-row .product-box .category {
+    margin-top: 2px;
+}
+
+.content-row .product-box-row .product-box {
+    height: 260px;
+    min-width: 170px;
+}
+
+.icon-box {
+    background-color: rgb(235, 235, 235);
+    width: 30px;
+    height: 30px;
+}
+
+.icon-box-block {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.buy-box {
+    position: absolute;
+    display: block;
+    left: 15%;
+    right: 15%;
+    bottom: 0px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.content-row .product-box-row .product-box:hover .price, .content-row .product-box-row .product-box:hover .category {
+    visibility: hidden;
+}
+
+.content-row .product-box-row .product-box:hover .buy-box {
+    bottom: 25px;
+    opacity: 1;
+    display: block;
+}
+
+.icon-box a {
+    display: block;
+    line-height: 30px;
+}
+
+/*Блок с большим верхним слайдером на главной*/
+
+.background-big-slider-box {
+    background-color: rgb(241, 242, 242);
+    height: 677px;
+}
+
+.img-big-slider-box .pic {
+    background: url("../img/iphone.png") no-repeat;
+    height: 677px;
+    background-size: 600px;
+    background-position: left 40px;
 }

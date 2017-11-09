@@ -71,13 +71,24 @@ form input[type="submit"] {
     display: block;
     width: 100%;
     margin: 20px 0;
-    background: #1565be;
     color: white;
+    background: rgb(31, 33, 38);
     border: 0;
     padding: 15px;
+    border-radius: 30px 30px;
     font-size: 1.6em;
+    outline: none;
 }
 
+form input[type="submit"]:hover {
+    opacity: .95;
+    box-shadow: 0 0 5px black;
+}
+
+form input[type="submit"]:active {
+    border-radius: 29px 29px;
+    opacity: 1;
+}
 
 /* Cначала обозначаем стили для IE8 и более старых версий
 т.е. здесь мы немного облагораживаем стандартный чекбокс. */
