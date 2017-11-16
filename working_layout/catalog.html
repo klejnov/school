@@ -252,364 +252,405 @@
     </div>
 </header>
 
-<section>
-
     <div class="container">
         <div class="row product-row">
             <div class="hidden-lg hidden-md hidden-sm col-xs-12">
-                <div class="wrapper-line-reviews">
-                    <div class="reviews">Выбирите категорию</div>
-                    <div class="line-grad"></div>
-                </div>
-                <div class="button-tags filters">
-                    <div class="button-white select-filter"><a href="#">Видеокарты</a></div>
-                    <div class="button-white"><a href="#">Телефоны</a></div>
-                    <div class="button-white"><a href="#">Мониторы</a></div>
-                    <div class="button-white"><a href="#">Камеры</a></div>
-                    <div class="button-white"><a href="#">Аксессуары</a></div>
-                    <div class="button-white"><a href="#">Для авто</a></div>
-                    <div class="button-white"><a href="#">Телевизоры</a></div>
-                    <div class="button-white"><a href="#">Наушники</a></div>
-                    <div class="button-white"><a href="#">Ноутбуки</a></div>
-                    <div class="button-white"><a href="#">Принтеры</a></div>
-                </div>
+                <section>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews"><h2>Выбирите категорию</h2></div>
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="button-tags filters">
+                        <div class="button-white select-filter"><a href="#">Видеокарты</a></div>
+                        <div class="button-white"><a href="#">Телефоны</a></div>
+                        <div class="button-white"><a href="#">Мониторы</a></div>
+                        <div class="button-white"><a href="#">Камеры</a></div>
+                        <div class="button-white"><a href="#">Аксессуары</a></div>
+                        <div class="button-white"><a href="#">Для авто</a></div>
+                        <div class="button-white"><a href="#">Телевизоры</a></div>
+                        <div class="button-white"><a href="#">Наушники</a></div>
+                        <div class="button-white"><a href="#">Ноутбуки</a></div>
+                        <div class="button-white"><a href="#">Принтеры</a></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews"><h2>Максимальная цена, $</h2></div>
+                        <div class="line-grad"></div>
+                    </div>
 
-                <div class="wrapper-line-reviews">
-                    <div class="reviews">Максимальная цена, $</div>
-                    <div class="line-grad"></div>
-                </div>
+                    <div class="range">
+                        <form name="nomer_scrollbar">
+                            <input type="range" name="pricename" id="priceInputId2" min="0" max="1000" value="10"
+                                   step="10"/>
+                            <span><output name="priceOutputName" id="priceOutputId2"></output></span>
+                        </form>
+                        <script type="text/javascript">
+                            function update() {
+                                var inp = document.getElementById("priceInputId2");
+                                var out = document.getElementById("priceOutputId2");
+                                out.textContent = inp.value;
+                                out.style.left = (inp.value - inp.min) / (inp.max - inp.min) * 100 + "%";
+                            }
 
-                <div class="range">
-                    <form name="nomer_scrollbar">
-                        <input type="range" name="pricename" id="priceInputId2" min="0" max="1000" value="10"
-                               step="10"/>
-                        <span><output name="priceOutputName" id="priceOutputId2"></output></span>
-                    </form>
-                    <script type="text/javascript">
-                        function update() {
-                            var inp = document.getElementById("priceInputId2");
-                            var out = document.getElementById("priceOutputId2");
-                            out.textContent = inp.value;
-                            out.style.left = (inp.value - inp.min) / (inp.max - inp.min) * 100 + "%";
-                        }
-
-                        document.getElementById("priceInputId2").addEventListener('input', update);
-                        update();
-                    </script>
-                </div>
-
+                            document.getElementById("priceInputId2").addEventListener('input', update);
+                            update();
+                        </script>
+                    </div>
+                </section>
+                <section>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews"><h2>Отображать сначала</h2></div>
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="button-tags filters">
+                        <div class="button-white select-filter"><a href="#">Популярные</a></div>
+                        <div class="button-white"><a href="#">Новые</a></div>
+                        <div class="button-white"><a href="#">Дешевые</a></div>
+                        <div class="button-white"><a href="#">Дорогие</a></div>
+                        <div class="button-white"><a href="#">Рейтинговые</a></div>
+                    </div>
+                </section>
             </div>
         </div>
 
         <div class="row product-row">
             <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">
-                <div>
-                    <section>
-                        <div class="wrapper-line-reviews">
-                            <div class="reviews">Выбирите категорию</div>
-                            <div class="line-grad"></div>
-                        </div>
-                        <div class="button-tags filters">
-                            <div class="button-white select-filter"><a href="#">Видеокарты</a></div>
-                            <div class="button-white"><a href="#">Телефоны</a></div>
-                            <div class="button-white"><a href="#">Мониторы</a></div>
-                            <div class="button-white"><a href="#">Камеры</a></div>
-                            <div class="button-white"><a href="#">Аксессуары</a></div>
-                            <div class="button-white"><a href="#">Для авто</a></div>
-                            <div class="button-white"><a href="#">Телевизоры</a></div>
-                            <div class="button-white"><a href="#">Наушники</a></div>
-                            <div class="button-white"><a href="#">Ноутбуки</a></div>
-                            <div class="button-white"><a href="#">Принтеры</a></div>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="wrapper-line-reviews">
-                            <div class="reviews">Максимальная цена, $</div>
-                            <div class="line-grad"></div>
-                        </div>
+                <section>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews"><h2>Выбирите категорию</h2></div>
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="button-tags filters">
+                        <div class="button-white select-filter"><a href="#">Видеокарты</a></div>
+                        <div class="button-white"><a href="#">Телефоны</a></div>
+                        <div class="button-white"><a href="#">Мониторы</a></div>
+                        <div class="button-white"><a href="#">Камеры</a></div>
+                        <div class="button-white"><a href="#">Аксессуары</a></div>
+                        <div class="button-white"><a href="#">Для авто</a></div>
+                        <div class="button-white"><a href="#">Телевизоры</a></div>
+                        <div class="button-white"><a href="#">Наушники</a></div>
+                        <div class="button-white"><a href="#">Ноутбуки</a></div>
+                        <div class="button-white"><a href="#">Принтеры</a></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews"><h2>Максимальная цена, $</h2></div>
+                        <div class="line-grad"></div>
+                    </div>
 
-                        <div class="range">
-                            <form name="nomer_scrollbar">
-                                <input type="range" name="pricename" id="priceInputId" min="0" max="1000" value="10"
-                                       step="10"/>
-                                <span><output name="priceOutputName" id="priceOutputId"></output></span>
-                            </form>
-                            <script type="text/javascript">
-                                function update() {
-                                    var inp = document.getElementById("priceInputId");
-                                    var out = document.getElementById("priceOutputId");
-                                    out.textContent = inp.value;
-                                    out.style.left = (inp.value - inp.min) / (inp.max - inp.min) * 100 + "%";
-                                }
+                    <div class="range">
+                        <form name="nomer_scrollbar">
+                            <input type="range" name="pricename" id="priceInputId" min="0" max="1000" value="10"
+                                   step="10"/>
+                            <span><output name="priceOutputName" id="priceOutputId"></output></span>
+                        </form>
+                        <script type="text/javascript">
+                            function update() {
+                                var inp = document.getElementById("priceInputId");
+                                var out = document.getElementById("priceOutputId");
+                                out.textContent = inp.value;
+                                out.style.left = (inp.value - inp.min) / (inp.max - inp.min) * 100 + "%";
+                            }
 
-                                document.getElementById("priceInputId").addEventListener('input', update);
-                                update();
-                            </script>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="wrapper-line-reviews">
-                            <div class="reviews">Лучшие продукты</div>
-                            <div class="line-grad"></div>
-                        </div>
+                            document.getElementById("priceInputId").addEventListener('input', update);
+                            update();
+                        </script>
+                    </div>
+                </section>
+                <section>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews"><h2>Отображать сначала</h2></div>
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="button-tags filters">
+                        <div class="button-white select-filter"><a href="#">Популярные</a></div>
+                        <div class="button-white"><a href="#">Новые</a></div>
+                        <div class="button-white"><a href="#">Дешевые</a></div>
+                        <div class="button-white"><a href="#">Дорогие</a></div>
+                        <div class="button-white"><a href="#">Рейтинговые</a></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews"><h2>Лучшие продукты</h2></div>
+                        <div class="line-grad"></div>
+                    </div>
 
-                        <div class="best-product">
-                            <div class="pic"><img src="img/best-product-1.jpg" alt="Фото товара"></div>
-                            <div class="best-product-right">
-                                <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
-                                <div class="star">
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="price"><span>$115.00</span> <span>$25.00</span></div>
+                    <div class="best-product">
+                        <div class="pic"><img src="img/best-product-1.jpg" alt="Фото товара"></div>
+                        <div class="best-product-right">
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
                             </div>
+                            <div class="price"><span>$115.00</span> <span>$25.00</span></div>
                         </div>
-                        <div class="best-product">
-                            <div class="pic"><img src="img/best-product-2.jpg" alt="Фото товара"></div>
-                            <div class="best-product-right">
-                                <div class="name"><a href="#">Mavic PRO Mini Drone Hobby RC</a></div>
-                                <div class="star">
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="price"><span>$115.00</span> <span>$10.00</span></div>
+                    </div>
+                    <div class="best-product">
+                        <div class="pic"><img src="img/best-product-2.jpg" alt="Фото товара"></div>
+                        <div class="best-product-right">
+                            <div class="name"><a href="#">Mavic PRO Mini Drone Hobby RC</a></div>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
                             </div>
+                            <div class="price"><span>$115.00</span> <span>$10.00</span></div>
                         </div>
-                        <div class="best-product">
-                            <div class="pic"><img src="img/best-product-3.jpg" alt="Фото товара"></div>
-                            <div class="best-product-right">
-                                <div class="name"><a href="#">Barand New Phone Smart Business</a></div>
-                                <div class="star">
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="price"><span>$115.00</span> <span>$10.00</span></div>
+                    </div>
+                    <div class="best-product">
+                        <div class="pic"><img src="img/best-product-3.jpg" alt="Фото товара"></div>
+                        <div class="best-product-right">
+                            <div class="name"><a href="#">Barand New Phone Smart Business</a></div>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
                             </div>
+                            <div class="price"><span>$115.00</span> <span>$10.00</span></div>
                         </div>
-                        <div class="best-product">
-                            <div class="pic"><img src="img/best-product-4.jpg" alt="Фото товара"></div>
-                            <div class="best-product-right">
-                                <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
-                                <div class="star">
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="price"><span>$115.00</span> <span>$25.00</span></div>
+                    </div>
+                    <div class="best-product">
+                        <div class="pic"><img src="img/best-product-4.jpg" alt="Фото товара"></div>
+                        <div class="best-product-right">
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
                             </div>
+                            <div class="price"><span>$115.00</span> <span>$25.00</span></div>
                         </div>
-                    </section>
-                    <section>
-                        <div class="vertical-block">
-                            <div class="product-box">
-                                <div class="navigaton-title">Ограничено</div>
-                                <div class="navigaton-top">
-                                    <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="line"></div>
+                    </div>
+                </section>
 
-                                <div class="pic"><img src="img/number-box-2.jpg" alt="Фото товара"></div>
-                                <div class="name"><a href="#">Samsung GSM Galaxy Note 8</a></div>
-                                <div class="price"><span>$950.00</span></div>
-                                <div class="category">Design / xbox</div>
-                                <div class="circle label-red"><span>-30%</span></div>
-                                <div class="number-timer">
-                                    <div class="timer">
-                                        <div class="number-box">10</div>
-                                        <div class="number-box-sign">дни</div>
-                                    </div>
-                                    <div class="timer">
-                                        <div class="number-box">12</div>
-                                        <div class="number-box-sign">час</div>
-                                    </div>
-                                    <div class="timer">
-                                        <div class="number-box">44</div>
-                                        <div class="number-box-sign">мин</div>
-                                    </div>
-                                    <div class="timer hidden-md hidden-sm">
-                                        <div class="number-box">34</div>
-                                        <div class="number-box-sign">сек</div>
-                                    </div>
+                    <div class="vertical-block">
+                        <div class="product-box">
+                            <div class="navigaton-title">Ограничено</div>
+                            <div class="navigaton-top">
+                                <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="line"></div>
+
+                            <div class="pic"><img src="img/number-box-2.jpg" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Samsung GSM Galaxy Note 8</a></div>
+                            <div class="price"><span>$950.00</span></div>
+                            <div class="category">Design / xbox</div>
+                            <div class="circle label-red"><span>-30%</span></div>
+                            <div class="number-timer">
+                                <div class="timer">
+                                    <div class="number-box">10</div>
+                                    <div class="number-box-sign">дни</div>
+                                </div>
+                                <div class="timer">
+                                    <div class="number-box">12</div>
+                                    <div class="number-box-sign">час</div>
+                                </div>
+                                <div class="timer">
+                                    <div class="number-box">44</div>
+                                    <div class="number-box-sign">мин</div>
+                                </div>
+                                <div class="timer hidden-md hidden-sm">
+                                    <div class="number-box">34</div>
+                                    <div class="number-box-sign">сек</div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section>
-                        <div class="wrapper-line-reviews">
-                            <div class="reviews">Поделиться</div>
-                            <div class="line-grad"></div>
+                    </div>
+                <section>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews"><h2>Поделиться</h2></div>
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="share-box-left">
+                        <div class="share-box facebook"><a href="#"><i class="fa fa-facebook"
+                                                                       aria-hidden="true"></i></a>
                         </div>
-                        <div class="share-box-left">
-                            <div class="share-box facebook"><a href="#"><i class="fa fa-facebook"
-                                                                           aria-hidden="true"></i></a>
-                            </div>
-                            <div class="share-box twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><!--
+                        <div class="share-box twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><!--
                                         --></div>
 
-                            <div class="share-box google-plus"><a href="#"><i class="fa fa-google-plus"
-                                                                              aria-hidden="true"></i></a></div>
-                            <div class="share-box instagram"><a href="#"><i class="fa fa-instagram"
-                                                                            aria-hidden="true"></i></a><!--
+                        <div class="share-box google-plus"><a href="#"><i class="fa fa-google-plus"
+                                                                          aria-hidden="true"></i></a></div>
+                        <div class="share-box instagram"><a href="#"><i class="fa fa-instagram"
+                                                                        aria-hidden="true"></i></a><!--
                                         --></div>
-                            <div class="share-box pinterest"><a href="#"><i class="fa fa-pinterest-p"
-                                                                            aria-hidden="true"></i></a></div>
-                        </div>
-                    </section>
-                </div>
+                        <div class="share-box pinterest"><a href="#"><i class="fa fa-pinterest-p"
+                                                                        aria-hidden="true"></i></a></div>
+                    </div>
+                </section>
             </div>
 
             <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                 <div class="catalog-row-sub">
                     <section>
-                    <div class="product-box">
-                        <div class="product-big"><img src="img/catalog-1.jpg" alt="Фото товара">
-                        </div>
-                        <div class="product-info">
-                            <div class="name"><h2>GIGABYTE GeForce GTX 1050 Ti</h2></div>
-                            <div class="sub-info">
-                                <p>Видеокарта MSI Geforce GTX 1050 TI Gaming X 4GB GDDR5 способна работать в трех разных
-                                    режимах: Gaming Mode, OC Mode и Silent Mode. Gaming Mode активирован по умолчанию.
-                                    OC Mode предполагает следующие частоты графического процессора: 1379 МГц (базовая) и
-                                    1493 МГц ("turbo"). Silent Mode - 1290 МГц (базовая) и 1392 МГц ("turbo").</p>
-                                <p>частота ядра 1354 МГц/1468 МГц, частота памяти 1752 МГц, 128 бит, 6 pin, DVI, HDMI,
-                                    DisplayPort</p>
-                                <button class="button" type="submit"><a href="product.html">Подробнее</a></button>
+                        <div class="product-box">
+                            <div class="product-big"><img src="img/catalog-1.jpg" alt="Фото товара">
+                            </div>
+                            <div class="product-info">
+                                <div class="name"><h2>GIGABYTE GeForce GTX 1050 Ti</h2></div>
+                                <div class="sub-info">
+                                    <p>Видеокарта MSI Geforce GTX 1050 TI Gaming X 4GB GDDR5 способна работать в трех
+                                        разных
+                                        режимах: Gaming Mode, OC Mode и Silent Mode. Gaming Mode активирован по
+                                        умолчанию.
+                                        OC Mode предполагает следующие частоты графического процессора: 1379 МГц
+                                        (базовая) и
+                                        1493 МГц ("turbo"). Silent Mode - 1290 МГц (базовая) и 1392 МГц ("turbo").</p>
+                                    <p>частота ядра 1354 МГц/1468 МГц, частота памяти 1752 МГц, 128 бит, 6 pin, DVI,
+                                        HDMI,
+                                        DisplayPort</p>
+                                    <div class="button"><a href="product.html">Подробнее</a></div>
+                                </div>
+                            </div>
+                            <div class="circle label-red"><span>-60%</span></div>
+                            <div class="wrapper-square">
+                                <div class="square-1">210</div>
+                                <div class="square-2">USD</div>
                             </div>
                         </div>
-                        <div class="circle label-red"><span>-60%</span></div>
-                        <div class="wrapper-square">
-                            <div class="square-1">210</div>
-                            <div class="square-2">USD</div>
-                        </div>
-                    </div>
                     </section>
                     <section>
-                    <div class="product-box">
-                        <div class="product-big"><img src="img/catalog-2.jpg" alt="Фото товара">
-                        </div>
-                        <div class="product-info">
-                            <div class="name"><h2>Видеокарта ASUS Radeon RX 560 4GB GDDR5 [RX560-4G]</h2></div>
-                            <div class="sub-info">
-                                <p>Видеокарта MSI Geforce GTX 1070 QUICK SILVER 8G OC работает в трех режимах: Gaming
-                                    Mode (по умолчанию), OC Mode и Silient Mode. OC Mode предполагает следующие частоты
-                                    GPU: 1607 МГц (base) и 1797 МГц (boost). Silient Mode, в свою очередь,,
-                                    предусматривает частоты 1506 МГц (base) и 1683 МГц (boost).</p>
-                                <p>частота ядра 1176 МГц, 1024sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2 слота, DVI,
-                                    HDMI, DisplayPort</p>
-                                <button class="button" type="submit"><a href="#">Подробнее</a></button>
+                        <div class="product-box">
+                            <div class="product-big"><img src="img/catalog-2.jpg" alt="Фото товара">
+                            </div>
+                            <div class="product-info">
+                                <div class="name"><h2>Видеокарта ASUS Radeon RX 560 4GB GDDR5 [RX560-4G]</h2></div>
+                                <div class="sub-info">
+                                    <p>Видеокарта MSI Geforce GTX 1070 QUICK SILVER 8G OC работает в трех режимах:
+                                        Gaming
+                                        Mode (по умолчанию), OC Mode и Silient Mode. OC Mode предполагает следующие
+                                        частоты
+                                        GPU: 1607 МГц (base) и 1797 МГц (boost). Silient Mode, в свою очередь,,
+                                        предусматривает частоты 1506 МГц (base) и 1683 МГц (boost).</p>
+                                    <p>частота ядра 1176 МГц, 1024sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2 слота,
+                                        DVI,
+                                        HDMI, DisplayPort</p>
+                                    <div class="button"><a href="#">Подробнее</a></div>
+                                </div>
+                            </div>
+                            <div class="circle label-green"><span>-30%</span></div>
+                            <div class="wrapper-square">
+                                <div class="square-1">340</div>
+                                <div class="square-2">USD</div>
                             </div>
                         </div>
-                        <div class="circle label-green"><span>-30%</span></div>
-                        <div class="wrapper-square">
-                            <div class="square-1">340</div>
-                            <div class="square-2">USD</div>
-                        </div>
-                    </div>
                     </section>
                     <section>
-                    <div class="product-box">
-                        <div class="product-big"><img src="img/catalog-3.jpg" alt="Фото товара">
-                        </div>
-                        <div class="product-info">
-                            <div class="name"><h2>Видеокарта Palit GeForce GTX 1050 Ti Dual OC 4GB GDDR5
-                                [NE5105TS18G1-1071D] </h2></div>
-                            <div class="sub-info">
-                                <p>Видеокарта MSI GeForce GTX 1070 Gaming Z 8GB GDDR5 работает в трех режимах: Gaming
-                                    Mode (по умолчанию), OC Mode и Silent Mode. OC Mode предполагает частоты GPU - 1657
-                                    МГц (базовая) и 1860 МГц ("turbo"). Silent Mode предполагает частоты GPU - 1506 МГц
-                                    (базовая) и 1683 МГц ("turbo").</p>
-                                <p>частота ядра 1366 МГц/1480 МГц, 768sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2
-                                    слота, DVI, HDMI, DisplayPort</p>
-                                <button class="button" type="submit"><a href="#">Подробнее</a></button>
+                        <div class="product-box">
+                            <div class="product-big"><img src="img/catalog-3.jpg" alt="Фото товара">
+                            </div>
+                            <div class="product-info">
+                                <div class="name"><h2>Видеокарта Palit GeForce GTX 1050 Ti Dual OC 4GB GDDR5
+                                    [NE5105TS18G1-1071D] </h2></div>
+                                <div class="sub-info">
+                                    <p>Видеокарта MSI GeForce GTX 1070 Gaming Z 8GB GDDR5 работает в трех режимах:
+                                        Gaming
+                                        Mode (по умолчанию), OC Mode и Silent Mode. OC Mode предполагает частоты GPU -
+                                        1657
+                                        МГц (базовая) и 1860 МГц ("turbo"). Silent Mode предполагает частоты GPU - 1506
+                                        МГц
+                                        (базовая) и 1683 МГц ("turbo").</p>
+                                    <p>частота ядра 1366 МГц/1480 МГц, 768sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2
+                                        слота, DVI, HDMI, DisplayPort</p>
+                                    <div class="button"><a href="#">Подробнее</a></div>
+                                </div>
+                            </div>
+                            <div class="circle label-green"><span>-30%</span></div>
+                            <div class="wrapper-square">
+                                <div class="square-1">120</div>
+                                <div class="square-2">USD</div>
                             </div>
                         </div>
-                        <div class="circle label-green"><span>-30%</span></div>
-                        <div class="wrapper-square">
-                            <div class="square-1">120</div>
-                            <div class="square-2">USD</div>
-                        </div>
-                    </div>
                     </section>
                     <section>
-                    <div class="product-box">
-                        <div class="product-big"><img src="img/catalog-4.jpg" alt="Фото товара">
-                        </div>
-                        <div class="product-info">
-                            <div class="name"><h2>Видеокарта Palit GeForce GTX 1060 JetStream 6GB GDDR5
-                                [NE51060015J9-1060J] </h2></div>
-                            <div class="sub-info">
-                                <p>Видеокарта MSI GeForce GTX 1080 Gaming 8GB GDDR5 работает в трех режимах: Gaming Mode
-                                    (по умолчанию), OC Mode и Silent Mode. OC Mode предполагает частоты GPU - 1632 МГц
-                                    (базовая) и 1771 МГц ("turbo"). Silent Mode предполагает частоты GPU - 1607 МГц
-                                    (базовая) и 1733 МГц ("turbo").</p>
-                                <p>частота ядра 1366 МГц/1480 МГц, 768sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2
-                                    слота, DVI, HDMI, DisplayPort</p>
-                                <button class="button" type="submit"><a href="#">Подробнее</a></button>
+                        <div class="product-box">
+                            <div class="product-big"><img src="img/catalog-4.jpg" alt="Фото товара">
+                            </div>
+                            <div class="product-info">
+                                <div class="name"><h2>Видеокарта Palit GeForce GTX 1060 JetStream 6GB GDDR5
+                                    [NE51060015J9-1060J] </h2></div>
+                                <div class="sub-info">
+                                    <p>Видеокарта MSI GeForce GTX 1080 Gaming 8GB GDDR5 работает в трех режимах: Gaming
+                                        Mode
+                                        (по умолчанию), OC Mode и Silent Mode. OC Mode предполагает частоты GPU - 1632
+                                        МГц
+                                        (базовая) и 1771 МГц ("turbo"). Silent Mode предполагает частоты GPU - 1607 МГц
+                                        (базовая) и 1733 МГц ("turbo").</p>
+                                    <p>частота ядра 1366 МГц/1480 МГц, 768sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2
+                                        слота, DVI, HDMI, DisplayPort</p>
+                                    <div class="button"><a href="#">Подробнее</a></div>
+                                </div>
+                            </div>
+                            <div class="wrapper-square">
+                                <div class="square-1">430</div>
+                                <div class="square-2">USD</div>
                             </div>
                         </div>
-                        <div class="wrapper-square">
-                            <div class="square-1">430</div>
-                            <div class="square-2">USD</div>
-                        </div>
-                    </div>
                     </section>
                     <section>
-                    <div class="product-box">
-                        <div class="product-big"><img src="img/catalog-5.jpg" alt="Фото товара">
-                        </div>
-                        <div class="product-info">
-                            <div class="name"><h2>Видеокарта PNY Quadro P6000 24GB GDDR5X [VCQP6000-PB]</h2></div>
-                            <div class="sub-info">
-                                <p>Видеокарта MSI Geforce GTX 1050 TI Gaming X 4GB GDDR5 способна работать в трех разных
-                                    режимах: Gaming Mode, OC Mode и Silent Mode. Gaming Mode активирован по умолчанию.
-                                    OC Mode предполагает следующие частоты графического процессора: 1379 МГц (базовая) и
-                                    1493 МГц ("turbo"). Silent Mode - 1290 МГц (базовая) и 1392 МГц ("turbo").</p>
-                                <p>частота ядра 1366 МГц/1480 МГц, 768sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2
-                                    слота, DVI, HDMI, DisplayPort</p>
-                                <button class="button" type="submit"><a href="#">Подробнее</a></button>
+                        <div class="product-box">
+                            <div class="product-big"><img src="img/catalog-5.jpg" alt="Фото товара">
+                            </div>
+                            <div class="product-info">
+                                <div class="name"><h2>Видеокарта PNY Quadro P6000 24GB GDDR5X [VCQP6000-PB]</h2></div>
+                                <div class="sub-info">
+                                    <p>Видеокарта MSI Geforce GTX 1050 TI Gaming X 4GB GDDR5 способна работать в трех
+                                        разных
+                                        режимах: Gaming Mode, OC Mode и Silent Mode. Gaming Mode активирован по
+                                        умолчанию.
+                                        OC Mode предполагает следующие частоты графического процессора: 1379 МГц
+                                        (базовая) и
+                                        1493 МГц ("turbo"). Silent Mode - 1290 МГц (базовая) и 1392 МГц ("turbo").</p>
+                                    <p>частота ядра 1366 МГц/1480 МГц, 768sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2
+                                        слота, DVI, HDMI, DisplayPort</p>
+                                    <div class="button"><a href="#">Подробнее</a></div>
+                                </div>
+                            </div>
+                            <div class="circle label-blue"><span>-10%</span></div>
+                            <div class="wrapper-square">
+                                <div class="square-1">165</div>
+                                <div class="square-2">USD</div>
                             </div>
                         </div>
-                        <div class="circle label-blue"><span>-10%</span></div>
-                        <div class="wrapper-square">
-                            <div class="square-1">165</div>
-                            <div class="square-2">USD</div>
-                        </div>
-                    </div>
                     </section>
                     <section>
-                    <div class="product-box">
-                        <div class="product-big"><img src="img/catalog-2.jpg" alt="Фото товара">
-                        </div>
-                        <div class="product-info">
-                            <div class="name"><h2>Видеокарта ASUS Radeon RX 560 4GB GDDR5 [RX560-4G]</h2></div>
-                            <div class="sub-info">
-                                <p>Видеокарта MSI Geforce GTX 1070 QUICK SILVER 8G OC работает в трех режимах: Gaming
-                                    Mode (по умолчанию), OC Mode и Silient Mode. OC Mode предполагает следующие частоты
-                                    GPU: 1607 МГц (base) и 1797 МГц (boost). Silient Mode, в свою очередь,,
-                                    предусматривает частоты 1506 МГц (base) и 1683 МГц (boost).</p>
-                                <p>частота ядра 1176 МГц, 1024sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2 слота, DVI,
-                                    HDMI, DisplayPort</p>
-                                <button class="button" type="submit"><a href="#">Подробнее</a></button>
+                        <div class="product-box">
+                            <div class="product-big"><img src="img/catalog-2.jpg" alt="Фото товара">
+                            </div>
+                            <div class="product-info">
+                                <div class="name"><h2>Видеокарта ASUS Radeon RX 560 4GB GDDR5 [RX560-4G]</h2></div>
+                                <div class="sub-info">
+                                    <p>Видеокарта MSI Geforce GTX 1070 QUICK SILVER 8G OC работает в трех режимах:
+                                        Gaming
+                                        Mode (по умолчанию), OC Mode и Silient Mode. OC Mode предполагает следующие
+                                        частоты
+                                        GPU: 1607 МГц (base) и 1797 МГц (boost). Silient Mode, в свою очередь,,
+                                        предусматривает частоты 1506 МГц (base) и 1683 МГц (boost).</p>
+                                    <p>частота ядра 1176 МГц, 1024sp, частота памяти 1750 МГц, 128 бит, 6 pin, 2 слота,
+                                        DVI,
+                                        HDMI, DisplayPort</p>
+                                    <div class="button"><a href="#">Подробнее</a></div>
+                                </div>
+                            </div>
+                            <div class="circle label-green"><span>-30%</span></div>
+                            <div class="wrapper-square">
+                                <div class="square-1">340</div>
+                                <div class="square-2">USD</div>
                             </div>
                         </div>
-                        <div class="circle label-green"><span>-30%</span></div>
-                        <div class="wrapper-square">
-                            <div class="square-1">340</div>
-                            <div class="square-2">USD</div>
-                        </div>
-                    </div>
                     </section>
                 </div>
 
@@ -617,7 +658,7 @@
                     <div class="paginator-wrapper">
                         <ul class="paginator">
                             <li><a href="#">
-                                <div class="circle-page"><</div>
+                                <div class="circle-page">&lt;</div>
                             </a></li>
                             <li><a href="#">
                                 <div class="circle-page select">1</div>
@@ -629,7 +670,7 @@
                                 <div class="circle-page">3</div>
                             </a></li>
                             <li><a href="#">
-                                <div class="circle-page">></div>
+                                <div class="circle-page">&gt;</div>
                             </a></li>
                         </ul>
                     </div>
@@ -640,8 +681,6 @@
         </div>
     </div>
 
-</section>
-
 
 <div class="container">
     <div class="row content-row">
@@ -650,143 +689,140 @@
         </div>
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
 
-
-            <section>
-            <div class="row product-box-head">
-                <div class="col-lg-3 col-md-4 col-sm-9">Вам понравиться</div>
-                <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
-                    <div class="line-grad"></div>
-                </div>
-                <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Горячие</a></div>
-                <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Лучшие</a></div>
-                <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Лимит</a></div>
-                <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs">
-                    <div class="navigaton-top">
-                        <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-                        <span class="navigation">
+                <div class="row product-box-head">
+                    <div class="col-lg-3 col-md-4 col-sm-9">Вам понравиться</div>
+                    <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Горячие</a></div>
+                    <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Лучшие</a></div>
+                    <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Лимит</a></div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs">
+                        <div class="navigaton-top">
+                            <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                            <span class="navigation">
                     <a href="#"><i class="fa fa-square" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-square" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-square" aria-hidden="true"></i></a>
                             </span>
-                        <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="row product-box-row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="product-box">
-                        <div class="pic"><img src="img/product-box-top-1.png" alt="Фото товара"></div>
-                        <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
-                        <div class="price"><span>$115.00</span> <span>$85.00</span></div>
-                        <div class="category">Games / xbox</div>
+                <div class="row product-box-row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="product-box">
+                            <div class="pic"><img src="img/product-box-top-1.png" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="price"><span>$115.00</span> <span>$85.00</span></div>
+                            <div class="category">Games / xbox</div>
 
-                        <div class="buy-box">
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
-                                                                     aria-hidden="true"></i></a></div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            <div class="buy-box">
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
-                                                                     aria-hidden="true"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="product-box">
+                            <div class="pic"><img src="img/product-box-top-2.png" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="price"><span>$115.00</span> <span>$85.00</span></div>
+                            <div class="category">Games / xbox</div>
+                            <div class="circle label-green"><span>-30%</span></div>
+
+                            <div class="buy-box">
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="product-box">
+                            <div class="pic"><img src="img/product-box-top-3.png" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="price"><span>$115.00</span> <span>$85.00</span></div>
+                            <div class="category">Games / xbox</div>
+
+                            <div class="buy-box">
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="product-box">
+                            <div class="pic"><img src="img/product-box-top-4.png" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="price"><span>$115.00</span> <span>$85.00</span></div>
+                            <div class="category">Games / xbox</div>
+                            <div class="circle label-green"><span>-60%</span></div>
+
+                            <div class="buy-box">
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="product-box">
-                        <div class="pic"><img src="img/product-box-top-2.png" alt="Фото товара"></div>
-                        <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
-                        <div class="price"><span>$115.00</span> <span>$85.00</span></div>
-                        <div class="category">Games / xbox</div>
-                        <div class="circle label-green"><span>-30%</span></div>
-
-                        <div class="buy-box">
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
-                                                                     aria-hidden="true"></i></a></div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
-                                                                     aria-hidden="true"></i></a></div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="product-box">
-                        <div class="pic"><img src="img/product-box-top-3.png" alt="Фото товара"></div>
-                        <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
-                        <div class="price"><span>$115.00</span> <span>$85.00</span></div>
-                        <div class="category">Games / xbox</div>
-
-                        <div class="buy-box">
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
-                                                                     aria-hidden="true"></i></a></div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
-                                                                     aria-hidden="true"></i></a></div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="product-box">
-                        <div class="pic"><img src="img/product-box-top-4.png" alt="Фото товара"></div>
-                        <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
-                        <div class="price"><span>$115.00</span> <span>$85.00</span></div>
-                        <div class="category">Games / xbox</div>
-                        <div class="circle label-green"><span>-60%</span></div>
-
-                        <div class="buy-box">
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
-                                                                     aria-hidden="true"></i></a></div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
-                                                                     aria-hidden="true"></i></a></div>
-                            </div>
-                            <div class="icon-box-block">
-                                <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section>
         </div>
     </div>
 </div>
