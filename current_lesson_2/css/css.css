@@ -1,0 +1,127 @@
+body {
+    background: white;
+    margin: 0;
+}
+
+/*Задание 1*/
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.block {
+    min-width: 250px;
+    width: 250px;
+    height: 200px;
+    font-family: Arial, Tahoma;
+    font-size: 1.1em;
+    /*border: 1px solid black;*/
+    margin-left: 60px;
+    margin-top: 20px;
+    position: relative;
+    color: #5e5e5e;
+    box-sizing: border-box;
+}
+
+.block:after {
+    color: rgba(204, 243, 231, 0.6);
+    font-size: 9em;
+    position: absolute;
+    top: -50px;
+    left: -55px;
+    z-index: -1;
+    font-weight: 900;
+}
+
+.number-1:after {
+    content: '1';
+}
+
+.number-2:after {
+    content: '2';
+}
+
+.number-3:after {
+    content: '3';
+}
+
+/*Задание 2*/
+
+.wrapper-call {
+    position: fixed;
+    bottom: 10px;
+    right: 90px;
+    height: 80px;
+}
+
+.call-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #aae6e6;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.call-slider {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #bdffff;
+    border-radius: 40px 40px;
+    position: absolute;
+    right: -80px;
+    transition: 1s;
+    padding-left: 30px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: Arial, Tahoma;
+    font-size: 1.2em;
+    overflow: hidden;
+    opacity: .2;
+
+}
+
+.wrapper-call:hover .call-slider {
+    width: 310px;
+    opacity: 1;
+}
+
+.call-slider a {
+    text-decoration: none;
+    color: black;
+    width: 80px;
+    padding: 40px 0px;
+}
+
+.call-circle img {
+    width: 45px;
+
+}
+
+body:hover .call-circle img {
+    animation: animate 1.2s ease-in-out 5s,
+    animate 1.2s ease-in-out 15s,
+    animate 1.2s ease-in-out 30s,
+    animate 1.2s ease-in-out 45s,
+    animate 1.2s ease-in-out 60s infinite;
+}
+
+@keyframes animate {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30% {
+        transform: rotate(-10deg);
+    }
+    20%, 40% {
+        transform: rotate(10deg);
+    }
+}
