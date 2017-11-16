@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Страница продукта</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="учёба, школа">
+    <meta name="Description" content="Обучение html и css">
+    <meta name="author" content="Клейнов Олег">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:100,100i,300,300i,400,400i,700,700i&amp;subset=cyrillic-ext"
+          rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- Модальное окно Регистрации -->
+<div id="registration" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Регистрация</h4>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+                <form name="registration" action="#" method="post">
+                    <div><input required type="text" id="first_name" name="first_name" placeholder=" "
+                                pattern="^[А-ЯЁ]{1}[а-яё]{1,}">
+                        <label
+                                for="first_name">Имя</label>
+                        <div class="requirmetns">Введите имя на русском языке и с заглавной буквы</div>
+                    </div>
+                    <div><input required type="text" id="last_name" name="last_name" placeholder=" "
+                                pattern="^[А-ЯЁ][а-яё]{1,}"> <label
+                            for="last_name">Фамилия</label>
+                        <div class="requirmetns">Введите фамилию на русском языке и с заглавной буквы</div>
+                    </div>
+                    <div><input required type="tel" id="tel" name="tel" placeholder=" "
+                                pattern="[+]375 [0-9]{2} [0-9]{7}"> <label
+                            for="tel">Телефон</label>
+                        <div class="requirmetns">Введите телефон в формате: +375 29 1234567</div>
+                    </div>
+                    <div><input required type="email" id="email" name="email" placeholder=" "> <label
+                            for="email">Email</label>
+                        <div class="requirmetns">Неправильный адрес электронной почты, повторите попытку.</div>
+                    </div>
+                    <div><input required type="password" id="password" name="password" placeholder=" "
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"> <label for="password">Пароль</label>
+                        <div class="requirmetns">Пароль должен иметь длину не менее 6 символов, число, прописные и
+                            строчные буквы
+                        </div>
+                    </div>
+                    <input type="radio" class="radio" name="radio" id="male" required/>
+                    <label for="male">Мужчина</label>
+                    <input type="radio" class="radio" name="radio" id="female" required/>
+                    <label for="female">Женщина</label>
+                    <input type="checkbox" class="checkbox" id="rules" required/>
+                    <label for="rules">Согласен с правилами магазина</label>
+                    <input type="submit" value="Зарегистрироваться"/></form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно Авторизации -->
+<div id="authorization" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Вход в магазин</h4>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+                <form name="authorization" action="#" method="post">
+                    <div><input required type="email" id="email-auth" name="email" placeholder=" "> <label
+                            for="email-auth">Email</label>
+                        <div class="requirmetns">Неправильный адрес электронной почты, повторите попытку.</div>
+                    </div>
+                    <div><input required type="password" id="password-auth" name="password" placeholder=" "
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"> <label for="password-auth">Пароль</label>
+                        <div class="requirmetns">Пароль должен иметь длину не менее 6 символов, число, прописные и
+                            строчные буквы
+                        </div>
+                    </div>
+                    <input type="submit" value="Войти"/></form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="background-top-menu container-fluid">
+        <div class="container">
+            <div class="row top-menu">
+                <div class="col-lg-1 col-md-1 col-sm-2"><a href="#"><span>Доставка</span></a></div>
+                <div class="col-lg-1 col-md-1 col-sm-2"><a href="#"><span>Правила</span></a></div>
+                <div class="col-lg-6 col-md-6 col-sm-4">
+                    <ul class="social">
+                        <li><span>Подписаться на нас</span></li>
+                        <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-1 hidden-sm">
+                    <div class="top-menu-block">
+                        <ul class="currency-menu">
+                            <li><a href="#">USD</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <ul class="currency-dropdown">
+                                    <li><a href="#">EUR</a></li>
+                                    <li><a href="#">RUR</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="top-menu-block">
+                        <ul class="currency-menu">
+                            <li><a href="#">English</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <ul class="currency-dropdown">
+                                    <li><a href="#">Русский</a></li>
+                                    <li><a href="#">Deutsch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-3"><span><a href="#authorization" data-toggle="modal">Вход</a>/<a
+                        href="#registration" data-toggle="modal">Регистрация</a></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-logo-menu container-fluid">
+        <div class="container">
+            <div class="row logo-menu">
+                <div class="col-lg-3 col-md-3 col-sm-3"><a href="index.html"><img src="img/logo-header.png"
+                                                                                  alt="MEGANO Магазин"></a>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-2 hidden-xs"><a href="#"><span><!--пустой блок--></span></a></div>
+                <div class="col-lg-1 col-md-2 col-sm-2 hidden-xs">
+                    <div class="label-content"><a href="#"><span>Магазин</span></a></div>
+                    <div class="label label-red">скидки</div>
+                </div>
+                <div class="col-lg-1 hidden-md hidden-sm"><a href="#"><span>Блог</span></a></div>
+                <div class="col-lg-1 col-md-2 col-sm-2 hidden-xs">
+                    <div class="label-content"><a href="#"><span>Галерея</span></a></div>
+                    <div class="label label-green">new</div>
+                </div>
+                <div class="col-lg-1 hidden-md hidden-sm"><a href="#"><span>Контакты</span></a></div>
+                <div class="col-lg-1 hidden-md hidden-sm"><a href="#"><span>Покупки</span></a></div>
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
+                    <div class="circle-block"><a href="#"><span><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+</span></a></div>
+                    <div class="circle label-blue">0</div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
+                    <div class="circle-block"><a href="#"><span><i class="fa fa-exchange fa-2x" aria-hidden="true"></i>
+</span></a></div>
+                    <div class="circle label-blue">0</div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
+                    <div class="circle-block"><a href="#"><span class="circle-block-nowrap"><i
+                            class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i> 0.00$</span>
+                        <div class="circle label-blue">3</div>
+                    </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-search-box container-fluid">
+        <div class="container">
+            <div class="row search-box">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <nav>
+                        <div class="dropdown">
+                            <input type="checkbox" id="checkbox-menu">
+                            <label for="checkbox-menu">
+                                <span class="block-nowrap"><i class="fa fa-list" aria-hidden="true"></i> Все разделы <i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </label>
+                            <ul class="main-menu">
+                                <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>Мониторы</a></li>
+                                <li><a href="#"><i class="fa fa-camera" aria-hidden="true"></i>Камеры</a></li>
+                                <li><a href="catalog.html"><i class="fa fa-hdd-o" aria-hidden="true"></i>Видео карты</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-plug" aria-hidden="true"></i>Электроника</a></li>
+                                <li><a href="#"><i class="fa fa-television" aria-hidden="true"></i>Телевизоры</a></li>
+                                <li><a href="#"><i class="fa fa-bus" aria-hidden="true"></i>Для авто</a></li>
+                                <li><a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Телефоны</a></li>
+                                <li><a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Наушники</a></li>
+                                <li><a href="#"><i class="fa fa-laptop" aria-hidden="true"></i>Ноутбуки</a></li>
+                                <li><a href="#"><i class="fa fa-server" aria-hidden="true"></i>Разное <i
+                                        class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#"><i class="fa fa-map-marker"
+                                                           aria-hidden="true"></i>Навигаторы</a></li>
+                                        <li><a href="#"><i class="fa fa-map-o" aria-hidden="true"></i>Трекеры</a></li>
+                                        <li><a href="#" class="no-border"><i class="fa fa-microphone"
+                                                                             aria-hidden="true"></i>Микрофоны</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="no-border"><i class="fa fa-print" aria-hidden="true"></i>Принтеры</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-8 hidden-xs">
+                    <div class="search">
+                        <form action="#" method="post" id="search" name="search">
+                            <input name="search" placeholder="Что вы ищете..." type="search" required>
+                            <div class="select-search">
+                                <select name="select-list" form="search">
+                                    <option value="all">Все категории</option>
+                                    <option value="1">Аксессуары</option>
+                                    <option value="2">Электроника</option>
+                                    <option value="3">Сумки</option>
+                                    <option value="4">Камеры</option>
+                                    <option value="5">Одежда</option>
+                                    <option value="6">Мода</option>
+                                </select>
+                            </div>
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i> Поиск</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="container">
+        <div class="row product-row">
+            <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">
+                <div>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews">Лучшие продукты</div>
+                        <div class="line-grad"></div>
+                    </div>
+
+                    <div class="best-product">
+                        <div class="pic"><img src="img/best-product-1.jpg" alt="Фото товара"></div>
+                        <div class="best-product-right">
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="price"><span>$115.00</span> <span>$25.00</span></div>
+                        </div>
+                    </div>
+                    <div class="best-product">
+                        <div class="pic"><img src="img/best-product-2.jpg" alt="Фото товара"></div>
+                        <div class="best-product-right">
+                            <div class="name"><a href="#">Mavic PRO Mini Drone Hobby RC</a></div>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="price"><span>$115.00</span> <span>$10.00</span></div>
+                        </div>
+                    </div>
+                    <div class="best-product">
+                        <div class="pic"><img src="img/best-product-3.jpg" alt="Фото товара"></div>
+                        <div class="best-product-right">
+                            <div class="name"><a href="#">Barand New Phone Smart Business</a></div>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="price"><span>$115.00</span> <span>$10.00</span></div>
+                        </div>
+                    </div>
+                    <div class="best-product">
+                        <div class="pic"><img src="img/best-product-4.jpg" alt="Фото товара"></div>
+                        <div class="best-product-right">
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="price"><span>$115.00</span> <span>$25.00</span></div>
+                        </div>
+                    </div>
+
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews">Популярные теги</div>
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="button-tags">
+                        <div class="button-white"><a href="#">Видео</a></div>
+                        <div class="button-white"><a href="#">Игры</a></div>
+                        <div class="button-white"><a href="#">Asus</a></div>
+                        <div class="button-white"><a href="#">Аксессуары</a></div>
+                        <div class="button-white"><a href="#">Дизайн</a></div>
+                        <div class="button-white"><a href="#">Телефоны</a></div>
+                    </div>
+                    <div class="wrapper-line-reviews">
+                        <div class="reviews">Поделиться</div>
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="share-box-left">
+                        <div class="share-box facebook"><a href="#"><i class="fa fa-facebook"
+                                                                       aria-hidden="true"></i></a>
+                        </div>
+                        <div class="share-box twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><!--
+                                        --></div>
+
+                        <div class="share-box google-plus"><a href="#"><i class="fa fa-google-plus"
+                                                                          aria-hidden="true"></i></a></div>
+                        <div class="share-box instagram"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="share-box pinterest"><a href="#"><i class="fa fa-pinterest-p"
+                                                                        aria-hidden="true"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <div class="row product-row-sub">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="product-box">
+                            <div class="product-big"><img src="img/product_big.jpg" alt="Фото товара"></div>
+                            <div class="circle label-green"><span>-60%</span></div>
+                        </div>
+                        <div class="preview">
+                            <div class="photo-preview"><a href="#"><img src="img/product-sm-1.png" alt="Превью"></a>
+                            </div>
+                            <div class="photo-preview"><a href="#"><img src="img/product-sm-2.png" alt="Превью"></a>
+                            </div>
+                            <div class="photo-preview"><a href="#"><img src="img/product-sm-3.png" alt="Превью"></a>
+                            </div>
+                            <div class="photo-preview"><a href="#"><img src="img/product-sm-4.png" alt="Превью"></a>
+                            </div>
+                            <div class="photo-preview"><a href="#"><img src="img/product-sm-5.png" alt="Превью"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div style="height: 100%;width: 100%;">
+                            <div class="product-big-info">
+                                <h1>GIGABYTE GeForce GTX 1050 Ti</h1>
+                                <div class="star">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                    <a href="#">(27 отзывов клиентов)</a>
+                                </div>
+                                <div class="price"><span>$55.00</span> <span>$115.00</span></div>
+                                <div class="sale">Окончание: 4 дня 15 часов 50 мин 60 сек.</div>
+                                <div class="line-grad"></div>
+                                <div class="list">
+                                    <ul>
+                                        <li>Gaming Mode, OC Mode и Silent Mode.</li>
+                                        <li>Gaming Mode активирован по умолчанию.</li>
+                                        <li>Turbo-частота графического процессора 1 468 МГц (Gaming Mode)</li>
+                                    </ul>
+                                </div>
+                                <div class="share-box-container">
+                                    <div class="share-box rectangle"><a href="#">Поделиться</a></div>
+                                    <div class="share-box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="share-box"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><!--
+                                        --></div>
+                                    <div class="share-box"><a href="#"><i class="fa fa-instagram"
+                                                                          aria-hidden="true"></i></a></div>
+                                    <div class="share-box"><a href="#"><i class="fa fa-pinterest-p"
+                                                                          aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="line-grad"></div>
+                                <div class="form-cart">
+                                    <div><input type="text" value="1"></div>
+                                    <div class="button"><a href="#">В корзину</a></div>
+                                    <div class="button-white"><a href="#">Сравнить</a></div>
+                                    <div class="circle-cart"><a href="#"><i class="fa fa-heart-o fa"
+                                                                            aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="line-grad"></div>
+                                <div>
+                                    <ul class="tags">
+                                        <li>Тэги:</li>
+                                        <li><a href="#">Аксессуары</a></li>
+                                        <li><a href="#">Игры</a></li>
+                                        <li><a href="#">Дизайн</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row product-row-sub">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <section>
+                            <div class="comment-block">
+                                <div class="tab-comment-block">
+                                    <div class="tab1 blue"><a href="#">Отзывы</a></div>
+                                    <div class="tab1"><a href="#">Полное описание</a></div>
+                                    <div class="tab1"><a href="#">Обзоры (3)</a></div>
+                                </div>
+                                <div class="frame-comment-block">
+                                    <div class="wrapper-line-reviews">
+                                        <div class="reviews">2 отзывa</div>
+                                        <div class="line-grad"></div>
+                                    </div>
+
+                                    <div class="review-box">
+                                        <div class="star">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="review-box-block">
+                                            <div class="user-box"><i class="fa fa-user-o fa-3x" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="comment-box">
+                                                <div class="name">Александра Кукушкина</div>
+                                                <div class="date">Декабрь 25 / 2017 / 22:50</div>
+                                                <div class="comment">Недавно купил себе. До этого была 770 4gb 256bit от
+                                                    Palit (2,5 года назад покупалась), по производительности видеокарты
+                                                    идут
+                                                    наравне, но 1050 Ti тише и холоднее.
+                                                    Считаю на сегодняшний день логичным к приобретению при наличии
+                                                    бюджета
+                                                    видеокарты не меньше уровня 1060 6gb и 1070 8gb. Иначе - только 1050
+                                                    Ti
+                                                    (если не ставятся такие задачи, как "майнинг" и т.п.).
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="review-box">
+                                        <div class="star">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="review-box-block">
+                                            <div class="user-box"><i class="fa fa-user-o fa-3x" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="comment-box">
+                                                <div class="name">Василий Рачинский</div>
+                                                <div class="date">Январь 15 / 2016 / 21:50</div>
+                                                <div class="comment"><p>Карта конечно отличная. Из плюсов. Очень
+                                                    холодная. Под нагрузкой 50-55 градусов. Тихие кулера. Даже на 60%
+                                                    оборотов не слышно карту. Запас по охлаждению огромный. Красивая
+                                                    сама по себе, подсветка то же добавляет красоты. Качественное
+                                                    исполнение всей карты.</p>
+                                                    <p>В майнинге выдает 15,7 на чистом эфире, 200 солей в зеке.</p>
+                                                    <p>Рекомендую как тихую домашнюю карту. В играх производительности
+                                                        хватает на все популярные проекты в FullHD.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wrapper-line-reviews">
+                                        <div class="reviews">Добавить отзыв</div>
+                                        <div class="line-grad"></div>
+                                    </div>
+
+                                    <div class="rating">
+                                        <div class="your-rating">Ваш рейтинг</div>
+                                        <div class="star">
+                                            <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="star">
+                                            <a href="#">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="star">
+                                            <a href="#">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="star">
+                                            <a href="#">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="star">
+                                            <a href="#">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="form-reviews">
+                                        <form id="add-reviews" method="post" action="#">
+                                            <textarea placeholder="Напишите ваш отзыв" required></textarea>
+                                            <span class="no-wrap">
+                                    <input type="text" name="name" id="name" placeholder="Ваше имя">
+                                    <input type="email" name="email" id="e-mail" placeholder="E-mail" required>
+                                    </span>
+                                            <button class="button" type="submit">Отослать отзыв</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container">
+    <div class="row content-row">
+        <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">
+
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+
+            <section>
+                <div class="row product-box-head">
+                    <div class="col-lg-3 col-md-4 col-sm-9">Вам понравиться</div>
+                    <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
+                        <div class="line-grad"></div>
+                    </div>
+                    <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Горячие</a></div>
+                    <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Лучшие</a></div>
+                    <div class="col-lg-1 col-md-2 hidden-sm hidden-xs"><a href="#">Лимит</a></div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs">
+                        <div class="navigaton-top">
+                            <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                            <span class="navigation">
+                    <a href="#"><i class="fa fa-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-square" aria-hidden="true"></i></a>
+                            </span>
+                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row product-box-row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="product-box">
+                            <div class="pic"><img src="img/product-box-top-1.png" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="price"><span>$115.00</span> <span>$85.00</span></div>
+                            <div class="category">Games / xbox</div>
+
+                            <div class="buy-box">
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="product-box">
+                            <div class="pic"><img src="img/product-box-top-2.png" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="price"><span>$115.00</span> <span>$85.00</span></div>
+                            <div class="category">Games / xbox</div>
+                            <div class="circle label-green"><span>-30%</span></div>
+
+                            <div class="buy-box">
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="product-box">
+                            <div class="pic"><img src="img/product-box-top-3.png" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="price"><span>$115.00</span> <span>$85.00</span></div>
+                            <div class="category">Games / xbox</div>
+
+                            <div class="buy-box">
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="product-box">
+                            <div class="pic"><img src="img/product-box-top-4.png" alt="Фото товара"></div>
+                            <div class="name"><a href="#">Corsair Carbide Serie Arctic White Steel</a></div>
+                            <div class="price"><span>$115.00</span> <span>$85.00</span></div>
+                            <div class="category">Games / xbox</div>
+                            <div class="circle label-green"><span>-60%</span></div>
+
+                            <div class="buy-box">
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-heart-o"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-shopping-basket"
+                                                                         aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="icon-box-block">
+                                    <div class="icon-box"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="background-footer-widgets-box container-fluid">
+        <div class="container">
+            <div class="row footer-widgets-box">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="footer-logo"><img src="img/logo-footer.png" alt="MEGANO Магазин"></div>
+                    <div class="footer-logo-text">Магазин «MEGANO» основан в 2017 году и является одним из лидирующих и
+                        наиболее динамично развивающихся брендов в сегменте торговли бытовой техникой, электроникой и
+                        аксессуарами к ним.
+                    </div>
+                    <div>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 hidden-md hidden-sm hidden-xs">
+                    <div class="footer-text-block">
+                        <div class="footer-title">Полезные ссылки</div>
+                        <div>
+                            <ul class="footer-links">
+                                <li><a href="#">Аксессуары</a></li>
+                                <li><a href="#">Электроника</a></li>
+                                <li><a href="#">Сумки</a></li>
+                                <li><a href="#">Камеры</a></li>
+                                <li><a href="#">Одежда</a></li>
+                                <li><a href="#">Мода</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 hidden-md hidden-sm hidden-xs">
+                    <div class="footer-text-block">
+                        <div class="footer-title">Ваш профиль</div>
+                        <div>
+                            <ul class="footer-links">
+                                <li><a href="#">Проверка заказа</a></li>
+                                <li><a href="#">Ваша корзина</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Информация о заказе</a></li>
+                                <li><a href="#">Сроки</a></li>
+                                <li><a href="#">Условия</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 hidden-sm hidden-xs">
+                    <div class="footer-text-block">
+                        <address>
+                            <div class="footer-title">Контакты</div>
+                            <div>
+                                <ul class="footer-address">
+                                    <li>Телефон: +375 29 1111111</li>
+                                    <li>Email: pochta@mail.ru</li>
+                                    <li>Skype: klejnov</li>
+                                    <li>Адрес: Беларусь, г. Бобруйск ул. Волочкова, 54</li>
+                                </ul>
+                            </div>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 hidden-xs">
+                    <div class="footer-text-block">
+                        <div class="footer-title">Свежие новости</div>
+                        <div class="wrapper">
+                            <div class="date-box">
+                                <div class="date-box-1">30</div>
+                                <div class="date-box-2">янв</div>
+                            </div>
+                            <div>
+                                <div class="footer-text-1"><a href="#">Предложение от которого вы не сможете отказаться.
+                                    Скидки!</a></div>
+                                <div class="footer-text">Электроника</div>
+                            </div>
+                        </div>
+                        <div class="date-box">
+                            <div class="date-box-1">1</div>
+                            <div class="date-box-2">янв</div>
+                        </div>
+                        <div>
+                            <div class="footer-text-1"><a href="#">Новогодняя распродажа. Минералка за полцены.</a>
+                            </div>
+                            <div class="footer-text">Еда и напитки</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="background-footer-copyright-box container-fluid">
+        <div class="container">
+            <div class="row footer-copyright-box">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <span>&copy; <span>MEGANO Магазин.</span> Все права защищены</span>
+                </div>
+                <div class="col-lg-3 hidden-md hidden-sm hidden-xs"></div>
+                <div class="col-lg-2 col-md-4 hidden-sm hidden-xs">
+                    <div class="payment-s"><span>Способы оплаты</span></div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="payment-icons"><span class="payment-icons-img"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
