@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Домашнее задание</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="учёба, школа">
+    <meta name="Description" content="Обучение html и css">
+    <meta name="author" content="Клейнов Олег">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .img-1 {
+            background-image: url("img/1.jpg");
+
+        }
+
+        .img-2 {
+            background-image: url("img/2.jpg");
+        }
+
+        .img-3 {
+            background-image: url("img/3.jpg");
+        }
+
+        .img-4 {
+            background-image: url("img/4.jpg");
+        }
+
+        .img-5 {
+            background-image: url("img/5.jpg");
+        }
+
+        .content {
+            height: 250px;
+            margin-top: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            font-size: 20px;
+            padding: 0 10px;
+        }
+
+        span {
+            background-color: white;
+            padding: 3px;
+            opacity: .8;
+            font-weight: bold;
+            outline: white solid 0.3em;
+        }
+
+        .content.img-1 {
+            height: 530px;
+        }
+
+        @media (max-width: 768px) {
+            .content.img-1 {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="background-top-menu container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="content img-1">
+                        <div class="title"><span>Пончики в пряном апельсиновом сахаре</span></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            <div class="content img-2">
+                                <div class="title"><span>Американские пончики</span></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="content img-3">
+                                <div class="title"><span>Колечки из творога</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="content img-4">
+                                <div class="title"><span>Пончики в пряном апельсиновом сахаре</span></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="content img-5">
+                                <div class="title"><span>Яблочные пончики</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>
+
+</body>
+</html>
