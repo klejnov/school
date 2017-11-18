@@ -2,3 +2,56 @@ body {
     background: white;
 }
 
+.img-1 {
+    background-image: url("../img/1.jpg");
+}
+
+.img-2 {
+    background-image: url("../img/2.jpg");
+}
+
+.img-3 {
+    background-image: url("../img/3.jpg");
+}
+
+.img-4 {
+    background-image: url("../img/4.jpg");
+}
+
+.img-5 {
+    background-image: url("../img/5.jpg");
+}
+
+.content {
+    height: 250px;
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+span {
+    background-color: white;
+    padding: 3px;
+    opacity: .8;
+    font-weight: bold;
+    outline: white solid 0.3em;
+}
+
+.content.img-1 {
+    height: 530px;
+}
+
+@media (max-width: 768px) {
+    .content.img-1 {
+        height: 250px;
+    }
+}
