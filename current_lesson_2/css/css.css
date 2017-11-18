@@ -125,3 +125,16 @@ body:hover .call-circle img {
         transform: rotate(10deg);
     }
 }
+
+/*Дополнено! Т.к. :hover на мобильных устройствах мы не сможем отследить,
+ыто анимацию на них можно запустить принудительно след. образом:*/
+
+@media (max-device-width: 600px) {
+    .call-circle img {
+        animation: animate 1.2s ease-in-out 5s,
+        animate 1.2s ease-in-out 15s,
+        animate 1.2s ease-in-out 30s,
+        animate 1.2s ease-in-out 45s,
+        animate 1.2s ease-in-out 60s infinite;
+    }
+}
