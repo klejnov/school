@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>CSS Grid</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="учёба, школа">
+    <meta name="Description" content="Обучение html и css">
+    <meta name="author" content="Клейнов Олег">
+    <style>
+
+
+        .row > div {
+            height: 100px;
+            color: white;
+            text-align: left;
+            height: 200px;
+
+        }
+
+        .img-1 {
+            background-image: url("1.jpg");
+        }
+
+        .img-2 {
+            background-image: url("2.jpg");
+        }
+
+        .img-3 {
+            background-image: url("3.jpg");
+        }
+
+        .img-4 {
+            background-image: url("4.jpg");
+        }
+
+        .content {
+            position: relative;
+            margin-top: 0px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            float: left;
+            border-radius: 15px 0px 0px 15px;
+        }
+
+        .title {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            font-size: 20px;
+            padding: 0 10px;
+            text-shadow: 1px -2px 4px black;
+        }
+
+        span {
+            color: grey;
+        }
+
+        .sub-title {
+            padding: 10px;
+        }
+
+        .title > span {
+            color: white;
+        }
+
+        .grid-content {
+            background-color: #eeeeee;
+            display: grid;
+            grid-template-columns: 3fr 4fr;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+        }
+
+        .grid-content:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            cursor: pointer;
+        }
+
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 250px 250px;
+            grid-auto-rows: 250px;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+
+        .grid-wrapper > div:nth-child(1) {
+            grid-column: 1/4;
+            grid-row: 1;
+        }
+
+        .grid-wrapper > div:nth-child(2) {
+            grid-column: 4/5;
+            grid-row: 1;
+        }
+
+        .grid-wrapper > div:nth-child(3) {
+            grid-column: 1/2;
+            grid-row: 2;
+        }
+
+        .grid-wrapper > div:nth-child(4) {
+            grid-column: 2/5;
+            grid-row: 2;
+        }
+
+        .grid-wrapper > div:nth-child(3) .sub-title, .grid-wrapper > div:nth-child(2) .sub-title {
+            display: none;
+        }
+
+        .grid-wrapper > .grid-content:nth-child(3), .grid-wrapper > .grid-content:nth-child(2) {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-wrapper > .grid-content:nth-child(3) .content, .grid-wrapper > .grid-content:nth-child(2) .content {
+            border-radius: 15px;
+        }
+
+        @media (max-width: 1200px) {
+            .grid-wrapper > div:nth-child(1) {
+                grid-column: 1/5;
+            }
+
+            .grid-wrapper > div:nth-child(2) {
+                grid-column: 1/3;
+                grid-row: 2;
+            }
+
+            .grid-wrapper > div:nth-child(3) {
+                grid-column: 3/5;
+                grid-row: 2;
+            }
+
+            .grid-wrapper > div:nth-child(4) {
+                grid-column: 1/-1;
+                grid-row: 3;
+            }
+
+            .grid-wrapper > div:nth-child(3) .sub-title, .grid-wrapper > div:nth-child(2) .sub-title {
+                display: block;
+            }
+
+            .grid-wrapper > .grid-content:nth-child(3), .grid-wrapper > .grid-content:nth-child(2) {
+                grid-template-columns: 3fr 4fr;
+            }
+
+            .grid-wrapper > .grid-content:nth-child(3) .content, .grid-wrapper > .grid-content:nth-child(2) .content {
+                border-radius: 15px 0px 0px 15px;
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            .grid-wrapper > div:nth-child(1) {
+                grid-column: 1/3;
+                grid-row: 1;
+            }
+
+            .grid-wrapper > div:nth-child(2) {
+                grid-column: 3/5;
+                grid-row: 1;
+            }
+
+            .grid-wrapper > div:nth-child(3) {
+                grid-column: 1/3;
+                grid-row: 2;
+            }
+
+            .grid-wrapper > div:nth-child(4) {
+                grid-column: 3/5;
+                grid-row: 2;
+            }
+
+            .grid-content {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-wrapper > div:nth-child(3) .sub-title, .grid-wrapper > div:nth-child(2) .sub-title, .sub-title {
+                display: none;
+            }
+
+            .grid-wrapper > .grid-content:nth-child(3), .grid-wrapper > .grid-content:nth-child(2) {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-wrapper > .grid-content:nth-child(3) .content, .grid-wrapper > .grid-content:nth-child(2) .content, .content {
+                border-radius: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .grid-wrapper {
+                grid-template-columns: repeat(1, minmax(340px, auto));
+            }
+
+            .grid-wrapper > div {
+                grid-column: 1/-1;
+            }
+
+            .grid-wrapper > div:nth-child(1) {
+                grid-column: 1/-1;
+                grid-row: 1;
+            }
+
+            .grid-wrapper > div:nth-child(2) {
+                grid-column: 1/-1;
+                grid-row: 2;
+            }
+
+            .grid-wrapper > div:nth-child(3) {
+                grid-column: 1/-1;
+                grid-row: 3;
+            }
+
+            .grid-wrapper > div:nth-child(4) {
+                grid-column: 1/-1;
+                grid-row: 4;
+            }
+
+            .grid-content {
+                grid-template-columns: 3fr 4fr;
+            }
+
+            .grid-wrapper > div:nth-child(3) .sub-title, .grid-wrapper > div:nth-child(2) .sub-title, .sub-title {
+                display: block;
+            }
+
+            .grid-wrapper > .grid-content:nth-child(3), .grid-wrapper > .grid-content:nth-child(2) {
+                grid-template-columns: 3fr 4fr;
+            }
+
+            .grid-wrapper > .grid-content:nth-child(3) .content, .grid-wrapper > .grid-content:nth-child(2) .content, .content {
+                border-radius: 15px 0px 0px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div class="grid-wrapper">
+    <div class="grid-content">
+        <div class="content img-1">
+            <div class="title"><span>1 Американские пончики</span></div>
+        </div>
+        <div class="sub-title"><span>1 Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь, ведущими, коварный. Составитель, они, подзаголовок. Подзаголовок, все? Несколько до текстов предупредила своего имени над предложения запятой, диких то скатился?</span>
+        </div>
+    </div>
+
+    <div class="grid-content">
+        <div class="content img-2">
+            <div class="title"><span>2 Французские пончики</span></div>
+        </div>
+        <div class="sub-title"><span>2 Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текста грустный злых безорфографичный сих ведущими свое от всех подпоясал послушавшись языком всемогущая пустился своего, страну рукопись города живет. Большой, собрал.</span>
+        </div>
+    </div>
+
+    <div class="grid-content">
+        <div class="content img-3">
+            <div class="title"><span>3 Немецкие пончики</span></div>
+        </div>
+        <div class="sub-title"><span>3 Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь, ведущими, коварный. Составитель, они, подзаголовок. Подзаголовок, все? Несколько до текстов предупредила своего имени над предложения запятой, диких то скатился?</span>
+        </div>
+    </div>
+
+    <div class="grid-content">
+        <div class="content img-4">
+            <div class="title"><span>4 Итальянские пончики</span></div>
+        </div>
+        <div class="sub-title"><span>4 Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текста грустный злых безорфографичный сих ведущими свое от всех подпоясал послушавшись языком всемогущая пустился своего, страну рукопись города живет. Большой, собрал.</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
