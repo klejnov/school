@@ -35,7 +35,6 @@
 
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -49,10 +48,12 @@
 <body>
 
 <header class="main-header grid" style="background-image: url(assets/images/0-header.jpg);">
+    <div id="mobile-menu" class="mobile-menu"><i class="fa fa-bars"></i></div>
     <div class="header-content grid container">
         <div class="header-main-logo">
             <a href="#" class="main-logo">MINI</a>
         </div>
+
         <nav class="header-main-menu">
             <ul class="main-menu grid">
                 <li><a href="#">About</a></li>
@@ -115,12 +116,12 @@
     <hr>
     <div class="skills-content container grid">
         <div class="block-skills-photo wow fadeInLeft" data-wow-offset="200"
-            >
+        >
             <div class="iPhone wow rollIn" data-wow-delay="1.5s"></div>
             <div class="iPad"></div>
         </div>
         <div class="block-skills-line grid wow fadeInRight" data-wow-offset="200"
-            >
+        >
             <div class="circle-grid">
                 <div class="circle"><i class="fa fa-sliders fa-2x fa-rotate-90" aria-hidden="true"></i>
                 </div>
@@ -219,14 +220,74 @@
 
         <h2>Our Clients</h2>
 
-        <div class="logo-img wow bounceIn" data-wow-delay=".1s" data-wow-offset="200"><img class="img-responsive" src="assets/images/logo-comp-1.png" alt="Логотип"></div>
-        <div class="logo-img wow bounceIn" data-wow-delay=".3s" data-wow-offset="200"><img class="img-responsive" src="assets/images/logo-comp-2.png" alt="Логотип"></div>
-        <div class="logo-img wow bounceIn" data-wow-delay=".5s" data-wow-offset="200"><img class="img-responsive" src="assets/images/logo-comp-3.png" alt="Логотип"></div>
-        <div class="logo-img wow bounceIn" data-wow-delay=".7s" data-wow-offset="200"><img class="img-responsive" src="assets/images/logo-comp-4.png" alt="Логотип"></div>
+        <div class="logo-img wow bounceIn" data-wow-delay=".1s" data-wow-offset="200"><img class="img-responsive"
+                                                                                           src="assets/images/logo-comp-1.png"
+                                                                                           alt="Логотип"></div>
+        <div class="logo-img wow bounceIn" data-wow-delay=".3s" data-wow-offset="200"><img class="img-responsive"
+                                                                                           src="assets/images/logo-comp-2.png"
+                                                                                           alt="Логотип"></div>
+        <div class="logo-img wow bounceIn" data-wow-delay=".5s" data-wow-offset="200"><img class="img-responsive"
+                                                                                           src="assets/images/logo-comp-3.png"
+                                                                                           alt="Логотип"></div>
+        <div class="logo-img wow bounceIn" data-wow-delay=".7s" data-wow-offset="200"><img class="img-responsive"
+                                                                                           src="assets/images/logo-comp-4.png"
+                                                                                           alt="Логотип"></div>
 
     </div>
 </section>
 
+<div style="height: 100px;"></div>
+
+<section class="contact">
+    <div class="contact-content container grid">
+        <div class="block-about grid">
+            <div class="block-about-title">Contact</div>
+            <div class="block-about-text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque
+                deleniti ducimus ea ipsum optio quae, quaerat repellendus? Est, et.</p></div>
+        </div>
+        <div class="form"><p>Drop Us A Message</p>
+
+            <form action="#" class="form">
+                <div class="input-wrap grid">
+                    <label for="user" class="user"><input id="user" name="user" placeholder="Введите Ваш имя" type="text" required></label>
+                    <label for="email" class="email"><input id="email" name="email" placeholder="Ваш email" type="email" required></label>
+                    <label for="message" class="message"><textarea id="message" name="message" placeholder="Ваше сообщение" type="text" required></textarea></label>
+                </div>
+                <input class="button-form" value="Submit" type="submit">
+            </form>
+
+        </div>
+        <div class="contact-info"><p>Contact Info</p>
+            <p class="story-text">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
+                consequat auctor eu in elit.</p>
+            <div class="contact-info-text grid">
+                <div class="circle-grid">
+                    <div class="circle wow rotateIn" style="visibility: visible; animation-name: rotateIn;"><i
+                            class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="contact-info-sub-text">13/2 Elizabeth St, Melbourne VIC 3000, Australia</div>
+            </div>
+            <div class="contact-info-text grid">
+                <div class="circle-grid">
+                    <div class="circle wow rotateIn" style="visibility: visible; animation-name: rotateIn;"><i
+                            class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="contact-info-sub-text">+61 3146 8728, +61 0987 6543</div>
+            </div>
+            <div class="contact-info-text grid">
+                <div class="circle-grid">
+                    <div class="circle wow rotateIn" style="visibility: visible; animation-name: rotateIn;"><i
+                            class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="contact-info-sub-text">support@envato.net</div>
+            </div>
+        </div>
+    </div>
+</section>
 <div style="height: 100px;"></div>
 
 <footer>
@@ -238,27 +299,34 @@
 
     <section class="footer">
         <div class="footer-content container grid">
-                <div class="block-footer-text-1"><div>© MINI 2014, All Right Reserves</div></div>
-                <div class="block-footer-text-2"><div>Designed By bigpsfan & Metrothemes</div></div>
-                <div class="block-social">
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                </div>
+            <div class="block-footer-text-1">
+                <div>© MINI 2014, All Right Reserves</div>
+            </div>
+            <div class="block-footer-text-2">
+                <div>Designed By bigpsfan & Metrothemes</div>
+            </div>
+            <div class="block-social">
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
+            </div>
         </div>
     </section>
 </footer>
 
-<script type="text/javascript">
-    window.onblur = function () {
-        window.onfocus = function () {
-            location.reload(true)
-        }
-    };
-</script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+<!--<script type="text/javascript">-->
+<!--window.onblur = function () {-->
+<!--window.onfocus = function () {-->
+<!--location.reload(true)-->
+<!--}-->
+<!--};-->
+<!--</script>-->
 </body>
 </html>
