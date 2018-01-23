@@ -1,11 +1,14 @@
 ;
 
+// Объявим вопросы
+
 var questionOne = 'Напишите фамилию первого президента Беларуси';
 var questionTwo = 'Как звучит фраза? Напишите вместо *** правильное слово: \n\n *** - всему голова!\n';
 var questionThree = 'Как правильно: Беларусь или Белоруссия?';
 var questionFour = '"В Беларуси три столицы: Минск, *** и Плещеницы."\nНапишите вместо *** пропущенное слово';
 var questionFive = 'В каком году начали строить Бобруйскую крепость?';
 
+// Собственно тест
 
 var answerOne = prompt(questionOne, '');
 switch (answerOne) {
@@ -43,7 +46,7 @@ switch (answerThree) {
         var correctlyThree = true;
         break;
     case 'Белоруссия':
-        alert('Конечно же Беларусь! Это нужно знать! Минус 1 бал.');
+        alert('Конечно же Беларусь! Это нужно знать! Минус 1 бал.'); // Отнимем бал :)
         result -= 1;
         break;
 
@@ -78,12 +81,15 @@ switch (answerFive) {
         alert('Вы ошиблись!');
 }
 
+// Суммируем очки. Плюс проверка Белоруссии, если ни один из ответов не будет верным.
+
 if (result == -1) {
     document.getElementById("result").innerHTML = 'Вы ответили на <span class="red">0</span> из 5 вопросов';
 } else {
     document.getElementById("result").innerHTML = 'Вы ответили на <span class="red">' + result + '</span> из 5 вопросов';
 }
 
+// Выводим изображение
 
 if (result > 4) {
     var addClass = document.getElementById("image");
@@ -95,6 +101,9 @@ if (result > 4) {
     var addClass = document.getElementById("image");
     addClass.className += " bad";
 }
+
+// Делаем страницу с итогами и с ответами в случае, если был дан неправильный ответ
+
 document.getElementById("totals").innerHTML = 'Итоги';
 
 document.getElementById("totals-questionOne").innerHTML = 'На вопрос <span class="orange">' + questionOne + '</span> Вы дали ответ:<br><span class="blue">' + answerOne + '</span>';
