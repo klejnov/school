@@ -84,9 +84,9 @@ switch (answerFive) {
 // Суммируем очки. Плюс проверка Белоруссии, если ни один из ответов не будет верным.
 
 if (result == -1) {
-    document.getElementById("result").innerHTML = 'Вы ответили на <span class="red">0</span> из 5 вопросов';
+    document.getElementById("result").innerHTML = 'Вы заработали  <span class="red">0</span> из 5 возможных';
 } else {
-    document.getElementById("result").innerHTML = 'Вы ответили на <span class="red">' + result + '</span> из 5 вопросов';
+    document.getElementById("result").innerHTML = 'Вы заработали <span class="red">' + result + '</span> из 5 возможных';
 }
 
 // Выводим изображение
