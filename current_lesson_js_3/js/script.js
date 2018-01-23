@@ -86,7 +86,7 @@ switch (answerFive) {
 if (result == -1) {
     document.getElementById("result").innerHTML = 'Вы заработали  <span class="red">0 баллов</span> из 5 возможных';
 } else {
-    document.getElementById("result").innerHTML = 'Вы заработали <span class="red">' + result + ' баллов</span> из 5 возможных';
+    document.getElementById("result").innerHTML = 'Вы заработали <span class="red">' + result + '</span> из 5 возможных баллов';
 }
 
 // Выводим изображение
