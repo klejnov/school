@@ -21,10 +21,12 @@ switch (answerOne) {
     case null:
         alert('Вы нажали "Отмена" и пропустили ответ');
         answerOne = 'Вы нажали "Отмена" и пропустили ответ';
+        var result = 0;
         break;
     case '':
         alert('Вы не ввели ответ');
         answerOne = 'Вы не ввели ответ';
+        var result = 0;
         break;
 
     default:
