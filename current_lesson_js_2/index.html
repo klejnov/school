@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Домашнее задание</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="учёба, школа">
+    <meta name="Description" content="Обучение html, css и JavaScript">
+    <meta name="author" content="Клейнов Олег">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+<p id="demo-1"></p>
+<script>
+    var x = 10;
+    var y = '23';
+    y--;
+    y--;
+    y--;
+    document.getElementById("demo-1").innerHTML = x + y;
+</script>
+
+<p id="demo-2"></p>
+<script>
+    var x = 10;
+    var y = '23';
+    y -= 3; // применен составной оператор присваивания
+    document.getElementById("demo-2").innerHTML = x + y;
+</script>
+
+<p id="demo-3"></p>
+<script>
+    var x = 10;
+    var y = '23';
+    y %= 23; // применен составной оператор присваивания
+    x *= 3; // применен составной оператор присваивания
+    document.getElementById("demo-3").innerHTML = x + y;
+</script>
+
+
+<script>
+    var x = 2;
+    x += 6; // применен составной оператор присваивания
+    alert(x); // 8
+</script>
+
+<script>
+    var x = 2;
+    x *= 4; // применен составной оператор присваивания
+    alert(x); // 8
+</script>
+
+<script>
+    var x = 2;
+    for (; x < 8;) {
+        x++
+    }
+    alert(x); // 8
+</script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+body {
+    background: white;
+    margin: 0;
+}
+
+.image {
+    text-align: center;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    min-width: 320px;
+}
