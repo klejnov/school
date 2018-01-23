@@ -18,6 +18,14 @@ switch (answerOne) {
         var result = 1;
         var correctlyOne = true;
         break;
+    case null:
+        alert('Вы нажали "Отмена" и пропустили ответ');
+        answerOne = 'Вы нажали "Отмена" и пропустили ответ';
+        break;
+    case '':
+        alert('Вы не ввели ответ');
+        answerOne = 'Вы не ввели ответ';
+        break;
 
     default:
         alert('Вы ошиблись!');
@@ -32,6 +40,14 @@ switch (answerTwo) {
         alert('Ответ верный!');
         result += 1;
         var correctlyTwo = true;
+        break;
+    case null:
+        alert('Вы нажали "Отмена" и пропустили ответ');
+        answerTwo = 'Вы нажали "Отмена" и пропустили ответ';
+        break;
+    case '':
+        alert('Вы не ввели ответ');
+        answerTwo = 'Вы не ввели ответ';
         break;
 
     default:
@@ -49,6 +65,14 @@ switch (answerThree) {
         alert('Конечно же Беларусь! Это нужно знать! Минус 1 бал.'); // Отнимем бал :)
         result -= 1;
         break;
+    case null:
+        alert('Вы нажали "Отмена" и пропустили ответ');
+        answerThree = 'Вы нажали "Отмена" и пропустили ответ';
+        break;
+    case '':
+        alert('Вы не ввели ответ');
+        answerThree = 'Вы не ввели ответ';
+        break;
 
     default:
         alert('Вы ошиблись!');
@@ -60,6 +84,14 @@ switch (answerFour) {
         alert('Правильно! Это Бобруйск!');
         result += 1;
         var correctlyFour = true;
+        break;
+    case null:
+        alert('Вы нажали "Отмена" и пропустили ответ');
+        answerFour = 'Вы нажали "Отмена" и пропустили ответ';
+        break;
+    case '':
+        alert('Вы не ввели ответ');
+        answerFour = 'Вы не ввели ответ';
         break;
 
     default:
@@ -75,6 +107,14 @@ switch (answerFive) {
         break;
     case '1812':
         alert('Строительство начато в 1810 году, крепость сыграла существенную роль в Отечественной Войне 1812 года.');
+        break;
+    case null:
+        alert('Вы нажали "Отмена" и пропустили ответ');
+        answerFive = 'Вы нажали "Отмена" и пропустили ответ';
+        break;
+    case '':
+        alert('Вы не ввели ответ');
+        answerFive = 'Вы не ввели ответ';
         break;
 
     default:
