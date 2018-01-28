@@ -60,22 +60,22 @@ var addClass = document.getElementById("image");
 
 switch (true) {
     case difference == 0:
-        addClass.className += " perfectly";
+        addClass.className = "image perfectly";
         document.getElementById("correctly").innerHTML = '<span class="green">Вы угадали!</span>';
         break;
 
     case difference > 0 && difference <= 3:
-        addClass.className += " nice";
+        addClass.className = "image nice";
         document.getElementById("correctly").innerHTML = '<span class="blue">Горячо!</span>';
         break;
 
     case difference >= 4 && difference <= 6:
-        addClass.className += " bad";
+        addClass.className = "image bad";
         document.getElementById("correctly").innerHTML = '<span class="blue">Холодно!</span>';
         break;
 
     default:
-        addClass.className += " bad";
+        addClass.className = "image bad";
         document.getElementById("correctly").innerHTML = '<span class="blue">Очень холодно! Вы были далеки от правильного ответа!</span>';
 
 }
