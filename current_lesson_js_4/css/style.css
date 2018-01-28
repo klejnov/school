@@ -1,0 +1,56 @@
+body {
+    background: white;
+    margin: 0;
+    text-align: center;
+}
+
+.wrapper::after {
+    content: "";
+    background-image: url("../img/background.jpg");
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: .03;
+    height: 120%;
+}
+.image {
+    display: inline-block;
+    height: 275px;
+    width: 275px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bad {
+    background-image: url("../img/1.png");
+}
+
+.nice {
+    background-image: url("../img/2.png");
+}
+
+.perfectly {
+    background-image: url("../img/3.png");
+}
+
+.red {
+    color: #f76251;
+}
+
+.blue {
+    color: #39b8d5;
+    font-size: 60px;
+}
+.green {
+    color: #3fbea3;
+}
+.orange {
+    color: #f79003;
+}
+p {
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
