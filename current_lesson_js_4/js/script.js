@@ -1,5 +1,6 @@
 ;
-
+function randomButton()
+{
 var randomNumber = Math.round(Math.random() * 10);
 var userNumber = prompt('Попробуйте угадать число от 0 до 10', '');
 
@@ -88,3 +89,5 @@ document.getElementById("totals").innerHTML = 'Итоги';
 document.getElementById("userNumber").innerHTML = 'Вы дали ответ:<br><span class="blue">' + userNumber + '</span>';
 
 document.getElementById("percent").innerHTML = 'Вы оказались близки на:<br><span class="blue">' + percent + ' %</span>';
+
+}
