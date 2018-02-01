@@ -96,6 +96,7 @@ function randomButton() {
     if (resultX1 === false && resultX2 === false) {
 
         var userNumberMax = userNumber;
+        // x11 и x22 - любые нецелые числа, чтобы начал работать for
         var x11 = 2.1;
         var x22 = 2.1;
 
@@ -130,6 +131,7 @@ function randomButton() {
             }
         }
 
+        // x11 и x22 - любые нецелые числа, чтобы начал работать for
         var x11 = 2.1;
         var x22 = 2.1;
         var userNumberMin = userNumber;
