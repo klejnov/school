@@ -20,27 +20,27 @@ if (userNumber != null) {
 while (userNumber == null || userNumber == '' || isNaN(userNumber) || userNumber > 10 || userNumber < 0)  {
     switch (true) {
         case userNumber == null:
-            alert('Вы нажали Отмена')
+            alert('Вы нажали Отмена');
             userNumber = prompt('Попробуйте ввести число заново', '').trim();
             break;
         case userNumber == '':
-            alert('Вы ничего не ввели')
+            alert('Вы ничего не ввели');
             userNumber = prompt('Попробуйте ввести число заново', '').trim();
             break;
         case isNaN(userNumber):
-            alert('Вы ввели не число')
+            alert('Вы ввели не число');
             userNumber = prompt('Попробуйте ввести число, а не текст', '').trim();
             break;
         case userNumber > 10:
-            alert('Вы ввели число больше 10')
+            alert('Вы ввели число больше 10');
             userNumber = prompt('Попробуйте ввести число в верном диапазоне', '').trim();
             break;
         case userNumber < 0:
-            alert('Вы ввели число меньше 0')
+            alert('Вы ввели число меньше 0');
             userNumber = prompt('Попробуйте ввести число в верном диапазоне', '').trim();
             break;
         default:
-            alert('Что-то пошло не так :)')
+            alert('Что-то пошло не так :)');
             userNumber = prompt('Попробуйте ввести число заново', '').trim();
     }
 
