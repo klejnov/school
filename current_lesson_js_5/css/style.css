@@ -1,0 +1,120 @@
+body {
+    background: white;
+    margin: 0;
+    text-align: center;
+}
+
+.wrapper::after {
+    content: "";
+    background-image: url("../img/background.jpg");
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: .07;
+    height: 100%;
+}
+.image {
+    display: inline-block;
+    height: 275px;
+    width: 275px;
+    background-repeat: no-repeat;
+    background-size: cover;
+	transition: transform .9s linear;
+}
+
+body:hover .image {
+transform: rotate3d(0, 1, 0, 360deg);
+}
+
+.bad {
+    background-image: url("../img/1.png");
+}
+
+.nice {
+    background-image: url("../img/2.png");
+}
+
+.perfectly {
+    background-image: url("../img/3.png");
+}
+
+.red {
+    color: #f76251;
+}
+
+.blue {
+    color: #39b8d5;
+    font-size: 60px;
+}
+.green {
+    color: #3fbea3;
+}
+.orange {
+    color: #f79003;
+}
+p {
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+
+.button {
+    margin: 10px
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(243, 156, 18);
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 800;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center;
+    position: relative;
+    outline: 0;
+    transition: background-color .1s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button::after {
+    transition: background-color .2s ease;
+    position: absolute;
+    content: '';
+    height: 4px;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    opacity: .18;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left: 0
+}
+
+.button:focus, .button:hover {
+    text-decoration: none;
+    color: #fff
+}
+
+.button:hover {
+    background-color: #f37423
+}
+
+.button:hover::after {
+    opacity: .22
+}
+
+.button:active {
+    background-color: #d85b0c
+}
+
+.button:active::after {
+    opacity: .32
+}
