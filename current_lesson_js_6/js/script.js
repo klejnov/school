@@ -50,7 +50,7 @@ function randomButton() {
                     userNumberPrompt = prompt('Попробуйте ввести число, а не текст', '').trim();
                     break;
                 case userNumberPrompt > 9:
-                    alert('Вы ввели число больше 10');
+                    alert('Вы ввели число больше 9');
                     userNumberPrompt = prompt('Попробуйте ввести число в верном диапазоне', '').trim();
                     break;
                 case userNumberPrompt < 0:
