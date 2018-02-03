@@ -36,8 +36,6 @@ function randomButton() {
         document.getElementById("correctly").innerHTML = '<span class="red">Вы не угадали числа!</span>';
     }
 
-    var addClass = document.getElementById("image");
-
 // Делаем страницу с итогами
 
     document.getElementById("result").innerHTML = 'Были загаданы следующие числа:<br><span class="orange">' + randomNumber;
