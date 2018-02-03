@@ -18,7 +18,7 @@ function randomButton() {
     alert('Вспомните пять чисел показанных ранее и введите каждое из них последовательно в правильном порядке');
 
     for (var i = 1, userNumber = ''; i < 6; i++) {
-        userNumber += ' \n Число ' + i + ': ' + String(prompt('Введите число ' + i, ''));
+        userNumber += ' \n Число ' + i + ': ' + prompt('Введите число ' + i, '');
         alert(userNumber);
         console.log('число ' + i + ' = ' + userNumber);
     }
