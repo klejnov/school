@@ -33,6 +33,7 @@ function randomButton() {
 // введено ли значение
 // введен текст или число
 // не выходит ли число из диапозона
+// введено ли целое значение
 
         while (userNumberPrompt == null || userNumberPrompt == '' || isNaN(userNumberPrompt) || userNumberPrompt > 9 || userNumberPrompt < 0 || Number.isInteger(+userNumberPrompt) == false)  {
             switch (true) {
