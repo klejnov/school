@@ -4,14 +4,13 @@ function randomButton() {
     var randomNumber;
     var userNumber;
 
-    alert('Запомните пять чисел!');
+    alert('Запомните следующие пять чисел!');
 
     for (var i = 1, randomNumber = ''; i < 6; i++) {
         randomNumber += ' \n Число ' + i + ': ' + String(Math.round(Math.random() * 9));
         alert(randomNumber);
         console.log('число ' + i + ' = ' + randomNumber);
     }
-
     // отладка
     console.log('Общая строка рандомная = ' + randomNumber);
     console.log('Тип = ' + typeof randomNumber);
@@ -38,9 +37,6 @@ function randomButton() {
     }
 
     var addClass = document.getElementById("image");
-
-// немного изменим switch, чтобы показать, что в case можно писать условия.
-
 
 // Делаем страницу с итогами
 
