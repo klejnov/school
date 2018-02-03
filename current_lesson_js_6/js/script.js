@@ -66,6 +66,7 @@ function randomButton() {
             }
 
         }
+
         userNumber += ' \n Число ' + i + ': ' + userNumberPrompt;
         alert(userNumber);
         console.log('число ' + i + ' = ' + userNumber);
