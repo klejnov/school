@@ -8,13 +8,13 @@ function randomButton() {
 
     for (var i = 1, randomNumber = ''; i < 6; i++) {
         randomNumber += ' \n Число ' + i + ': ' + String(Math.round(Math.random() * 9));
-        alert(randomNumber);
+        // alert(randomNumber);
         console.log('число ' + i + ' = ' + randomNumber);
     }
     // отладка
     console.log('Общая строка рандомная = ' + randomNumber);
     console.log('Тип = ' + typeof randomNumber);
-
+    alert(randomNumber);
     alert('Вспомните пять чисел показанных ранее и введите каждое из них последовательно в правильном порядке');
 
     for (var i = 1, userNumber = ''; i < 6; i++) {
