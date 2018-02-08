@@ -84,26 +84,20 @@ function getInfoNumber(userNumber) {
     for (var i = 2; i < userNumber; i++) {
         if (userNumber % i == 0) {
             info[2] = 'Число ' + userNumber + ' не является простым';
-            console.log(info[2]);
             break;
         } else {
             info[2] = 'Число ' + userNumber + ' является простым';
-            console.log(info[2]);
         }
     }
 
     if (userNumber == 2) {
         info[2] = 'Число ' + userNumber + ' является простым';
-        console.log(info[2]);
     } else if (userNumber == 1) {
         info[2] = 'Число ' + userNumber + ' не является простым числом';
-        console.log(info[2]);
     } else if (userNumber == 0) {
         info[2] = 'Ноль к множеству натуральных чисел не принадлежит, следовательно, и не является простым числом. ';
-        console.log(info[2]);
     } else if (userNumber < 0) {
         info[2] = 'Отрицательные числа не являются простыми числами';
-        console.log(info[2]);
     }
 
     console.log(info[2]);
