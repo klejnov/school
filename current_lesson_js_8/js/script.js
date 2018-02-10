@@ -12,8 +12,13 @@ function getTransliteration(userString) {
 
     for (var k = 0; k < length; k++) {
 
-        for (var i = 0; userString[k] != stringRus[i]; i++) {
+        stop: for (var i = 0; userString[k] != stringRus[i]; i++) {
             userStringNew[k] = stringLat[i + 1];
+            if (i > stringRus.length) {
+                alert('Что-то пошло не так! Введите текст на русском языке!');
+                userStringNew[k] = '';
+                break stop; // Сделаем доп. условие для метки чтобы прервать цикл, и не получить бесконечный цикл в случае, если введены символы которых нет в массиве stringRus.
+            }
         }
         if (userString[k] == stringRus[0]) {
             userStringNew[k] = stringLat[0];
