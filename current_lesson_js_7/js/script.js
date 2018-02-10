@@ -1,7 +1,5 @@
 ;
 
-var userNumber;
-
 function getInfoNumber(userNumber) {
 
 // Удалим пробелы с начала и конца строки, либо удалим все пробелы и сделаем пустую строку ''.
