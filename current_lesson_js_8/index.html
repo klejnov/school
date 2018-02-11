@@ -9,7 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 </head>
 
@@ -22,16 +21,16 @@
     <p id="correctly"></p>
     <p id="percent"></p>
     <script src="js/script.js"></script>
-
     <a OnClick="getTransliteration(prompt('Введите текст ', ''));" class="button">Введите текст для транслитерации</a>
     <p></p>
-
-    <div style="text-align:center;height:15px;background:#e9edf2;cursor:pointer;padding:10px;display: inline-block;margin-top:5px;width: 400px" onclick="$(this).hide();$('#code').slideDown()">Код JS (доступен после выполнения)</div>
-    <div style="display:none" id="code"></div>
+    <details>
+        <summary>Код JS</summary>
+        <textarea style="width: 90%; height: 50vh;" id="code"></textarea>
+    </details>
 </div>
-
-
-
+<script>
+    document.getElementById("code").innerHTML = getTransliteration;
+</script>
 
 </body>
 
