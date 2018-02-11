@@ -12,22 +12,21 @@ function getTransliteration(userString) {
 
     for (var k = 0; k < length; k++) {
 
-        stop: for (var i = 0; userString[k] != stringRus[i]; i++) {
-            userStringNew[k] = stringLat[i + 1];
-            if (i > stringRus.length) {
-                alert('Что-то пошло не так! Введите текст на русском языке!');
-                userStringNew[k] = '';
-                break stop; // Сделаем доп. условие для метки чтобы прервать цикл, и не получить бесконечный цикл в случае, если введены символы которых нет в массиве stringRus.
+        for (var i = 0; i < stringRus.length; i++) {
+            if (userString[k] == stringRus[i]) {
+                userStringNew[k] = stringLat[i];
+                break;
             }
         }
-        if (userString[k] == stringRus[0]) {
-            userStringNew[k] = stringLat[0];
+        if (userStringNew[k] == undefined) {
+            alert('Вы вели неизвестный символ')
         }
+
     }
     console.log(userStringNew);
 
     // Текущий варант (3 варинат) через reduce:
-    userStringTrans = userStringNew.reduce(function(sum, item) {
+    userStringTrans = userStringNew.reduce(function (sum, item) {
         return sum + item;
     }, '');
 
