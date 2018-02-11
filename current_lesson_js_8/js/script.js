@@ -26,9 +26,15 @@ function getTransliteration(userString) {
     }
     console.log(userStringNew);
 
-    for (var i = 0; i < userStringNew.length; i++) {
-        userStringTrans += userStringNew[i];
-    }
+    userStringNew.forEach(function(item) {
+        userStringTrans += item;
+    });
+
+    // Либо так:
+    // for (var i = 0; i < userStringNew.length; i++) {
+    //     userStringTrans += userStringNew[i];
+    // }
+    console.log(userStringTrans);
 
 // Делаем страницу с итогами
 
