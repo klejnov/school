@@ -26,11 +26,19 @@ function getTransliteration(userString) {
     }
     console.log(userStringNew);
 
-    userStringNew.forEach(function(item) {
-        userStringTrans += item;
-    });
+    // Либо так (3 варинат) reduce:
+    userStringTrans = userStringNew.reduce(function(sum, item) {
+        return sum + item;
+    }, '');
 
-    // Либо так:
+    // Либо так (2 варинат) forEach:
+
+    // userStringNew.forEach(function(item) {
+    //     userStringTrans += item;
+    // });
+
+    // Либо так (1 варинат) for:
+
     // for (var i = 0; i < userStringNew.length; i++) {
     //     userStringTrans += userStringNew[i];
     // }
