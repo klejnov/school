@@ -23,9 +23,15 @@
     <p id="percent"></p>
     <script src="js/script.js"></script>
     <a OnClick="getInfoNumber(prompt('Введите число ', ''));" class="button">Проверка числа!</a>
+
+    <details>
+        <summary>Код JS</summary>
+        <textarea id="code"></textarea>
+    </details>
 </div>
-
-
+<script>
+    document.getElementById("code").innerHTML = getInfoNumber;
+</script>
 
 </body>
 

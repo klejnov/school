@@ -16,17 +16,18 @@ body {
     opacity: .07;
     height: 100%;
 }
+
 .image {
     display: inline-block;
     height: 275px;
     width: 275px;
     background-repeat: no-repeat;
     background-size: cover;
-	transition: transform .9s linear;
+    transition: transform .9s linear;
 }
 
 body:hover .image {
-transform: rotate3d(0, 1, 0, 360deg);
+    transform: rotate3d(0, 1, 0, 360deg);
 }
 
 .bad {
@@ -50,19 +51,21 @@ transform: rotate3d(0, 1, 0, 360deg);
     color: #39b8d5;
     font-size: 30px;
 }
+
 .green {
     color: #3fbea3;
     font-size: 60px;
 }
+
 .orange {
     color: #f79003;
     font-size: 30px;
 }
+
 p {
     margin-top: -15px;
     margin-bottom: 30px;
 }
-
 
 .button {
     margin: 10px
@@ -120,4 +123,21 @@ p {
 
 .button:active::after {
     opacity: .32
+}
+
+textarea {
+    width: 90%;
+    height: 70vh;
+}
+
+summary {
+    background-color: #bddac0;
+    width: 20%;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    margin: 10px 0px;
 }

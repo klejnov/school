@@ -121,3 +121,20 @@ p {
 .button:active::after {
     opacity: .32
 }
+
+textarea {
+    width: 90%;
+    height: 70vh;
+}
+
+summary {
+    background-color: #bddac0;
+    width: 20%;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    margin: 10px 0px;
+}
