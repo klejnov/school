@@ -26,18 +26,18 @@ function getTransliteration(userString) {
     }
     console.log(userStringNew);
 
-    // Либо так (3 варинат) reduce:
+    // Текущий варант (3 варинат) через reduce:
     userStringTrans = userStringNew.reduce(function(sum, item) {
         return sum + item;
     }, '');
 
-    // Либо так (2 варинат) forEach:
+    // Либо так (2 варинат) через forEach:
 
     // userStringNew.forEach(function(item) {
     //     userStringTrans += item;
     // });
 
-    // Либо так (1 варинат) for:
+    // Либо так (1 варинат) через for:
 
     // for (var i = 0; i < userStringNew.length; i++) {
     //     userStringTrans += userStringNew[i];
