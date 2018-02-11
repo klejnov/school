@@ -52,5 +52,6 @@ function getTransliteration(userString) {
 
     document.getElementById("userNumber").innerHTML = 'Текст после транслитерации:<br><span class="blue">' + userStringTrans + '</span>';
 
+    document.getElementById("code").innerHTML = '<pre style="text-align: left">' + getTransliteration + '</pre>';
 
 }
