@@ -25,6 +25,9 @@ function getTransliteration(userString) {
     }
     console.log(userStringNew);
 
+    // Еще вариант от Евгения (4 варинат) через join:
+    // userStringTrans = userStringNew.join('');
+
     // Текущий варант (3 варинат) через reduce:
     userStringTrans = userStringNew.reduce(function (sum, item) {
         return sum + item;
