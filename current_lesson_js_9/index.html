@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Домашнее задание</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="учёба, школа">
+    <meta name="Description" content="Обучение html, css и JavaScript">
+    <meta name="author" content="Клейнов Олег">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+
+    <table id="myTable">
+        <thead>
+        <tr>
+            <th>Фамилия <a href="#" onclick="getSort(0,false)">↓</a> <a href="#" onclick="getSort(0,true)">↑</a></th>
+            <th>Имя <a href="#" onclick="getSort(1,false)">↓</a> <a href="#" onclick="getSort(1,true)">↑</a></th>
+            <th>Возраст <a href="#" onclick="getSort(2,false)">↓</a> <a href="#" onclick="getSort(2,true)">↑</a></th>
+            <th>Средний бал <a href="#" onclick="getSort(3,false)">↓</a> <a href="#" onclick="getSort(3,true)">↑</a>
+            </th>
+        </tr>
+        </thead>
+        <tbody id="tr"></tbody>
+    </table>
+
+    <div><a OnClick="addStudents();" class="button">Добавить студентов</a></div>
+    <div><a OnClick="toFind();" class="button">Поиск по новому списку студентов</a></div>
+
+    <details>
+        <summary>Код JS</summary>
+        <textarea id="code"></textarea>
+    </details>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
