@@ -57,15 +57,14 @@ function getSort(sort_id, reverse) {
 
 
 function addStudents() {
-
     var students_new = students2.concat(students);
-
     // Вывод в таблицу
     createTable(students_new);
 }
 
 function toFind() {
     addStudents();
+
     var search;
     var students_new = students2.concat(students);
 
