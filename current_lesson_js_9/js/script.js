@@ -103,7 +103,7 @@ function toFind() {
     console.log(students_new);
 }
 
-//вывод кода в textarea (подключен ajax)
+//вывод кода в textarea (подключен jQuery v3.3.1 для работы с ajax)
 var code_js;
 $.ajax({
     url: "js/script.js",
