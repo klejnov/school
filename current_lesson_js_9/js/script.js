@@ -40,17 +40,17 @@ function createTable(students_arr) {
         addClass = document.getElementById("spinner");
         addClass.className = "spinner";
     }
-};
+}
 
 function getSort(sort_id, reverse) {
     var i = sort_id;
     students.sort(CompareForSort);
-    if (reverse == true) {
-        students.reverse()
+    if (reverse === true) {
+        students.reverse();
     }
 
     function CompareForSort(first, second) {
-        if (first[i] == second[i])
+        if (first[i] === second[i])
             return 0;
         if (first[i] < second[i])
             return -1;
@@ -90,7 +90,7 @@ function toFind() {
             search = prompt('Введите средний балл, например:', '11.8');
             break;
         default:
-            alert('Что-то пошло не так!')
+            alert('Что-то пошло не так!');
     }
 
     var students_new = students_new.filter(function (item) {
@@ -101,7 +101,7 @@ function toFind() {
         }
     });
 
-    if (students_new.length == 0) {
+    if (students_new.length === 0) {
         // Вывод в таблицу
         document.getElementById("tr").innerHTML = '';
         document.getElementById("tr").innerHTML += '<tr><td colspan="4" style="text-align: center;">Ничего не найдено</td></tr>';
