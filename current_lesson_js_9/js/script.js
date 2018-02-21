@@ -25,12 +25,23 @@ console.log(students);
 getSort(0, false);
 
 function createTable(students_arr) {
-    // Вывод в таблицу
-    document.getElementById("tr").innerHTML = '';
-    // students.forEach(function(item, i, students) - item – очередной элемент массива. i – его номер.  students – массив, который перебирается.
-    students_arr.forEach(function (item) {
-        document.getElementById("tr").innerHTML += '<tr><td>' + item[0] + '</td>' + '<td>' + item[1] + '</td>' + '<td>' + item[2] + '</td>' + '<td>' + item[3] + '</td><tr>';
-    });
+    var addClass = document.getElementById("spinner");
+    addClass.className = "orbit-spinner";
+
+    setTimeout(func, 500);
+
+    function func() {
+        // Вывод в таблицу
+        document.getElementById("tr").innerHTML = '';
+        // students.forEach(function(item, i, students) - item – очередной элемент массива. i – его номер.  students – массив, который перебирается.
+        students_arr.forEach(function (item) {
+            document.getElementById("tr").innerHTML += '<tr><td>' + item[0] + '</td>' + '<td>' + item[1] + '</td>' + '<td>' + item[2] + '</td>' + '<td>' + item[3] + '</td><tr>';
+        });
+        addClass = document.getElementById("spinner");
+        addClass.className = "spinner";
+    }
+
+
 };
 
 function getSort(sort_id, reverse) {
