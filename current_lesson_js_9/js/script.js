@@ -64,7 +64,6 @@ function getSort(sort_id, reverse) {
     console.log(students);
 }
 
-
 function addStudents() {
     var students_new = students2.concat(students);
     // Вывод в таблицу
@@ -72,7 +71,6 @@ function addStudents() {
 }
 
 function toFind() {
-    addStudents();
 
     var search;
     var students_new = students2.concat(students);
@@ -108,8 +106,6 @@ function toFind() {
         createTable(students_new);
     }
 
-    console.log('массив после поиска:');
-    console.log(students_new);
 }
 
 //вывод кода в textarea (подключен jQuery v3.3.1 для работы с ajax)
