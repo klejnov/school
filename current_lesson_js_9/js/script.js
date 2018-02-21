@@ -94,7 +94,12 @@ function toFind() {
     }
 
     var students_new = students_new.filter(function (item) {
-        return item[search_id - 1] == search;
+        if (search_id <= 2) {
+            return item[search_id - 1].toUpperCase() == search.toUpperCase();
+        } else {
+            return item[search_id - 1] == search;
+        }
+
     });
 
     if (students_new.length == 0) {
