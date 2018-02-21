@@ -95,11 +95,10 @@ function toFind() {
 
     var students_new = students_new.filter(function (item) {
         if (search_id <= 2) {
-            return item[search_id - 1].toUpperCase() == search.toUpperCase();
+            return item[search_id - 1].toUpperCase() == search.toUpperCase(); // для поиска в любом регистре
         } else {
             return item[search_id - 1] == search;
         }
-
     });
 
     if (students_new.length == 0) {
