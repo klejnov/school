@@ -40,8 +40,6 @@ function createTable(students_arr) {
         addClass = document.getElementById("spinner");
         addClass.className = "spinner";
     }
-
-
 };
 
 function getSort(sort_id, reverse) {
