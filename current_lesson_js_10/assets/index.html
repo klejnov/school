@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Домашнее задание</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="учёба, школа">
+    <meta name="Description" content="Обучение html, css и JavaScript">
+    <meta name="author" content="Клейнов Олег">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <script src="js/libs.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+
+    <div class="ball-wrapper sort">По размеру: <a href="#" onclick="getSort('size',false)">↓</a> <a href="#" onclick="getSort('size',true)">↑</a></div>
+    <div class="ball-wrapper sort">По cкорости: <a href="#" onclick="getSort('speed',false)">↓</a> <a href="#" onclick="getSort('speed',true)">↑</a></div>
+    <div></div>
+    <div class="ball-wrapper" id="ball-wrapper"></div>
+
+
+    <details>
+        <summary>Код JS</summary>
+        <textarea id="code"></textarea>
+    </details>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
