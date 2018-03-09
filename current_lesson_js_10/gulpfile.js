@@ -92,15 +92,6 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 		])
 	.pipe(gulp.dest('dist/css'))
 
-    var buildCssMain = gulp.src([ // Переносим библиотеки в продакшен
-        'assets/css/style.css'
-    ])
-		.pipe(cssnano({autoprefixer: { // Сжимаем
-        browsers:['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
-        add: true
-    }}))
-        .pipe(gulp.dest('dist/css'))
-
 	var buildFonts = gulp.src('assets/fonts/**/*') // Переносим шрифты в продакшен
 	.pipe(gulp.dest('dist/fonts'))
 
