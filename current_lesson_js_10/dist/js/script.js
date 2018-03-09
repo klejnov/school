@@ -7,7 +7,7 @@ function Ball(color) {
     // сделаем метод, задающий скорость шара
     this.speed = function () {
         if (this.color == "red") {
-            return this.size * 0.01; // округлим до целого
+            return this.size * 0.01;
         }
         if (this.color == "blue") {
             return this.size * 0.01;

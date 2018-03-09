@@ -51,10 +51,16 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('css-libs', ['sass'], function() {
-	return gulp.src('assets/css/table.css') // Выбираем файл для минификации
-		.pipe(cssnano()) // Сжимаем
+	return gulp.src([
+		'assets/css/table.css'
+	]) // Выбираем файл для минификации
+        .pipe(cssnano({autoprefixer: {
+            browsers:['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
+            add: true
+        }})) // Сжимаем
 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
 		.pipe(gulp.dest('assets/css')); // Выгружаем в папку assets/css
+
 });
 
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
@@ -82,10 +88,18 @@ gulp.task('img', function() {
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 
 	var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-		'assets/css/style.css',
 		'assets/css/table.min.css'
 		])
 	.pipe(gulp.dest('dist/css'))
+
+    var buildCssMain = gulp.src([ // Переносим библиотеки в продакшен
+        'assets/css/style.css'
+    ])
+		.pipe(cssnano({autoprefixer: { // Сжимаем
+        browsers:['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
+        add: true
+    }}))
+        .pipe(gulp.dest('dist/css'))
 
 	var buildFonts = gulp.src('assets/fonts/**/*') // Переносим шрифты в продакшен
 	.pipe(gulp.dest('dist/fonts'))
