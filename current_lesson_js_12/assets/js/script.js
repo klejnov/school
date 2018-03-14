@@ -24,11 +24,13 @@ generateRandomCart();
 
 // Эффект барабана
 var random_card_random = 0;
+
 function jump_cart_random() {
-    random_card_random = 10 + Math.floor(Math.random() * 20);
+    random_card_random = 20 + Math.floor(Math.random() * 40);
     console.log('Количество итераций: ' + random_card_random);
     return random_card_random;
 }
+
 jump_cart_random();
 
 function jump_cart(y) {
@@ -46,7 +48,7 @@ function jump_cart(y) {
             for (var i = 0; i < elements.length; i++) {
                 elements[i].style.paddingBottom = '0px';
                 elements[i].dataset.id = '0';
-                elements[i].getElementsByTagName('img')[0].className = "";;
+                elements[i].getElementsByTagName('img')[0].className = "";
             }
 
             random_card.getElementsByClassName('card')[y % 5].style.paddingBottom = '20px';
@@ -89,6 +91,7 @@ function select_carts(id_cart) {
         }
         document.getElementsByClassName('fingerprint-spinner')[0].style.display = 'none';
     }
+
     setTimeout(func1, 2500);
 
     var random_cart_id = document.getElementById('random-card').querySelectorAll('[data-id="1"]')[0].dataset.karta;
@@ -101,6 +104,7 @@ function select_carts(id_cart) {
             document.getElementById('random-text').innerHTML = '<span class="red">Вы ошиблись!</span>';
         }
     }
+
     setTimeout(func2, 3500);
 
 }
