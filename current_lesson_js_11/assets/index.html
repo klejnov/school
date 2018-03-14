@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Домашнее задание</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="учёба, школа">
+    <meta name="Description" content="Обучение html, css и JavaScript">
+    <meta name="author" content="Клейнов Олег">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/table.min.css" rel="stylesheet">
+    <script src="js/libs.min.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="ball-wrapper select">Цвет текста: <span class="red" onclick="setColor('#f76251')"></span> <span class="blue" onclick="setColor('#39b8d5')"></span> <span class="green" onclick="setColor('#3fbea3')"></span> <span class="orange" onclick="setColor('#f79003')"></span></div>
+    <div class="ball-wrapper select">Размер текста: <a href="#" onclick="setSize(40)">↑↑</a> <a href="#" onclick="setSize(60)">↑↑</a> <a href="#" onclick="setSize(80)">↑↑</a> <a href="#" onclick="setSize(85)">↑↑</a></div>
+    <div></div>
+
+    <div class="ball-wrapper" id="time-wrapper">
+        <div><span>1</span> <span>мес.</span></div>
+        <div><span>1</span> <span>д.</span></div>
+        <div><span>1</span> <span>ч.</span></div>
+        <div><span>1</span> <span>мин.</span></div>
+        <div><span>1</span> <span>сек.</span></div>
+    </div>
+
+    <details>
+        <summary>Код JS</summary>
+        <textarea id="code"></textarea>
+    </details>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
