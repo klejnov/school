@@ -12,7 +12,7 @@ function generateRandomCart() {
     }
 }
 
-// Фунеция для генерации нижнего поля всех карт
+// Функция для генерации нижнего поля всех карт
 function generateCart() {
     for (var i = 1; i <= 13; i++) {
         document.getElementsByClassName('select-card')[0].innerHTML += '<img src="img/id' + i + '.jpg" alt="Карта ' + i + '" data-karta="id' + i + '" onclick="select_carts(\'id' + i + '\')">';
@@ -117,10 +117,10 @@ function show() {
 }
 
 // Незаработал закомментированный способ ниже. Через defineProperty пробовал разрешить запись в opacity.
-// Но всё равно доступ только для
-// var setcss = window.getComputedStyle(document.getElementById('circle'), ':after');
+// Но всё равно доступ только для чтения
+// var setcss = windoыw.getComputedStyle(document.getElementById('circle'), ':after');
 // Object.defineProperty(setcss, "opacity", {configurable: true, writable: true, enumerable: true });
-// setcss.opacity = '0.1';
+// setcss.opacity = '0.1'; // получаю ошибку что параметр только для чтения.
 
 // доступ к псевдоэлементам
 var after = document.styleSheets[0].cssRules[1].style;
