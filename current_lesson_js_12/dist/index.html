@@ -8,6 +8,35 @@
     <meta name="author" content="Клейнов Олег">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #circle {
+            display: block;
+            cursor: pointer;
+        }
+
+        #circle:after {
+            content: '\f10c';
+            opacity: 0;
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        #circle:before {
+            content: '\f067';
+            opacity: 1;
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            transition: transform 2s linear;
+        }
+        #circle:hover:before {
+            transform: rotate(1turn);
+        }
+    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
     <link href="css/table.min.css" rel="stylesheet">
     <script src="js/libs.min.js"></script>
@@ -16,7 +45,11 @@
 <body>
 
 <div class="wrapper">
-    <div class="rotate" onclick="restart()"></div>
+
+    <span id="circle" class="fa fa-4x" onMouseOver="hover(after,before)" onMouseOut="hover(before,after)" onclick="show()" title="Подсмотреть карты"></span>
+
+    <div class="rotate" onclick="restart()" title="Раздать еще раз"></div>
+
     <div class="fingerprint-spinner">
         <div class="spinner-ring"></div>
         <div class="spinner-ring"></div>
@@ -28,11 +61,11 @@
         <div class="spinner-ring"></div>
         <div class="spinner-ring"></div>
     </div>
+
     <div class="card-wrapper select">Случайная карта:</div>
     <div id="random-card"></div>
     <div id="random-text" class="card-wrapper select"></div>
     <div class="select-card"></div>
-
 
     <details>
         <summary>Код JS</summary>

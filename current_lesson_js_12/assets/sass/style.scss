@@ -116,7 +116,7 @@ body {
       height: 92px;
       padding: 5px;
       cursor: pointer;
-      bottom:0;
+      bottom: 0;
       &:hover {
         margin-bottom: 10px;
       }
@@ -140,6 +140,10 @@ body {
       transform: rotate(1turn);
     }
   }
+  #circle {
+    color: #5B9BD5;
+  }
+
 }
 
 textarea {
@@ -168,8 +172,6 @@ summary {
     margin: 11px 0px;
   }
 }
-
-
 
 .fingerprint-spinner, .fingerprint-spinner * {
   box-sizing: border-box;
@@ -256,6 +258,6 @@ summary {
 
 @keyframes fingerprint-spinner-animation {
   100% {
-    transform: rotate( 360deg );
+    transform: rotate(360deg);
   }
 }

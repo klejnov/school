@@ -75,12 +75,11 @@ function restart() {
 
 }
 
-
 function select_carts(id_cart) {
     var select_cart = id_cart;
     console.log('Вы выбрали карту: ' + select_cart);
 
-    //покажем карты
+    // покажем карты
     var elements = random_card.querySelectorAll('.cover');
 
     document.getElementsByClassName('fingerprint-spinner')[0].style.display = 'block';
@@ -107,6 +106,51 @@ function select_carts(id_cart) {
 
     setTimeout(func2, 3500);
 
+}
+
+// Включаем режим "Подсмотреть карты".
+function show() {
+    var elements = random_card.querySelectorAll('.cover');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.opacity = '0';
+    }
+}
+
+// Незаработал закомментированный способ ниже. Через defineProperty пробовал разрешить запись в opacity.
+// Но всё равно доступ только для
+// var setcss = window.getComputedStyle(document.getElementById('circle'), ':after');
+// Object.defineProperty(setcss, "opacity", {configurable: true, writable: true, enumerable: true });
+// setcss.opacity = '0.1';
+
+// доступ к псевдоэлементам
+var after = document.styleSheets[0].cssRules[1].style;
+var before = document.styleSheets[0].cssRules[2].style;
+
+function hover(x, y) {
+    emergence(x);
+    attenuation(y);
+
+    var i = 0;
+
+    function emergence(x) {
+        var timerId = setInterval(function () {
+            x.opacity = ++i / 10;
+            if (i == 10) {
+                clearInterval(timerId);
+            }
+        }, 80);
+    }
+
+    var k = 10;
+
+    function attenuation(x) {
+        var timerId = setInterval(function () {
+            x.opacity = --k / 10;
+            if (k == 0) {
+                clearInterval(timerId);
+            }
+        }, 80);
+    }
 }
 
 
