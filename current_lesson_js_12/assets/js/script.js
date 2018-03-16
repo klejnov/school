@@ -118,7 +118,7 @@ function show() {
 
 // Незаработал закомментированный способ ниже. Через defineProperty пробовал разрешить запись в opacity.
 // Но всё равно доступ только для чтения
-// var setcss = windoыw.getComputedStyle(document.getElementById('circle'), ':after');
+// var setcss = window.getComputedStyle(document.getElementById('circle'), ':after');
 // Object.defineProperty(setcss, "opacity", {configurable: true, writable: true, enumerable: true });
 // setcss.opacity = '0.1'; // получаю ошибку что параметр только для чтения.
 
