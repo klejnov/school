@@ -15,34 +15,34 @@ function setOpacity() {
         document.querySelectorAll('.range-wrapper')[1].style.display = 'inline-block';
 
     } else {
-        of();
+        off();
     }
 }
 
-var i = 0;
+
 
 function on() {
+    var i = 0;
     var timerId = setInterval(function () {
         elem.style.opacity = ++i / 10;
         range.value = i;
         brightness.innerHTML = 'Яркость ' + i*10 + ' %';
         if (i == 10) {
             clearInterval(timerId);
-            i = 0;
         }
     }, 120);
 }
 
-var k = 10;
 
-function of() {
+
+function off() {
+    var k = 10;
     var timerId = setInterval(function () {
         elem.style.opacity = --k / 10;
         brightness.innerHTML = 'Яркость ' + k*10 + ' %';
         range.value = k;
         if (k == 0) {
             clearInterval(timerId);
-            k = 10;
         }
     }, 120);
 }

@@ -40,8 +40,8 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
             baseDir: 'assets' // Директория для сервера - assets
         },
         notify: false, // Отключаем уведомления
-        //tunnel: true
-        //tunnel: "klejnov" //Demonstration page: http://klejnov.localtunnel.me
+        // tunnel: true,
+        // tunnel: "klejnovd" //Demonstration page: http://klejnov.localtunnel.me
     });
 });
 
