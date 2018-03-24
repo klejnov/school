@@ -134,7 +134,7 @@ function setShift(flag) {
     });
 }
 
-// Добавим управление с клавиатуры
+// Добавим управление с клавиатуры (стрелки право/лево).
 addEventListener("keydown", function (event) {
     if (event.keyCode == 39) {
         setReverse(true);
@@ -144,9 +144,7 @@ addEventListener("keydown", function (event) {
             hover.style.opacity = 0.7;
         }, 300)
     }
-});
 
-addEventListener("keydown", function (event) {
     if (event.keyCode == 37) {
         setReverse(false);
         hover = document.querySelector('.fa-chevron-circle-left');
@@ -156,6 +154,7 @@ addEventListener("keydown", function (event) {
         }, 300)
     }
 });
+
 
 //вывод кода в textarea (подключен jQuery v3.3.1 для работы с ajax)
 var code_js;
