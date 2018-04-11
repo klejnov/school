@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Работа в классе</title>
+    <style>
+        .quickSelection strong {
+            display: inline-block;
+            margin: 4px;
+            float: left;
+            border: 1px solid #e0e0e0;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .quickSelection strong:hover {
+            background: #eee;
+        }
+
+        form {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .links a {
+            display: block;
+        }
+        p {
+            margin: 2px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="block1" lang="en-us">div.block1 lang="en-us" Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aspernatur debitis deserunt, earum est et,
+    ipsum labore maiores minima optio perspiciatis ipsa sapiente possimus quas rem sint tempora vel velit voluptate.
+    Eius,
+    necessitatibus?
+</div>
+<div class="block2">div.block2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur debitis deserunt,
+    earum est et,
+    ipsum labore maiores <span>minima optio</span> perspiciatis possimus quas rem sint tempora vel velit voluptate.
+    Eius,
+    necessitatibus?
+</div>
+<h4>H4 Header 1</h4>
+<div class="block3" id="id3">
+    <p>1 p Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p>2 p Cupiditate doloremque explicabo fugit ipsa sapiente. Ipsam, vero?</p>
+    <p class="paragraph">3 p.paragraph Doloribus natus nulla voluptates? Est fuga possimus quisquam!</p>
+    <p>4 p Animi atque dolorem neque nobis quibusdam sunt voluptatum.</p>
+    <p>5 p Animi atque dolorem neque ipsa sapiente nobis quibusdam sunt voluptatum.</p>
+    <p>6 p Animi atque dolorem neque nobis quibusdam sunt voluptatum.</p>
+</div>
+
+<h5>H5 Header 2</h5>
+<ul>
+    <li>Пункт 1
+        <ul>
+            <li>Подпункт 1.1</li>
+            <li>Подпункт 1.2</li>
+        </ul>
+    </li>
+    <li>Пункт 2
+        <ul>
+            <li></li>
+            <li>Подпункт 2.2</li>
+            <li class="class1 class2">Подпункт 2.3</li>
+            <li>Подпункт 2.4</li>
+        </ul>
+    </li>
+    <li>Пункт 3
+        <ul>
+            <li>Подпункт 3.1</li>
+        </ul>
+    </li>
+</ul>
+
+<div class="links">
+    <div>div для проверки first-of-type</div>
+    <p>p для проверки first-of-type</p>
+    <a href="https://www.google.com/">https://www.google.com/</a>
+    <a href="https://yandex.ru/">https://yandex.ru/</a>
+    <a href="yandex.ru">yandex.ru</a>
+    <a href="https://www.tut.by/">https://www.tut.by/</a>
+</div>
+
+<form action="#" method="post">
+    <input type="text" id="selector" placeholder="Введите селектор">
+    <input type="submit" value="Найти по селектору">
+</form>
+
+<div class="quickSelection">
+    <strong>*</strong>
+    <strong>.block2</strong>
+    <strong>li</strong>
+    <strong>#id3</strong>
+    <strong>span, p, .block1</strong>
+    <strong>.block2 > span</strong>
+    <strong>#id3 p</strong>
+    <strong>.paragraph + p</strong>
+    <strong>.paragraph ~ p</strong>
+    <strong>p:eq(2)</strong>
+    <strong>p:gt(2)</strong>
+    <strong>p:gt(-3)</strong>
+    <strong>p:lt(2)</strong>
+    <strong>p:lt(-2)</strong>
+    <strong>p:even</strong>
+    <strong>p:odd</strong>
+    <strong>p:first</strong>
+    <strong>p:last</strong>
+    <strong>:header</strong>
+    <strong>:lang(en-us)</strong>
+    <strong>div:not(.block3)</strong>
+    <strong>:root</strong>
+    <strong>:target</strong><!-- нужно перейти по ссылке Task2.html#id3 чтобы сработало-->
+    <strong>p:contains('ipsa sapiente')</strong>
+    <strong>li:empty</strong>
+    <strong>div:has(span)</strong>
+    <strong>p:parent</strong>
+    <strong>p:hidden</strong>
+    <strong>p:visible</strong>
+    <strong>[href|="https://www.google.com/"]</strong>    <!-- выбирает элементы с указанным атрибутом со значением, равным заданной строке, или начиная с этой строки, за которой следует дефис (-).-->
+    <strong>[href*="www"]</strong> <!--содержит слово-->
+    <strong>[class~="class2"]</strong>    <!-- выбирает элементы с указанным атрибутом со значением, содержащим заданное слово, ограниченное пробелами.-->
+    <strong>[href$=".ru/"]</strong> <!--заканчивается-->
+    <strong>a[href="https://yandex.ru/"]</strong>
+    <strong>a[href!="https://yandex.ru/"]</strong> <!--выберите элементы, которые либо не имеют указанного атрибута, либо имеют указанный атрибут, но не имеют определенное значение.-->
+    <strong>[href^="https"]</strong><!--начинается-->
+    <strong>[href]</strong>
+    <strong>[class="block3"][id="id3"]</strong> <!--сразу соответствие по нескольким атрибутам-->
+    <strong>p:first-child</strong>
+    <strong>p:first-of-type</strong>
+    <strong>p:last-child</strong>
+    <strong>p:last-of-type</strong>
+    <strong>p:nth-child(2)</strong>
+    <strong>p:nth-last-child(2)</strong>
+    <strong>p:nth-last-of-type(2)</strong>
+    <strong>p:nth-of-type(2)</strong>
+    <strong>li:only-child</strong>
+    <strong>div:only-of-type</strong>
+</div>
+<!--
+1)	Скачайте и подключите к данному документу библиотеку jQuery;
+2)	Создайте на странице текстовое поле и кнопку.
+3)	Создайте произвольное количество элементов на странице с различными уровнями вложенности.
+4)	Цель: в текстовое поле вводим селектор и нажимаем на кнопку. Элемент, который соответвует селектору, меняет цвет.
+-->
+<script src="js/libs.min.js"></script>
+<script src="js/script-2.js"></script>
+</body>
+</html>
