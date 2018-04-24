@@ -11,6 +11,10 @@ $(function () {
 
     $('.tbl-header th').on('click', 'span, [class^="fa fa-sort"]', function () {
 
+        // Показ/скрытие иконки сортировки. part 1
+        $(event.target).parent().find('[class^="fa fa-sort"]').attr("data-show", "active");
+        $(event.target).closest('tr').find('[class^="fa fa-sort"]:not([data-show="active"])').hide();
+
         // определим позицию input
         var position = $(event.target).parent().index() + 1;
         console.log(position);
@@ -49,6 +53,9 @@ $(function () {
             $(event.target).parent().find('.fa-sort-numeric-desc').hide();
         }
 
+        // Показ/скрытие иконки сортировки. part 2
+        $(event.target).parent().find('[class^="fa fa-sort"]').attr("data-show", "");
+
     });
 
 
@@ -60,6 +67,13 @@ $(function () {
         var wine = $('input[name="wine"]').val().toUpperCase();
         var forecast = $('input[name="forecast"]').val().toUpperCase();
 
+        // подсветим иконку фильтра, если поле не пусто
+        if ($(event.target).val()) {
+            $(event.target).parent().find('.fa-filter').addClass('active');
+        } else {
+            $(event.target).parent().find('.active').removeClass('active');
+        }
+
         $(".tbl-content tr").show(1000);
 
         $(".tbl-content tr").each(function (indx, element) {
@@ -70,8 +84,8 @@ $(function () {
             var wineTd = $(element).find('td:nth-child(4)').text().toUpperCase();
             var forecastTd = $(element).find('td:nth-child(5)').text().toUpperCase();
 
-            console.log(countryTd);
-            console.log(!(countryTd.indexOf(country) + 1));
+            //console.log(countryTd);
+            //console.log(!(countryTd.indexOf(country) + 1));
 
             if (!(countryTd.indexOf(country) + 1) ||
                 !(consumptionTd.indexOf(consumption) + 1) ||

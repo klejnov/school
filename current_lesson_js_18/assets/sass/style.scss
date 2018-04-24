@@ -57,6 +57,9 @@ body {
           top: 10px;
           cursor: pointer;
         }
+        i.active{
+          color: darkorchid;
+        }
         [class^="fa fa-sort"] {
           display: none;
           cursor: pointer;
