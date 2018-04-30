@@ -20,7 +20,8 @@ $(function () {
         },
 
         lazy: {
-            loadOnTransitionStart: true
+            loadPrevNext: true,
+            loadPrevNextAmount: 3
         },
 
         // Navigation arrows
