@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="57e85ec3-b4dd-4185-9ca0-4373592d6395" name="192.168.100.125" url="http://lesson.loc">
+        <fileTransfer host="192.168.100.125" port="22" privateKey="P:\Разное\Бекап\rsa_petro_key\rsa_key_petro" rootFolder="/var/www/html" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

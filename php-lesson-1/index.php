@@ -12,12 +12,20 @@
 </head>
 
 <body>
+<?php
 
+//phpinfo();
+
+?>
 <div class="container">
     <div class="header">
         <div><h2>
                 <?php
-                $fileName = explode("\\", __FILE__);
+                // Так работает если пути к файлу прописаны в Windows:
+                // $fileName = explode("\\", __FILE__);
+
+                // А это универсальный вариант на реальном сервере и на Windows
+                $fileName =  explode(DIRECTORY_SEPARATOR, realpath(__FILE__));
                 echo "<h2>". $fileName[count($fileName)-1] ."</h2>";
                 ?>
             </h2>
