@@ -16,13 +16,19 @@
 <div class="container">
     <div class="header"></div>
     <div class="main">
-        <div class="form">
-            <h1>Введите количество котиков</h1>
-            <form action="" method="post">
-                <input type="number" placeholder="" name="number" value="0" required="required" autofocus="autofocus">
-                <button type="submit">Показать котиков</button>
-            </form>
-        </div>
+        <?php if (!isset($_POST["number"]) || ($_POST["number"] < 0)): ?>
+
+            <div class="form">
+                <h1>Введите количество котиков</h1>
+                <form action="" method="post">
+                    <input type="number" placeholder="" name="number" value="0" required="required"
+                           autofocus="autofocus">
+                    <button type="submit">Показать котиков</button>
+                </form>
+            </div>
+
+        <?php endif; ?>
+
         <?php
 
         if (isset($_POST["number"])) {
@@ -30,11 +36,11 @@
             $number = $_POST["number"];
             if ($number < 0) {
                 echo '<p class="error">Введите корректное количество котов</p>';
-                exit();
+                //exit();
             }
 
             echo ($number == 0) ? "Кажется, что вы любитель собак ¯\_(ツ)_/¯" : "Всего котов: $number";
-            echo '<script>document.querySelector(".form").style.display = "none";</script>';
+            //echo '<script>document.querySelector(".form").style.display = "none";</script>';
             for ($i = 1; $i <= $number; $i++) {
                 echo "<h2>" . $i . "</h2><img src='http://placekitten.com/g/300/" . rand(300, 350) . "' alt='animals'>";
             }
