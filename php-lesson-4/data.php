@@ -40,13 +40,11 @@ function infoGet($info, $flag) {
 
 
 if (isset($_POST["Ajax"]) && $_POST["Ajax"] == 'tel') {
-    $flag = 'tel';
-    infoGet($info, $flag);
+    infoGet($info, 'tel');
 }
 
 if (isset($_POST["Ajax"]) && $_POST["Ajax"] == 'mail') {
-    $flag = 'mail';
-    infoGet($info, $flag);
+    infoGet($info, 'mail');
 }
 
 if (isset($_POST["Ajax"]) && $_POST["Ajax"] == 'js') {
