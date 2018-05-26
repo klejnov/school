@@ -22,8 +22,6 @@ $(function () {
             data: {Ajax: telAjaxID}
         }).done(function (result) {
 
-            $("#msg").empty();
-
             if ($.isEmptyObject(result)) {
                 console.log('Завершаем работу. Пустой объект JSON');
                 return;
@@ -34,11 +32,11 @@ $(function () {
                 var keys = Object.keys(element);
 
                 if (param == 'tel') {
-                    $("#msg").prepend('<p><a id="' + keys[0] + '" href="tel:' + element[keys[0]] + '">Тел: ' + element[keys[0]] + '</a></p>');
+                    $("#msg").empty().prepend('<p><a id="' + keys[0] + '" href="tel:' + element[keys[0]] + '">Тел: ' + element[keys[0]] + '</a></p>');
                 }
 
                 if (param == 'mail') {
-                    $("#msg").prepend('<p><a id="' + keys[0] + '" href="mailto:' + element[keys[0]] + '">Написать: ' + element[keys[1]] + '</a></p>');
+                    $("#msg").empty().prepend('<p><a id="' + keys[0] + '" href="mailto:' + element[keys[0]] + '">Написать: ' + element[keys[1]] + '</a></p>');
                 }
             });
 
@@ -57,8 +55,6 @@ $(function () {
             data: {Ajax: "js"}
         }).done(function (result) {
 
-            $("#msg-js").empty();
-
             if ($.isEmptyObject(result)) {
                 console.log('Завершаем работу. Пустой объект JSON');
                 return;
@@ -74,13 +70,13 @@ $(function () {
                 if (keys[index].search(/tel/i) == 0) {
                     console.log('телефон');
                     var telReplace = element.replace(/[^0-9]/g, "");
-                    $("#msg-js").append('<p><a id="' + keys[index] + '" href="tel:+' + telReplace + '">Тел: ' + element + '</a></p>');
+                    $("#msg-js").empty().append('<p><a id="' + keys[index] + '" href="tel:+' + telReplace + '">Тел: ' + element + '</a></p>');
                 }
 
                 if (keys[index].search(/mail/i) == 0) {
                     console.log('почта');
                     var mailReplace = element.replace(/@(.*?){1,}/g, "");
-                    $("#msg-js").append('<p><a id="' + keys[index] + '" href="mailto:' + element + '">Написать: ' + mailReplace + '</a></p>');
+                    $("#msg-js").empty().append('<p><a id="' + keys[index] + '" href="mailto:' + element + '">Написать: ' + mailReplace + '</a></p>');
                 }
 
             });
