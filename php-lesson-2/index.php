@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="Keywords" content="учёба, школа">
     <meta name="Description" content="Обучение html, css, JavaScript и PHP">
-    <meta name="author" content="Клейнов Олег">
+    <meta name="author" content="Клейнов Олег Петрович">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
