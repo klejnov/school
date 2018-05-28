@@ -4,7 +4,7 @@
     <title>Домашнее задание</title>
     <meta charset="utf-8">
     <meta name="Keywords" content="учёба, школа">
-    <meta name="Description" content="Обучение html, css и JavaScript">
+    <meta name="Description" content="Обучение HTML, CSS, JavaScript, jQuery и PHP">
     <meta name="author" content="Клейнов Олег">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
