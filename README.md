@@ -2,5 +2,5 @@
 
 ![Олег Клейнов](https://scontent-frt3-1.xx.fbcdn.net/v/t31.0-8/22104736_1915925528423360_5516810690207152627_o.jpg?_nc_cat=0&oh=df9df6aac74ed5334c01ae53375c7053&oe=5B85783B)
 
-[Связь со мной](https://vk.com/klejnov)
+[Связь со мной](https://vk.com/klejnov).
 
