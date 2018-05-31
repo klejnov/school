@@ -8,10 +8,10 @@ class Fraction
 
     public function __construct($numerator, $denominator)
     {
-        // отловим ошибки, если в качестве оргумента конструктору передано НЕ число
+        // отловим ошибки, если в качестве оргумента конструктору передано НЕ число, либо знаменатель ноль
         if (!is_numeric($numerator) == true || !is_numeric($denominator) == true) {
-        throw new Exception('Введено не число');
-    }
+            throw new Exception('Введено не число');
+        }
         if ($denominator == 0) {
             throw new Exception('Деление на ноль');
         }
@@ -38,7 +38,7 @@ class Fraction
 
     public function decimal() // метод представления дроби в десятичном виде
     {
-        if($this->denominator == 0){
+        if ($this->denominator == 0) {
             echo "Деление на ноль";
 
         } else {
