@@ -36,7 +36,7 @@ class Fraction
     }
 
 
-    public function decimal() // метод представления дроби в десятичном виде
+    public function decimal()// метод представления дроби в десятичном виде
     {
         if ($this->denominator == 0) {
             echo "Деление на ноль";
@@ -50,6 +50,9 @@ class Fraction
 
     public static function statsMethodSum($fraction1, $fraction2) // Метод для суммы
     {
+        if (!($fraction1 instanceof Fraction) || !($fraction2 instanceof Fraction)) {
+            throw new Exception('Объект не принадлежит экземпляру класса Fraction');
+        }
         $number1 = $fraction1->numerator / $fraction1->denominator;
         $number2 = $fraction2->numerator / $fraction2->denominator;
         echo "Сумма: ";
@@ -58,6 +61,9 @@ class Fraction
 
     public static function statsMethodSub($fraction1, $fraction2) // Метод для вычитания
     {
+        if (!($fraction1 instanceof Fraction) || !($fraction2 instanceof Fraction)) {
+            throw new Exception('Объект не принадлежит экземпляру класса Fraction');
+        }
         $number1 = $fraction1->numerator / $fraction1->denominator;
         $number2 = $fraction2->numerator / $fraction2->denominator;
         echo "Частное: ";
@@ -66,6 +72,9 @@ class Fraction
 
     public static function statsMethodMultipl($fraction1, $fraction2) // Метод для умножения
     {
+        if (!($fraction1 instanceof Fraction) || !($fraction2 instanceof Fraction)) {
+            throw new Exception('Объект не принадлежит экземпляру класса Fraction');
+        }
         $number1 = $fraction1->numerator / $fraction1->denominator;
         $number2 = $fraction2->numerator / $fraction2->denominator;
         echo "Умножение: ";
@@ -74,6 +83,9 @@ class Fraction
 
     public static function statsMethodDivis($fraction1, $fraction2) // Метод для деления
     {
+        if (!($fraction1 instanceof Fraction) || !($fraction2 instanceof Fraction)) {
+            throw new Exception('Объект не принадлежит экземпляру класса Fraction');
+        }
         $number1 = $fraction1->numerator / $fraction1->denominator;
         $number2 = $fraction2->numerator / $fraction2->denominator;
         echo "Деление: ";
