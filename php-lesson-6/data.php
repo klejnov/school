@@ -10,9 +10,11 @@ class Fraction
     {
         // отловим ошибки, если в качестве оргумента конструктору передано НЕ число
         if (!is_numeric($numerator) == true || !is_numeric($denominator) == true) {
-            throw new Exception('Введено не число');
+        throw new Exception('Введено не число');
+    }
+        if ($denominator == 0) {
+            throw new Exception('Деление на ноль');
         }
-
         $this->numerator = $numerator;
         $this->denominator = $denominator;
 
@@ -79,8 +81,8 @@ class Fraction
 try {
 
     // Создадим два объекта экземпляра класса Fraction:
-    $newObject1 = new Fraction(2, 4);
-    $newObject2 = new Fraction(6, 3);
+    $newObject1 = new Fraction(2, 1);
+    $newObject2 = new Fraction(6, 0);
 
     // Вывод результата для заданий сокращения дроби и для представления в десятичном виде
     echo $newObject1->reduction();
