@@ -22,8 +22,8 @@ class Fraction
 
     public function reduction() // метод сокращения дроби
     {
-        $a = $this->numerator;
-        $b = $this->denominator;
+        $a = abs($this->numerator);
+        $b = abs($this->denominator);
 
         while ($a != $b) { // определим общий числитель
             if ($a > $b)
@@ -38,7 +38,13 @@ class Fraction
 
     public function decimal() // метод представления дроби в десятичном виде
     {
-        echo "Десятичный вид: " . round($this->numerator / $this->denominator, 2) . "<br><br>";
+        if($this->denominator == 0){
+            echo "Деление на ноль";
+
+        } else {
+            echo "Десятичный вид: " . round($this->numerator / $this->denominator, 2) . "<br><br>";
+
+        }
 
     }
 
@@ -71,7 +77,8 @@ class Fraction
         $number1 = $fraction1->numerator / $fraction1->denominator;
         $number2 = $fraction2->numerator / $fraction2->denominator;
         echo "Деление: ";
-        echo $number1 / $number2 . "<br>";
+
+        echo $number2 == 0 ? 'на ноль' : $number1 / $number2 . "<br>";
     }
 }
 
@@ -81,8 +88,8 @@ class Fraction
 try {
 
     // Создадим два объекта экземпляра класса Fraction:
-    $newObject1 = new Fraction(2, 1);
-    $newObject2 = new Fraction(6, 0);
+    $newObject1 = new Fraction(1, 2);
+    $newObject2 = new Fraction(6, 3);
 
     // Вывод результата для заданий сокращения дроби и для представления в десятичном виде
     echo $newObject1->reduction();
