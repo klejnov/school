@@ -3,8 +3,8 @@
 class Fraction
 {
 
-    public $numerator; // Числитель
-    public $denominator; // Знаменатель
+    private $numerator; // Числитель
+    private $denominator; // Знаменатель
 
     public function __construct($numerator, $denominator)
     {
@@ -100,7 +100,7 @@ class Fraction
 try {
 
     // Создадим два объекта экземпляра класса Fraction:
-    $newObject1 = new Fraction(1, 2);
+    $newObject1 = new Fraction(2, 4);
     $newObject2 = new Fraction(6, 3);
 
     // Вывод результата для заданий сокращения дроби и для представления в десятичном виде
