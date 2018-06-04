@@ -5,7 +5,7 @@ class Database implements Loging
 
     private $tableName;
 
-    function recordMethod()
+    public function recordMethod()
     {
         echo '<br><b>Имя класса: </b>' . __CLASS__ . "<br>";
         echo $this->tableName . "<br>";
