@@ -1,0 +1,25 @@
+#context {
+    position: absolute;
+    display: none;
+    width: 200px;
+    background: linear-gradient(90deg,#b866c52e,#ffffff36);
+    font-family: Roboto,sans-serif;
+    top: 0px;
+    left: 0px;
+    color: white;
+}
+#context div {
+     padding: 8px;
+ }
+
+#context div:hover {
+    background-color: #ffffff75;
+    cursor: pointer;
+}
+
+#context div:first-child {
+    border-bottom: 1px solid #ddddddc7;
+    background-color: #ffffff4a;
+    cursor: auto;
+}
+
