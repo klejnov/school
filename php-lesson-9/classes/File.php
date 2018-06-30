@@ -99,7 +99,7 @@ class File
             return json_encode('Директория удалена');
 
             /*
-             * Обычное удаение
+             * Обычное удаление
              */
 //            rmdir($dir . DS . $name);
 //            return json_encode('Директория удалена');
@@ -189,6 +189,3 @@ class File
     }
 
 }
-
-//File::createDirectory('123456789');
-//File::createDirectory('123456789/1234');

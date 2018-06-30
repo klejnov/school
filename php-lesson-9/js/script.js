@@ -110,7 +110,6 @@ $(function () {
                 return;
             }
 
-            //alert(result);
             $('.result-dir').slideDown(500).text(result);
             setTimeout(function () {
                 $('.result-dir').slideUp(500);
@@ -220,7 +219,6 @@ $(function () {
             $('.move').show(500);
             pathMove = path + '/' + name;
             //console.log(action + path + '/' + name);
-
         }
 
     });

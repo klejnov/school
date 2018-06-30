@@ -39,9 +39,6 @@
                 <button id="move">Переместить</button>
             </div>
 
-            <?php
-
-?>
             <div class="tbl-header">
                 <form action="#" name="form" id="form">
                     <table cellpadding="0" cellspacing="0" border="0">
