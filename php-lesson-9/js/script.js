@@ -22,7 +22,7 @@ $(function () {
             $.each(result.list, function (key, element) {
 
                 if (element.type == 'dir') {
-                    $(".tbl-content tbody").append('<tr class="type-dir"><td><i class="fa fa-folder-o" aria-hidden="true"></i></td><td>' + element.name + '</td></tr>');
+                    $(".tbl-content tbody").append('<tr class="type-dir" data-dir="on"><td><i class="fa fa-folder-o" aria-hidden="true"></i></td><td>' + element.name + '</td></tr>');
                 } else {
                     $(".tbl-content tbody").append('<tr><td><i class="fa fa-file-text-o" aria-hidden="true"></i></td><td><a href="/php-lesson-9/' + result.path + '/' + element.name + '" target="_blank">' + element.name + '</a></td></tr>');
 
@@ -51,6 +51,9 @@ $(function () {
             event.preventDefault();
             var textElement = $(this).text();
 
+            $(".type-dir").data('dir', 'on');
+            $(this).data('dir', 'off');
+
             var Xinner = event.pageX;
             var Yinner = event.pageY - 40;
             console.log("Нажато contextmenu на\n" + textElement + "\nКоордината х: " + event.pageX + "\nКоордината y: " + event.pageY);
@@ -76,8 +79,11 @@ $(function () {
     function clickDir() {
         $(".type-dir").on('click', function () {
 
+            if ($(this).data("dir") == 'off') {
+                return;
+            }
             path += '/' + $(this).text();
-            listGet();
+            listGet(this);
             console.log('Выбрана директория: ' + path);
 
         });
@@ -181,7 +187,7 @@ $(function () {
         });
     }
 
-    $("#context div").on('click', function () {
+    $("#context div").on('click', function (event) {
 
         var action = $(this).attr('data-action');
         var name = $(this).parent().find("div:first").text();
@@ -219,9 +225,11 @@ $(function () {
             $('.move').show(500);
             pathMove = path + '/' + name;
             //console.log(action + path + '/' + name);
+
         }
 
     });
+
 
     $(".move #move").on('click', function () {
 
