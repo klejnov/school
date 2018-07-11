@@ -59,9 +59,9 @@ try {
 
     //Добавим связи между таблицами
     $sql = "
-ALTER TABLE `track`	ADD CONSTRAINT `FK_track_singer` FOREIGN KEY (`singer`) REFERENCES `singer` (`singer_id`);
-ALTER TABLE `track`	ADD CONSTRAINT `FK_track_album` FOREIGN KEY (`album`) REFERENCES `album` (`album_id`);
-ALTER TABLE `track`	ADD CONSTRAINT `FK_track_genre` FOREIGN KEY (`genre`) REFERENCES `genre` (`genre_id`);
+ALTER TABLE `track` ADD CONSTRAINT `FK_track_singer` FOREIGN KEY (`singer`) REFERENCES `singer` (`singer_id`);
+ALTER TABLE `track` ADD CONSTRAINT `FK_track_album` FOREIGN KEY (`album`) REFERENCES `album` (`album_id`);
+ALTER TABLE `track` ADD CONSTRAINT `FK_track_genre` FOREIGN KEY (`genre`) REFERENCES `genre` (`genre_id`);
 
 ALTER TABLE `album` ADD CONSTRAINT `FK_album_singer` FOREIGN KEY (`singer`) REFERENCES `singer` (`singer_id`);
 ALTER TABLE `album` ADD CONSTRAINT `FK_album_genre` FOREIGN KEY (`genre`) REFERENCES `genre` (`genre_id`);
