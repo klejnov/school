@@ -105,11 +105,11 @@ INSERT INTO `track` (`track_id`, `track_name`, `singer`, `album`, `duration`, `y
     //Добавим триггер.
     $sql = "
 CREATE TRIGGER `check_duration_INSERT` BEFORE INSERT  ON `track` 
-            FOR EACH ROW BEGIN IF NEW.duration <= 0 THEN 
-            SIGNAL SQLSTATE '45000' 
-            SET MESSAGE_TEXT = 'Введите длительность трека больше нуля!'; 
-            END IF; 
-            END;
+			FOR EACH ROW BEGIN IF NEW.duration <= 0 THEN 
+			SIGNAL SQLSTATE '45000' 
+			SET MESSAGE_TEXT = 'Введите длительность трека больше нуля!'; 
+			END IF; 
+			END;
 
 CREATE TRIGGER `check_duration_UPDATE` BEFORE UPDATE  ON `track` 
 			FOR EACH ROW BEGIN IF NEW.duration <= 0 THEN 
@@ -117,7 +117,7 @@ CREATE TRIGGER `check_duration_UPDATE` BEFORE UPDATE  ON `track`
 			SET MESSAGE_TEXT = 'Введите длительность трека больше нуля!'; 
 			END IF; 
 			END;
-    ";
+            ";
     $conn->exec($sql);
     echo "Тригеры созданы <br><br>";
 
@@ -125,10 +125,8 @@ CREATE TRIGGER `check_duration_UPDATE` BEFORE UPDATE  ON `track`
     $today = date("Y.m.d_H-i-s");
     shell_exec("mysqldump -u$userName -p$password $dbName > dump_$today.sql");
 
-
 } catch (PDOException $e) {
 
     echo "Ошибка запроса " . $sql . $e->getMessage();
-
 
 }
