@@ -15,6 +15,9 @@ class DataBase
         $this->connect();
     }
 
+    /**
+     * @return $this
+     */
     private function connect()
     {
         $config = require_once 'config.php';
@@ -25,12 +28,20 @@ class DataBase
         return $this;
     }
 
+    /**
+     * @param $sql
+     * @return mixed
+     */
     public function execute($sql)
     {
         $sth = $this->link->prepare($sql);
         return $sth->execute();
     }
 
+    /**
+     * @param $sql
+     * @return array
+     */
     public function query($sql)
     {
         $sth = $this->link->prepare($sql);
@@ -42,6 +53,12 @@ class DataBase
         return $result;
     }
 
+    /**
+     * @param $search
+     * @return array
+     *
+     * Search for music albums
+     */
     public function searchAlbums($search)
     {
         $sth = $this->link->prepare("SELECT  album_id, 
@@ -65,6 +82,13 @@ class DataBase
         return $result;
     }
 
+    /**
+     * @param $search
+     * @param $id
+     * @return array
+     *
+     * Track search by id
+     */
     public function searchTracks($search, $id)
     {
 
@@ -85,6 +109,11 @@ class DataBase
         return $result;
     }
 
+    /**
+     * @param $dbName
+     *
+     * Backing up the database in the directory /../backup/
+     */
     public function backup($dbName)
     {
         $config = include 'config.php';
