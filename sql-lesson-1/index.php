@@ -85,7 +85,7 @@ INSERT INTO `genre` (`genre_id`, `genre_name`) VALUES
 INSERT INTO `album` (`album_id`, `album_name`, `singer`, `year`, `genre`) VALUES 
 (NULL, 'Незнакомка', '1', '2003', '1'), 
 (NULL, 'Бесполая и грустная любовь', '2', '2004', '2'),
-(NULL, 'Живая струна', '3', '1996', '3');
+(NULL, 'Живая струна', '3', '1996', '4');
 INSERT INTO `track` (`track_id`, `track_name`, `singer`, `album`, `duration`, `year`, `genre`) VALUES 
 (NULL, 'Роза Чайная', '1', '1', '223', '2004', '1'), 
 (NULL, 'Зайки врозь', '1', '1', '221', '2004', '1'), 
