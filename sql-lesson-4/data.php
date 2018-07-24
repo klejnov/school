@@ -72,5 +72,8 @@ try {
 HTML_BLOCK;
 }
 
-//$db = new DataBase();
-//$db->backup('sql-lesson-4');
+/**
+ * Вызов метода резервного копирования текущей базы данных
+ */
+
+//DataBase::backup();

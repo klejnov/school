@@ -87,12 +87,12 @@ class DataBase
      *
      * Backing up the database in the directory /../backup/
      */
-    public function backup($dbName)
+    static function backup()
     {
         $config = include 'config.php';
         $today = date("Y.m.d_H-i-s");
         $dir = __DIR__;
-        shell_exec("mysqldump -u{$config['username']} -p{$config['password']} $dbName > $dir/../backup/dump_$today.sql");
+        shell_exec("mysqldump -u{$config['username']} -p{$config['password']} {$config['db_name']} > $dir/../backup/dump_$today.sql");
     }
 
 }
