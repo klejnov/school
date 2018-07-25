@@ -27,8 +27,13 @@
 
             <input type="color">
             <p></p>
-            <input type="button" value="Удалить сессию">
+            <input type="button" value="Очистить сессию">
 
+            <?php
+            $getallheaders = getallheaders();
+            $msg = $getallheaders['Cookie'] ?? "Обновите страницу, чтобы увидеть имя сессии";
+            echo "<p style='text-align: center'>" . $msg . "</p>";
+            ?>
         </section>
     </div>
     <div class="sidebar-left">3</div>

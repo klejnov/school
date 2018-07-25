@@ -79,6 +79,7 @@ class DataBase
         if ($result === false) {
             return [];
         }
+
         return $result;
     }
 
